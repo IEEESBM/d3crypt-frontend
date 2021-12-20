@@ -7,6 +7,7 @@ import {
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import MobileNavbar from "./Components/MobileNav/MobileNav";
+import UserProfile from "./Components/UserProfile/UserProfile";
 
 
 function App() {
@@ -14,11 +15,12 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path={"/"}>
-          <MobileNavbar/>
-            <Navbar/>
-            <Home/>
+          <Route exact path="/">
+            <MobileNavbar />
+            <Navbar />
+            <Home />
           </Route>
+          <Route exact path='/user-profile' component={UserProfile} />
         </Switch>
       </Router>
     </div>
