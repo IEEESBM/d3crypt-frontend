@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+
+.mobilenavbar {
+  display: none;
+}
+
+.slidenavbar {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .mobilenavbar {
+    display: block;
+    height: 61px !important;
+    width: 100%;
+    background: #000;
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 200;
+  }
+
+  .mobilenavbar .decryptlogo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .slidenavbar > div {
+    display: flex;
+    position: relative;
+  }
+
+  .slidenavbar .homeicon,
+  .slidenavbar .leaderboardicon,
+  .slidenavbar .settingsicon {
+    font-size: 8vw;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3vw;
+  }
+
+  .slidenavbar div p {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+  }
+
+  .slidenavbar {
+    display: block;
+    position: absolute;
+    width: 275px;
+    background: #121212;
+    left: -275px;
+    transition: 0.4s;
+    top: 0;
+    transition-timing-function: ease-in-out;
+    height: 100%;
+    z-index: 100;
+  }
+
+  .list-item {
+    height: 58px;
+    border-radius: 15px;
+
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 160%;
+    color: #ffffff;
+    padding-top: 1rem;
+  }
+
+  .btn-c{
+    height: 58px;
+    border-radius: 15px;
+
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 160%;
+    color: #ffffff;
+    padding-top: 1rem;
+  }
+  .list-item:hover {
+    background: #000000;
+    cursor: pointer;
+  }
+
+  .slide {
+    position: fixed;
+    left: 0px;
+    transition: 0.4s;
+    transition-timing-function: ease-in-out;
+  }
+.hamburger:hover{
+    cursor: pointer;
+}
+
+  .mobile-logo {
+    position: absolute;
+    width: 52.41px;
+    height: 45.47px;
+    left: 53px;
+    top: 28px;
+    left: 22.5%;
+    top: 20%;
+  }
+.list-link{
+    text-decoration: none;
+    color: #ffffff;
+}
+.list-link:hover{
+    color: white;
+}
+.log-button{
+    text-align: center;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    background: #292929;
+    width: 148px;
+    height: 46px;
+    font-weight: 800;
+font-size: 16px;
+align-items: center;
+letter-spacing: 0.005em;
+color: #ffffff;
+border: none;
+}
+
+
+.reg-button{
+        text-align: center;
+        border-radius: 50px;
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+background: #ffb800;
+
+        width: 148px;
+        height: 46px;
+        font-weight: 800;
+    font-size: 16px;
+    align-items: center;
+    letter-spacing: 0.005em;
+color: #161616;
+
+    border: none;
+        
+}
+  .mobile-span {
+    position: absolute;
+    width: 104.86px;
+    height: 33.94px;
+
+    left: 45%;
+    top: 30%;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 156%;
+    /* or 31px */
+
+    letter-spacing: 0.35em;
+
+    color: #ffffff;
+
+    text-shadow: 4px 20px 60px rgba(255, 255, 255, 0.25);
+  }
+  .mobile-c {
+    height: 80px;
+  }
+}
