@@ -10,6 +10,7 @@ import MobileNavbar from "./Components/MobileNav/MobileNav";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import SignUp from './Components/SignUp/SignUp'
 import Signin from './Components/Signin/signin'
+import Leaderboard from './Components/Leaderboard/LeaderBoard';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path='/user-profile' component={UserProfile} />
           <Route exact path='/register' component={SignUp} />
           <Route exact path='/signin' component={Signin} />
+          <Route exact path='/leaderboard' component={Leaderboard} />
         </Switch>
       </Router>
     </div>
