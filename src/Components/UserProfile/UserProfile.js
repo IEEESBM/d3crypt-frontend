@@ -46,14 +46,14 @@ function UserProfile() {
     <>
       <MobileNavbar />
 
-      <div className='userprofile'>
+      <div id='userprofile'>
 
         <Sidebar />
 
         <div className='content'>
 
           <h1 className='header'>
-            <p className='heading'>User Profile</p>
+            <p className='page-heading'>User Profile</p>
             <p className='line'><hr /></p>
           </h1>
 

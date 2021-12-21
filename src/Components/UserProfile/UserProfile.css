@@ -7,14 +7,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
 
-.userprofile {
+#userprofile {
   width: 100%;
   max-width: 100%;
   display: flex;
   height: 116.5vw;
 }
 
-.userprofile .sidebar {
+#userprofile .sidebar {
   flex: 6.25%;
   height: 116.5vw;
   background: #121212;
@@ -24,28 +24,28 @@
   align-items: center;
 }
 
-.userprofile .homeicon,
-.userprofile .leaderboardicon,
-.userprofile .settingsicon {
+#userprofile .homeicon,
+#userprofile .leaderboardicon,
+#userprofile .settingsicon {
   color: #ffffff;
   transition: 0.2s;
 }
 
-.userprofile .homeicon:hover,
-.userprofile .leaderboardicon:hover,
-.userprofile .settingsicon:hover {
+#userprofile .homeicon:hover,
+#userprofile .leaderboardicon:hover,
+#userprofile .settingsicon:hover {
   color: #ffb800;
 }
 
-.userprofile .smallicon,
-.userprofile .homeicon,
-.userprofile .leaderboardicon,
-.userprofile .settingsicon {
+#userprofile .smallicon,
+#userprofile .homeicon,
+#userprofile .leaderboardicon,
+#userprofile .settingsicon {
   margin-top: 40px;
   font-size: 3vw;
 }
 
-.userprofile .content {
+#userprofile .content {
   flex: 93.75%;
   background: #171717;
   width: 90%;
@@ -55,7 +55,7 @@
   padding-right: 2.5vw;
 }
 
-.userprofile .header {
+#userprofile .header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,12 +63,18 @@
   margin-bottom: 40px;
 }
 
-.userprofile .line {
+#userprofile .line {
   flex: 1;
   padding-left: 2vw;
 }
 
-.userprofile .header .heading {
+#userprofile .line hr {
+  width: 100%;
+  border: 0.75px solid #FFFFFF;
+  opacity: 1;
+}
+
+#userprofile .header .page-heading {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -77,14 +83,14 @@
   color: #ffb800;
 }
 
-.userprofile .row1,
-.userprofile .row2 {
+#userprofile .row1,
+#userprofile .row2 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2.77vw;
 }
 
-.userprofile .profilephoto {
+#userprofile .profilephoto {
   width: 35vw;
   height: 39.4vw;
   background: #292929;
@@ -92,7 +98,7 @@
   border-bottom: #ffb800 solid 11.29px;
 }
 
-.userprofile .contact {
+#userprofile .contact {
   width: 50vw;
   height: 39.4vw;
   background: #292929;
@@ -100,7 +106,7 @@
   border-bottom: #ffb800 solid 11.29px;
 }
 
-.userprofile .details {
+#userprofile .details {
   width: 42.4vw;
   height: 26vw;
   background: #292929;
@@ -108,7 +114,7 @@
   border-bottom: #ffb800 solid 11.29px;
 }
 
-.userprofile .profileimage {
+#userprofile .profile-image {
   height: 13.88vw;
   width: 13.88vw;
   border-radius: 50%;
@@ -117,7 +123,7 @@
   margin-top: 7.36vw;
 }
 
-.userprofile .name {
+#userprofile .name {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -129,7 +135,7 @@
   margin-top: 4.65vw;
 }
 
-.userprofile .year {
+#userprofile .year {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -139,7 +145,7 @@
   text-align: center;
 }
 
-.userprofile .contactheading {
+#userprofile .contactheading {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -151,7 +157,7 @@
   margin-bottom: 3.4vw;
 }
 
-.userprofile .contacttitle {
+#userprofile .contacttitle {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -159,9 +165,10 @@
   line-height: 1.94vw;
   color: #ffffff;
   margin-left: 4.93vw;
+  margin-bottom: 0;
 }
 
-.userprofile .contactdata {
+#userprofile .contactdata {
   width: 37.83vw;
   height: 4.3vw;
   background: #171717;
@@ -180,7 +187,7 @@
   outline: none;
 }
 
-.userprofile .detailsheading {
+#userprofile .detailsheading {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -192,7 +199,7 @@
   margin-bottom: 1.73vw;
 }
 
-.userprofile .detailstitle {
+#userprofile .detailstitle {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -201,9 +208,10 @@
   color: #ffffff;
   margin-left: 3.4vw;
   margin-top: 0.76vw;
+  margin-bottom: 0;
 }
 
-.userprofile .detailsdata {
+#userprofile .detailsdata {
   width: 33vw;
   height: 4.3vw;
   background: #171717;
@@ -223,11 +231,11 @@
   outline: none;
 }
 
-.userprofile .datafocus {
+#userprofile .datafocus {
   outline: auto;
 }
 
-.userprofile .backbutton {
+#userprofile .backbutton {
   background: #2a2d3a;
   box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
   border-radius: 50px;
@@ -245,7 +253,7 @@
   margin-right: auto;
   margin-top: 60px !important;
 }
-.userprofile .editbutton {
+#userprofile .editbutton {
   background: #ffb800;
   box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
   border-radius: 50px;
@@ -264,7 +272,7 @@
   margin-top: 60px !important;
 }
 
-.userprofile .buttons {
+#userprofile .buttons {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -272,19 +280,19 @@
   justify-content: space-between;
 }
 
-.userprofile .contact .data-and-button {
+#userprofile .contact .data-and-button {
   display: flex;
   align-items: center;
   margin-left: 4.5vw;
 }
 
-.userprofile .details .data-and-button {
+#userprofile .details .data-and-button {
   display: flex;
   align-items: center;
   margin-left: 3vw;
 }
 
-.userprofile .editfield {
+#userprofile .editfield {
   opacity: 0.3;
   color: #ffffff;
   font-size: 3vw;
@@ -293,7 +301,7 @@
   cursor: pointer;
 }
 
-.userprofile .editfieldclicked {
+#userprofile .editfieldclicked {
   opacity: 1;
   transition: 0.2s;
 }
@@ -301,32 +309,32 @@
 /******************************************/
 
 @media screen and (max-width: 576px) {
-  .userprofile {
+  #userprofile {
     height: 400vw;
   }
 
-  .userprofile .sidebar {
+  #userprofile .sidebar {
     display: none;
   }
 
-  .userprofile .header {
+  #userprofile .header {
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
   }
 
-  .userprofile .header .heading {
+  #userprofile .header .page-heading {
     font-size: 5vw;
   }
 
-  .userprofile .row1,
-  .userprofile .row2 {
+  #userprofile .row1,
+  #userprofile .row2 {
     display: block;
     margin-bottom: 0;
   }
 
-  .userprofile .profilephoto {
+  #userprofile .profilephoto {
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
@@ -335,7 +343,7 @@
     padding-top: 16.66vw;
   }
 
-  .userprofile .contact {
+  #userprofile .contact {
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
@@ -345,7 +353,7 @@
     border-bottom: #ffb800 solid 1.86vw;
   }
 
-  .userprofile .details {
+  #userprofile .details {
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
@@ -353,23 +361,23 @@
     margin-top: 4.81vw;
   }
 
-  .userprofile .profileimage {
+  #userprofile .profile-image {
     width: 32.77vw;
     height: 32.77vw;
     margin-top: 0;
   }
 
-  .userprofile .name {
+  #userprofile .name {
     font-size: 5vw;
     margin-top: 7vw;
   }
 
-  .userprofile .year {
+  #userprofile .year {
     font-size: 2.77vw;
     margin-top: 5vw;
   }
 
-  .userprofile .contactheading {
+  #userprofile .contactheading {
     font-size: 3.88vw;
     padding-top: 7vw;
     padding-left: 7vw;
@@ -377,14 +385,14 @@
     margin-bottom: 5vw;
   }
 
-  .userprofile .contacttitle {
+  #userprofile .contacttitle {
     font-size: 3.333vw;
     margin: 0px;
     margin-top: 3vw;
     padding-left: 8vw;
   }
 
-  .userprofile .contactdata {
+  #userprofile .contactdata {
     width: 60.28vw;
     height: 6.88vw;
     font-size: 3.33vw;
@@ -392,11 +400,11 @@
     margin-top: 2.7vw;
   }
 
-  .userprofile .details {
+  #userprofile .details {
     border-bottom: #ffb800 solid 1.86vw;
   }
 
-  .userprofile .detailsheading {
+  #userprofile .detailsheading {
     font-size: 3.88vw;
     padding-top: 7vw;
     padding-left: 7vw;
@@ -404,14 +412,14 @@
     margin-bottom: 4.72vw;
   }
 
-  .userprofile .detailstitle {
+  #userprofile .detailstitle {
     font-size: 3.333vw;
     margin: 0px;
     margin-top: 4.2vw;
     padding-left: 8vw;
   }
 
-  .userprofile .detailsdata {
+  #userprofile .detailsdata {
     width: 60.28vw;
     height: 6.88vw;
     font-size: 3.33vw;
@@ -419,20 +427,20 @@
     margin-top: 2.7vw;
   }
 
-  .userprofile .backbutton {
+  #userprofile .backbutton {
     width: 18vw;
     height: 5.8vw;
     line-height: 5.8vw;
     font-size: 3vw;
   }
-  .userprofile .editbutton {
+  #userprofile .editbutton {
     width: 18vw;
     height: 5.8vw;
     line-height: 5.8vw;
     font-size: 3vw;
   }
 
-  .userprofile .buttons {
+  #userprofile .buttons {
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -440,15 +448,15 @@
     justify-content: space-between;
   }
 
-  .userprofile .contact .data-and-button {
+  #userprofile .contact .data-and-button {
     margin-left: 6vw;
   }
   
-  .userprofile .details .data-and-button {
+  #userprofile .details .data-and-button {
     margin-left: 6vw;
   }
 
-  .userprofile .editfield {
+  #userprofile .editfield {
     font-size: 5vw;
     margin-left: 1vw;
   }

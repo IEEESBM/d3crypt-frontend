@@ -1,7 +1,6 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-// import {Navbar, Container,Nav} from 'react-bootstrap';
 import { AiOutlineArrowRight } from "react-icons/ai";
 import logo from '../../assets/logo.svg';
 
