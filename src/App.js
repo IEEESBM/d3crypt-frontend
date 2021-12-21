@@ -8,7 +8,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import MobileNavbar from "./Components/MobileNav/MobileNav";
 import UserProfile from "./Components/UserProfile/UserProfile";
-
+import SignUp from './Components/SignUp/SignUp'
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
             <Home />
           </Route>
           <Route exact path='/user-profile' component={UserProfile} />
+          <Route exact path='/register' component={SignUp} />
         </Switch>
       </Router>
     </div>
