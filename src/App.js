@@ -9,6 +9,7 @@ import Home from "./Components/Home/Home";
 import MobileNavbar from "./Components/MobileNav/MobileNav";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import SignUp from './Components/SignUp/SignUp'
+import Signin from './Components/Signin/signin'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </Route>
           <Route exact path='/user-profile' component={UserProfile} />
           <Route exact path='/register' component={SignUp} />
+          <Route exact path='/signin' component={Signin} />
         </Switch>
       </Router>
     </div>
