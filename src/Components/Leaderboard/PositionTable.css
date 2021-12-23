@@ -1,136 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 .position-container {
-    position: absolute;
-    top: 32.847vw;
-    left: 11.0416vw;
-    color: #FFFFFF;
+  position: absolute;
+  top: 32.847vw;
+  left: 11.0416vw;
+  color: #ffffff;
 }
 
 .position-box {
-    max-width: 82.22vw;
+  max-width: 82.22vw;
 }
-
 
 /* -------------------- Header Box ----------------------- */
 
 .position-header {
-    background: #292929;
-    position: relative;
-    font-weight: 600;
-    font-size: 1.25vw;
-    border: 1px solid #161616;
-    width: 82.22vw;
-    height: 4.0972vw;
-    border-radius: .555vw;
-    color: #FFB800;
+  background: #292929;
+  position: relative;
+  font-weight: 600;
+  font-size: 1.25vw;
+  border: 1px solid #161616;
+  width: 82.22vw;
+  height: 4.0972vw;
+  border-radius: 0.555vw;
+  color: #ffb800;
 }
 
 .PositionH {
-    position: absolute;
-    width: 6.3194vw;
-    height: 1.736vw;
-    top: .805vw;
-    left: 3.54vw;
+  position: absolute;
+  width: 6.3194vw;
+  height: 1.736vw;
+  top: 0.805vw;
+  left: 3.54vw;
 }
 
 .PositionN {
-    position: absolute;
-    width: 4.1664vw;
-    height: 1.736vw;
-    top: .805vw;
-    left: 30.13vw;
+  position: absolute;
+  width: 4.1664vw;
+  height: 1.736vw;
+  top: 0.805vw;
+  left: 30.13vw;
 }
 
 .PositionP {
-    position: absolute;
-    width: 5.416vw;
-    height: 1.736vw;
-    top: .805vw;
-    left: 54.861vw;
+  position: absolute;
+  width: 5.416vw;
+  height: 1.736vw;
+  top: 0.805vw;
+  left: 54.861vw;
 }
 
 .PositionS {
-    position: absolute;
-    width: 3.4027vw;
-    height: 1.736vw;
-    top: .805vw;
-    left: 74.6527vw;
+  position: absolute;
+  width: 3.4027vw;
+  height: 1.736vw;
+  top: 0.805vw;
+  left: 74.6527vw;
 }
 
 .fa-sort {
-    position: absolute;
-    width: 0.77vw;
-    height: 0.452vw;
-    top: 0.3472vw;
-    left: 3.47vw;
+  position: absolute;
+  width: 0.77vw;
+  height: 0.452vw;
+  top: 0.3472vw;
+  left: 3.47vw;
 }
-
 
 /* ---------------------- Position Box ----------------------- */
 
 .position-table {
-    margin-top: 0.972vw;
-    background: #292929;
-    position: relative;
-    border: 1px solid #161616;
-    width: 82.22vw;
-    height: 5.486vw;
-    border-radius: .555vw;
+  margin-top: 0.972vw;
+  background: #292929;
+  position: relative;
+  border: 1px solid #161616;
+  width: 82.22vw;
+  height: 5.486vw;
+  border-radius: 0.555vw;
 }
 
 .Position {
-    position: absolute;
-    left: 3.055vw;
-    top: 1.66vw;
-    color: #000000;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 0.833vw;
-    width: 5.277vw;
-    height: 2.152vw;
-    padding: 0vw .833vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3.472vw;
+  position: absolute;
+  left: 3.055vw;
+  top: 1.66vw;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 0.833vw;
+  width: 5.277vw;
+  height: 2.152vw;
+  padding: 0vw 0.833vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3.472vw;
 }
 
 .position-pic {
-    position: absolute;
-    left: 27.708vw;
-    top: 1.36vw;
-    width: 2.22vw;
-    height: 2.22vw;
-    background: #7D7D7D;
-    border-radius: 50%;
+  position: absolute;
+  left: 27.708vw;
+  top: 1.36vw;
+  width: 2.22vw;
+  height: 2.22vw;
+  background: #7d7d7d;
+  border-radius: 50%;
 }
 
 .position-name {
-    position: absolute;
-    font-size: 1.25vw;
-    font-weight: 600;
-    left: 30.76vw;
-    top: 1.609vw;
-    width: 6.805vw;
-    height: 1.736vw;
+  position: absolute;
+  font-size: 1.25vw;
+  font-weight: 600;
+  left: 30.76vw;
+  top: 1.609vw;
+  width: 6.805vw;
+  height: 1.736vw;
 }
 
 .position-points {
-    position: absolute;
-    font-size: 1.36vw;
-    font-weight: 600;
-    left: 55.55vw;
-    top: 1.658vw;
-    width: 2.986vw;
-    height: 1.458vw;
+  position: absolute;
+  font-size: 1.36vw;
+  font-weight: 600;
+  left: 55.55vw;
+  top: 1.658vw;
+  width: 2.986vw;
+  height: 1.458vw;
 }
 
 .position-sort {
-    position: absolute;
-    font-size: 1.66vw;
-    left: 76.527vw;
-    top: 1.136vw;
-    width: 2.986vw;
-    height: 1.458vw;
+  position: absolute;
+  font-size: 1.66vw;
+  left: 76.527vw;
+  top: 1.136vw;
+  width: 2.986vw;
+  height: 1.458vw;
 }

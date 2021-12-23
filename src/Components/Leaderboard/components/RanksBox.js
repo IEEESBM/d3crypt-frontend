@@ -19,7 +19,8 @@ function RanksBox(props) {
       >
         <img
           src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
-          alt="ProfilePic" className="profileimage"
+          alt="ProfilePic"
+          className="profileimage"
           style={{
             top: props.top_pic,
             width: props.sizee,

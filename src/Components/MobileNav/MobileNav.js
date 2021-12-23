@@ -4,20 +4,34 @@ import "./MobileNav.css";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 
-function MobileNavbar() {
+export default function MobileNavbar() {
   function displayNavbar() {
     document.querySelector(".slidenavbar").classList.toggle("slide");
   }
 
+  function toggleClass() {
+    var div = document.getElementById("nav-icon2");
+    div.classList.toggle("open");
+    document.querySelector(".slidenavbar").classList.toggle("slide");
+  }
   return (
     <>
       <nav className="mobilenavbar">
-        <Hamburger className="hamburger" onClick={displayNavbar}></Hamburger>
+        {/* <vaHamburger className="hamburger" onClick={displayNavbar}></Hamburger> */}
+
         {/* <a href="#"><DecryptLogo className="decryptlogo"></DecryptLogo></a> */}
+        <div id="nav-icon2" onClick={toggleClass}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
 
       <div className="slidenavbar">
-        <Hamburger className="hamburger" onClick={displayNavbar}></Hamburger>
+        {/* <Hamburger className="hamburger" onClick={displayNavbar}></Hamburger> */}
         <div className="mobile-c">
           <img src={logo} className="mobile-logo"></img>
           <span className="mobile-span">CRYPT</span>
@@ -40,9 +54,9 @@ function MobileNavbar() {
         </div>
 
         <div className="list-item">
-          <Link className="list-link" to={"/contact"}>
-            <p>Contact</p>
-          </Link>
+          <a id="nav-link" href="#contact">
+            Contact
+          </a>
         </div>
         <div className="btn-c">
           <Link to={"/register"}>
@@ -50,13 +64,11 @@ function MobileNavbar() {
           </Link>
         </div>
         <div className="btn-c">
-          <Link to={"/login"}>
-            <button className="log-button">Login</button>
+          <Link to={"/signin"}>
+            <button className="log-button">Sign in</button>
           </Link>
         </div>
       </div>
     </>
   );
 }
-
-export default MobileNavbar;

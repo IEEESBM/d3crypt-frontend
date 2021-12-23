@@ -6,14 +6,11 @@ import logo from "../../assets/logo.svg";
 
 import "./Home.css";
 export default function Home() {
-
   return (
     <div className="h-container">
       <div className="head">
-      <img src={logo} className="logo2" />
-        <span className="h-text">
-        Crypt
-        </span> 
+        <img src={logo} className="logo2" />
+        <span className="h-text">Crypt</span>
       </div>
       <img src={disc} className="disc-img" />
       <div className="head_text">
@@ -30,8 +27,10 @@ export default function Home() {
       <button className="register-btn-2">
         <span className="register-2">Register Now!</span>
       </button>
-      <div className="r-more">Read More</div>
-      <AiOutlineArrowDown className="down-arrow" />
+      <a href="#contact">
+        <div className="r-more">Read More</div>
+        <AiOutlineArrowDown className="down-arrow" />
+      </a>
     </div>
   );
 }

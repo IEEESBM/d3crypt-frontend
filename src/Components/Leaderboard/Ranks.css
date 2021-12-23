@@ -1,43 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 .ranks-container {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .ranks-box {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.50rem;
-    font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .ranks-pic {
-    position: absolute;
-    border-radius: 50%;
-    background: #CCCCCC;
+  position: absolute;
+  border-radius: 50%;
+  background: #cccccc;
 }
 
 .profileimage {
-    border-radius: 50%;
-    position: absolute;
+  border-radius: 50%;
+  position: absolute;
 }
 
 .ranks-name {
-    position: absolute;
-    font-size: 1.6vw;
-    line-height: 3.722vw;
-    font-weight: 600;
-    border-radius: 1.388vw;
+  position: absolute;
+  font-size: 1.6vw;
+  line-height: 3.722vw;
+  font-weight: 600;
+  border-radius: 1.388vw;
 }
 
 .ranks-position {
-    position: absolute;
-    line-height: 2.33vw;
-    width: 5.138vw;
-    height: 6.055vw;
-    border-radius: 1.388vw;
-    font-size: 5vw;
-    text-align: center;
+  position: absolute;
+  line-height: 2.33vw;
+  width: 5.138vw;
+  height: 6.055vw;
+  border-radius: 1.388vw;
+  font-size: 5vw;
+  text-align: center;
 }
 
 .ranks-suffix {
-    font-size: 1.5vw;
+  font-size: 1.5vw;
 }
