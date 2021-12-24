@@ -46,3 +46,12 @@
 
 
 }
+
+#headingTwo button .accordion-button{
+    background-color:#292929;
+}
+
+#acc{
+    background-color: #292929;
+    color: white;
+}
