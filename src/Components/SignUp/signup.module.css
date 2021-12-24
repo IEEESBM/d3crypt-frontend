@@ -14,16 +14,16 @@
 .bg .head {
   background: #121212;
   box-shadow: 0px 0.278vw 8.33vw 0.278vw rgba(0, 0, 0, 0.03);
-  height: 6.25vw;
+  height: 4vw;
 }
 
 .bg .hero {
   box-shadow: 0px 0px 0.902vw rgba(0, 0, 0, 0.55);
   border-radius: 3.33vw;
-  height: 64.3vw;
+  height: 70vw;
   width: 72.9vw;
   margin: auto;
-  margin-top: 6.11vw;
+  margin-top: 4vw;
   display: flex;
   row-gap: 0px;
 }

@@ -1,15 +1,42 @@
-import React from "react";
+import { React, useState, useEffect } from 'react'
 import styles from "./signup.module.css";
 import { ReactComponent as Illustration } from "./Taking notes-bro 1.svg";
 import { ReactComponent as Logo } from "./Group 83.svg";
 import MobileNav from "../MobileNav/MobileNav";
 import NavBar from "../Navbar/Navbar";
 
+const initialState={
+  name:'',
+  email:'',
+  phone:'',
+  college:'',
+  ID:'',
+  memNo:'',
+  teamName:'',
+  teamEmail:'',
+  password:''
+}
+
+
 function SignUp() {
+  const [newUser,setNewUser] = useState(initialState);
+
+  useEffect(()=>{},[newUser]);
+
+  const handleOnChange = e =>{
+    const {name,value} = e.target;
+
+    setNewUser({...newUser,[name]:value});
+  };
+
+  const handleOnSubmit= e =>{
+    e.preventDefault();
+  }
+
   return (
     <div className={styles.bg}>
       <MobileNav />
-      <div className={styles.head}>{/* <NavBar/> */}</div>
+      <div className={styles.head}><NavBar/></div>
       <div className={styles.hero}>
         <div className={styles.illustration}>
           <Logo className={styles.logo} />
@@ -20,72 +47,57 @@ function SignUp() {
           </p>
         </div>
         <div className={styles.content}>
-          <form className={styles.container}>
-            <div className={styles.text}>
-              <p className={styles.title}>Sign Up</p>
-              <div className={styles.form}>
-                <input
-                  className={styles.label}
-                  type="text"
-                  placeholder="Full name"
-                ></input>
-              </div>
-              <div className={styles.form}>
-                <input
-                  className={styles.label}
-                  type="text"
-                  placeholder="Email ID"
-                ></input>
-              </div>
-              <div className={styles.form}>
-                <input
-                  className={styles.label}
-                  type="text"
-                  placeholder="Mobile No."
-                ></input>
-              </div>
-              <div className={styles.form}>
-                <input
-                  className={styles.label}
-                  type="text"
-                  placeholder="College"
-                ></input>
-              </div>
-              <div className={styles.form}>
-                <input
-                  className={styles.label}
-                  type="text"
-                  placeholder="Application ID"
-                ></input>
-              </div>
-              <div className={styles.form}>
-                <input
-                  className={styles.label}
-                  type="text"
-                  placeholder="IEEE Membership N.(if any)"
-                ></input>
-              </div>
-              <div className={styles.form}>
-                <input
-                  className={styles.label}
-                  type="text"
-                  placeholder="Teammate name"
-                ></input>
-              </div>
-              <div className={styles.form}>
-                <input
-                  className={styles.label}
-                  type="text"
-                  placeholder="Teammate Email ID"
-                ></input>
-              </div>
-            </div>
-            <button className={styles.register} type="submit">
-              Register
-            </button>
+        <form className={styles.container} onSubmit={handleOnSubmit}>
+          <div className={styles.text}>
+          <p className={styles.title}>Sign Up</p>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name='name' value={newUser.name} 
+            onChange={handleOnChange}
+            placeholder='Full name'></input>
+          </div>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name='email' value={newUser.email} onChange={handleOnChange}placeholder='Email ID'></input>
+          </div>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name='phone'   value={newUser.phone} 
+            onChange={handleOnChange}
+            placeholder='Mobile No.'></input>
+          </div>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name='college' value={newUser.college} 
+            onChange={handleOnChange}
+            placeholder='College'></input>
+          </div>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name='ID'  value={newUser.ID} 
+            onChange={handleOnChange}
+            placeholder='Application ID'></input>
+          </div>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name='memNo' value={newUser.memNo} 
+            onChange={handleOnChange}
+            placeholder='IEEE Membership N.(if any)'></input>
+          </div>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name= 'teamName' value={newUser.teamName} 
+            onChange={handleOnChange}
+            placeholder='Teammate name'></input>
+          </div>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name='teamEmail' value={newUser.teamEmail} 
+            onChange={handleOnChange}
+            placeholder='Teammate Email ID'></input>
+          </div>
+          <div className={styles.form}>
+            <input className={styles.label} type='text' name='password' value={newUser.password} 
+            onChange={handleOnChange}
+            placeholder='Password'></input>
+          </div>
+          </div>
+          <button className ={styles.register}type='submit'>Register</button>  
           </form>
           <p className={styles.link}>
-            Already have an account? <a>Sign In!</a>
+            Already have an account? <a href='/signin'>Sign In!</a>
           </p>
         </div>
       </div>
