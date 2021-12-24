@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Avenir";
+    src: url("../../assets/fonts/AvenirLTStd-Black.otf");
+  }
+  
+
 .rules-container{
     background-color: #191919;
     min-height: calc(100vh - 90px);
@@ -8,50 +14,54 @@
 
 }
 
-.rules-h{
-    margin-top: 20px;
-    color: white;
-    font-size: 48px;
-    text-align: center;
-    font-weight: 800;
-    font-family: 'Avenir LT Std';
-    margin-bottom: 45px;
-}
-
-.rules-box{
-    width: 70%;
-    margin-left: 15%;
-    /* height: 160px; */
-    background-color: black;
-    background: #292929;
-    height: auto;
-    margin-bottom: 26px;
-}
-
-.rules-q{
-    color: white;
-    padding-top: 19px;
-    margin-left: 29px;
-    font-weight: 700;
-    font-size: 24px;
-}
-
-.rules-a{
-    color:#9C9C9C;
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 29px;
-    padding-top: 19px;
-    padding-bottom: 19px;
 
 
-}
 
-#headingTwo button .accordion-button{
-    background-color:#292929;
-}
 
 #acc{
     background-color: #292929;
     color: white;
 }
+
+
+.accordion-item
+{
+   
+   width:1006px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    border:none;
+    font-family: Avenir LT Std;
+font-style: normal;
+font-weight: 350;
+font-size: 16px;
+line-height: 24px;
+/* or 150% */
+
+
+color: #9C9C9C;
+}
+.accordion-body
+{
+    
+    background-color: #292929;
+    border:none;
+    color: #9C9C9C;
+}
+.accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  }
+#acc
+{
+    font-family: Avenir LT Std;
+    font-style: normal;
+    font-weight:normal;
+    font-size: 24px;
+    line-height: 28px;
+    padding-left: 29px;
+    padding-top: 14.5px;
+    padding-right:29px;
+    padding-bottom: 14.5px;
+}
+
