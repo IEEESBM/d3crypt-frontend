@@ -65,3 +65,12 @@ color: #9C9C9C;
     padding-bottom: 14.5px;
 }
 
+
+#accordion-item{
+    border: none;
+}
+
+#accordion-item::focus{
+
+    outline: none;
+}
