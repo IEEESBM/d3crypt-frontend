@@ -31,6 +31,8 @@ export default function Home() {
         <div className="r-more">Read More</div>
         <AiOutlineArrowDown className="down-arrow" />
       </a>
+      
+
     </div>
   );
 }
