@@ -194,13 +194,14 @@
     position: absolute;
     height: 300vh;
     top: 100vh;
+    width:100vw;
   }
   .ieee-img
   {
     position: absolute;
 width: 288px;
 height: 284px;
-left: 162px;
+left: 11.25%;
 top:0.00602861px;
 
 
@@ -210,7 +211,7 @@ top:0.00602861px;
     position: absolute;
 width: 480px;
 height: 320px;
-left: 834px;
+left: 57.9166%;
 top: 34.9659%;
   }
   .rules-img
@@ -218,7 +219,7 @@ top: 34.9659%;
     position: absolute;
 width: 474px;
 height: 261px;
-left: 45px;
+left: 3.125%;
 top: 74.21895932%;
   }
  
@@ -227,7 +228,7 @@ top: 74.21895932%;
   position: absolute;
 width: 566px;
 height: 114px;
-left: 748px;
+left: 51.94444%;
 top: 9.51181%;
 
 font-family: Avenir LT Std;
@@ -249,7 +250,7 @@ color: #FFFFFF;
   position: absolute;
 width: 463px;
 height: 76px;
-left:150px;
+left:10.416666%;
 top: 29.8751406%;
 
 font-family: Poppins;
@@ -267,7 +268,7 @@ color: #FFB800;
   position: absolute;
 width: 463px;
 height: 76px;
-left: 814px;
+left: 56.52777%;
 top: 3.081292%;
 
 font-family: Poppins;
@@ -287,8 +288,8 @@ color: #FFB800;
   position: absolute;
 width: 664px;
 height: 104px;
-left: 170px;
-top: 559px;
+left: 11.805555%;
+top: 37.2434488%;
 
 font-family: Poppins;
 font-style: normal;
@@ -308,7 +309,7 @@ color: #FFFFFF;
   position: absolute;
   width: 664px;
   height: 104px;
-  left: 170px;
+  left: 11.805555%;
   top: 45.0136648%;
   
   font-family: Poppins;
@@ -329,7 +330,7 @@ align-items: center;
   position: absolute;
   width: 664px;
   height: 104px;
-  left: 170px;
+  left: 11.805555%;
   top: 52.7838808%;
  
 align-items: center;
@@ -355,7 +356,7 @@ align-items: center;
   position: absolute;
 width: 6px;
 height: 6px;
-left: 150px;
+left: 10.416666%;
 top: 38.1142489%;
 border-radius: 50%;
 
@@ -366,7 +367,7 @@ background: #C4C4C4;
   position: absolute;
 width: 6px;
 height: 6px;
-left: 150px;
+left: 10.416666%;
 top: 45.683511%;
 border-radius: 50%;
 
@@ -377,7 +378,7 @@ background: #C4C4C4;
   position: absolute;
 width: 6px;
 height: 6px;
-left: 150px;
+left: 10.416666%;
 top: 53.45372%;
 border-radius: 50%;
 
@@ -389,7 +390,7 @@ background: #C4C4C4;
   position: absolute;
 width: 182px;
 height: 46px;
-left: 152px;
+left: 10.555555%;
 top: 61.558866%;
 border: none;
 background: #292929;
@@ -423,7 +424,7 @@ color: #FFFFFF;
   position: absolute;
 width: 463px;
 height: 76px;
-left: 814px;
+left: 56.52777%;
 top: 67.25255%;
 
 font-family: Poppins;
@@ -443,7 +444,7 @@ color: #FFB800;
   position: absolute;
 width: 664px;
 height: 51px;
-left: 672px;
+left: 46.66666%;
 top: 74.218959%;
 
 font-family: Poppins;
@@ -465,7 +466,7 @@ color: #FFFFFF;
   position: absolute;
 width: 664px;
 height: 51px;
-left: 672px;
+left: 46.6666666%;
 top: 78.17051%;
 
 font-family: Poppins;
@@ -487,7 +488,7 @@ color: #FFFFFF;
   position: absolute;
 width: 664px;
 height: 51px;
-left: 672px;
+left: 46.6666666%;
 top: 82.1231%;
 
 font-family: Poppins;
@@ -508,7 +509,7 @@ color: #FFFFFF;
   position: absolute;
 width: 664px;
 height: 51px;
-left: 672px;
+left: 46.6666666%;
 top: 86.075237%;
 
 font-family: Poppins;
@@ -529,7 +530,7 @@ color: #FFFFFF;
   position: absolute;
 width: 664px;
 height: 51px;
-left: 672px;
+left: 46.6666666%;
 top: 90.027329%;
 
 font-family: Poppins;
@@ -551,7 +552,7 @@ color: #FFFFFF;
   position: absolute;
 width: 6px;
 height: 6px;
-left: 655px;
+left: 45.48611111%;
 top: 74.8888055%;
 
 background: #C4C4C4;
@@ -564,7 +565,7 @@ border-radius: 50%;
   position: absolute;
 width: 6px;
 height: 6px;
-left: 655px;
+left: 45.48611111%;
 top: 78.8408%;
 
 background: #C4C4C4;
@@ -576,7 +577,7 @@ border-radius: 50%;
   position: absolute;
   width: 6px;
   height: 6px;
-  left: 655px;
+  left: 45.48611111%;
   top: 82.7929907%;
   
   background: #C4C4C4;
@@ -588,7 +589,7 @@ border-radius: 50%;
   position: absolute;
 width: 6px;
 height: 6px;
-left: 655px;
+left: 45.48611111%;
 top: 86.7450833%;
 
 background: #C4C4C4;
@@ -600,7 +601,7 @@ border-radius: 50%;
   position: absolute;
 width: 6px;
 height: 6px;
-left: 655px;
+left: 45.48611111%;
 top: 90.69717%;
 border-radius: 50%;
 
@@ -611,7 +612,7 @@ background: #C4C4C4;
   position: absolute;
 width: 182px;
 height: 46px;
-left: 1100px;
+left: 76.3888%;
 top: 95.1851454%;
 border: none;
 background: #292929;
