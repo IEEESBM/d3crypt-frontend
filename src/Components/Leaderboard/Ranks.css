@@ -1,43 +1,215 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
-.ranks-container {
-  color: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+.leaderboard-container .ranks-container {
+    color: #FFFFFF;
+    width: 90vw;
+    height: 15vh;
 }
 
-.ranks-box {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
+.leaderboard-container .ranks-box {
+    font-family: 'Poppins', sans-serif;
+    font-size: .694vw;
+    font-weight: 600;
 }
 
-.ranks-pic {
-  position: absolute;
-  border-radius: 50%;
-  background: #cccccc;
+.leaderboard-container .rank-box1 {
+    box-shadow: 0px 0px 13px rgba(180, 180, 180, 0.1);
+    background-color: #BF8A00;
+    position: absolute;
+    width: 20.94vw;
+    height: 14.79vw;
+    top: 14.16vw;
+    left: 41.11vw;
+    border-radius: 1.388vw;
+    line-height: 9.722vw;
+    z-index: 3;
 }
 
-.profileimage {
-  border-radius: 50%;
-  position: absolute;
+.leaderboard-container .rank-box1-pic {
+    top: -2vw;
+    width: 7.08vw;
+    height: 7.08vw;
 }
 
-.ranks-name {
-  position: absolute;
-  font-size: 1.6vw;
-  line-height: 3.722vw;
-  font-weight: 600;
-  border-radius: 1.388vw;
+.leaderboard-container .rank-box1-name {
+    top: 5.416vw;
+    width: 9.166vw;
+    height: 2.361vw;
 }
 
-.ranks-position {
-  position: absolute;
-  line-height: 2.33vw;
-  width: 5.138vw;
-  height: 6.055vw;
-  border-radius: 1.388vw;
-  font-size: 5vw;
-  text-align: center;
+.leaderboard-container .rank-box1-pos {
+    top: 11.33vw;
 }
 
-.ranks-suffix {
-  font-size: 1.5vw;
+.leaderboard-container .rank-box2 {
+    background-color: #6D6D6D;
+    position: absolute;
+    width: 16.875vw;
+    height: 11.25vw;
+    top: 17.708vw;
+    left: 26.875vw;
+    border-radius: 1.388vw;
+    line-height: 9.722vw;
+    z-index: 2;
+}
+
+.leaderboard-container .rank-box2-pic {
+    top: -2vw;
+    width: 5.277vw;
+    height: 5.277vw;
+}
+
+.leaderboard-container .rank-box2-name {
+    top: 3.25vw;
+    width: 9.166vw;
+    height: 2.361vw;
+}
+
+.leaderboard-container .rank-box2-pos {
+    top: 7.791vw;
+}
+
+.leaderboard-container .rank-box3 {
+    background-color: #675117;
+    position: absolute;
+    width: 16.875vw;
+    height: 9.375vw;
+    top: 19.583vw;
+    left: 60.277vw;
+    border-radius: 1.388vw;
+    line-height: 9.722vw;
+    z-index: 2;
+}
+
+.leaderboard-container .rank-box3-pic {
+    top: -2vw;
+    width: 3.47vw;
+    height: 3.47vw;
+}
+
+.leaderboard-container .rank-box3-name {
+    top: 1.55vw;
+    width: 9.166vw;
+    height: 2.361vw;
+}
+
+.leaderboard-container .rank-box3-pos {
+    top: 5.916vw;
+}
+
+.leaderboard-container .ranks-pic {
+    position: absolute;
+    border-radius: 50%;
+    background: #CCCCCC;
+}
+
+.leaderboard-container .profileimage {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.leaderboard-container .ranks-name {
+    position: absolute;
+    font-size: 1.6vw;
+    line-height: 3.722vw;
+    font-weight: 600;
+    border-radius: 1.388vw;
+}
+
+.leaderboard-container .ranks-position {
+    position: absolute;
+    line-height: 2.33vw;
+    width: 5.138vw;
+    height: 6.055vw;
+    border-radius: 1.388vw;
+    font-size: 5vw;
+    text-align: center;
+}
+
+.leaderboard-container .ranks-suffix {
+    font-size: 1.5vw;
+}
+
+
+/* Mobile View */
+
+@media (max-width: 360px) {
+    .leaderboard-container .ranks-container {
+        position: relative;
+        top: -7vh;
+    }
+    .leaderboard-container .rank-box1 {
+        width: 30.94vw;
+        height: 22.79vw;
+        top: 18.16vw;
+        left: 35.11vw;
+        border-radius: 5vw;
+    }
+    .leaderboard-container .rank-box1-pic {
+        top: -4vw;
+        width: 13.08vw;
+        height: 13.08vw;
+        line-height: 5vh;
+    }
+    .leaderboard-container .rank-box1-name {
+        top: 9.416vw;
+        width: 15.166vw;
+        height: 4.361vw;
+    }
+    .leaderboard-container .rank-box1-pos {
+        top: 18.33vw;
+    }
+    .leaderboard-container .rank-box2 {
+        width: 24.875vw;
+        height: 19.25vw;
+        top: 21.708vw;
+        left: 12.875vw;
+        border-radius: 5vw;
+    }
+    .leaderboard-container .rank-box2-pic {
+        top: -3vw;
+        width: 9.277vw;
+        height: 9.277vw;
+    }
+    .leaderboard-container .rank-box2-name {
+        top: 7.25vw;
+        width: 15.166vw;
+        height: 2.361vw;
+    }
+    .leaderboard-container .rank-box2-pos {
+        top: 14.791vw;
+    }
+    .leaderboard-container .rank-box3 {
+        width: 24.875vw;
+        height: 17.375vw;
+        top: 23.583vw;
+        left: 64.277vw;
+        border-radius: 5vw;
+    }
+    .leaderboard-container .rank-box3-pic {
+        top: -3vw;
+        width: 7.47vw;
+        height: 7.47vw;
+    }
+    .leaderboard-container .rank-box3-name {
+        top: 6.55vw;
+        width: 15.166vw;
+        height: 4.361vw;
+    }
+    .leaderboard-container .rank-box3-pos {
+        top: 12.916vw;
+    }
+    .leaderboard-container .ranks-name {
+        font-size: 2.6vw;
+        line-height: 4.722vw;
+        font-weight: 600;
+    }
+    .leaderboard-container .ranks-position {
+        line-height: 2.33vw;
+        width: 5.138vw;
+        height: 6.055vw;
+        font-size: 7vw;
+    }
+    .leaderboard-container .ranks-suffix {
+        font-size: 3vw;
+    }
 }

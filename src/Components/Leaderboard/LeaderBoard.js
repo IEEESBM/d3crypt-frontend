@@ -1,25 +1,24 @@
 import React from "react";
+import Sidebar from "./Sidebar";
 import Ranks from "./Ranks";
-import Sidebar from "./components/Sidebar";
 import PositionTable from "./PositionTable";
 import "./LeaderBoard.css";
 
 function LeaderBoard() {
   return (
-    <div className="L-container">
-      <Sidebar />
-      <div className="leaderboard-container">
+    <div className="leaderboard-container">
+      <Sidebar></Sidebar>
+      <div className="leaderboard-main">
         <h1 className="header">
           <p className="heading">Leaderboard</p>
           <p className="heading-line">
             <hr />
           </p>
         </h1>
-
-        {/* -------------- Ranks box ----------------- */}
-        <Ranks></Ranks>
-        {/* --------------- Table ------------------- */}
-        <PositionTable></PositionTable>
+        <div className="leaderboard-content">
+          <Ranks></Ranks>
+          <PositionTable></PositionTable>
+        </div>
       </div>
     </div>
   );
