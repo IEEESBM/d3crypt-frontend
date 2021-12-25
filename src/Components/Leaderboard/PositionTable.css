@@ -1,134 +1,170 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-.position-container {
-  position: absolute;
-  top: 32.847vw;
-  left: 11.0416vw;
-  color: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.leaderboard-container .position-container {
+    position: absolute;
+    top: 32.847vw;
+    left: 11.0416vw;
+    color: #FFFFFF;
 }
 
-.position-box {
-  max-width: 82.22vw;
+.leaderboard-container .position-box {
+    max-width: 82.22vw;
 }
+
 
 /* -------------------- Header Box ----------------------- */
 
-.position-header {
-  background: #292929;
-  position: relative;
-  font-weight: 600;
-  font-size: 1.25vw;
-  border: 1px solid #161616;
-  width: 82.22vw;
-  height: 4.0972vw;
-  border-radius: 0.555vw;
-  color: #ffb800;
+.leaderboard-container .position-header {
+    background: #292929;
+    font-weight: 600;
+    font-size: 1.25vw;
+    border: 1px solid #161616;
+    width: 82.22vw;
+    height: 4.0972vw;
+    border-radius: .555vw;
+    color: #FFB800;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
 }
 
-.PositionH {
-  position: absolute;
-  width: 6.3194vw;
-  height: 1.736vw;
-  top: 0.805vw;
-  left: 3.54vw;
+.leaderboard-container .PositionH {
+    flex: 1;
+    margin-top: 1vw;
 }
 
-.PositionN {
-  position: absolute;
-  width: 4.1664vw;
-  height: 1.736vw;
-  top: 0.805vw;
-  left: 30.13vw;
+.leaderboard-container .PositionN {
+    flex: 1;
+    margin-top: 1vw;
 }
 
-.PositionP {
-  position: absolute;
-  width: 5.416vw;
-  height: 1.736vw;
-  top: 0.805vw;
-  left: 54.861vw;
+.leaderboard-container .PositionP {
+    flex: 1;
+    margin-top: 1vw;
 }
 
-.PositionS {
-  position: absolute;
-  width: 3.4027vw;
-  height: 1.736vw;
-  top: 0.805vw;
-  left: 74.6527vw;
+
+/* -------------------- Table ----------------------- */
+
+.leaderboard-container .position-table {
+    margin-top: 0.972vw;
+    background: #292929;
+    position: relative;
+    border: 1px solid #161616;
+    width: 82.22vw;
+    height: 5.486vw;
+    border-radius: .555vw;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
 }
 
-.fa-sort {
-  position: absolute;
-  width: 0.77vw;
-  height: 0.452vw;
-  top: 0.3472vw;
-  left: 3.47vw;
+.leaderboard-container .position-h {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
 }
 
-/* ---------------------- Position Box ----------------------- */
-
-.position-table {
-  margin-top: 0.972vw;
-  background: #292929;
-  position: relative;
-  border: 1px solid #161616;
-  width: 82.22vw;
-  height: 5.486vw;
-  border-radius: 0.555vw;
+.leaderboard-container .Position {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 0.833vw;
+    width: 5.277vw;
+    height: 2.152vw;
+    padding: 0vw .833vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3.472vw;
 }
 
-.Position {
-  position: absolute;
-  left: 3.055vw;
-  top: 1.66vw;
-  color: #000000;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-size: 0.833vw;
-  width: 5.277vw;
-  height: 2.152vw;
-  padding: 0vw 0.833vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: 3.472vw;
+.leaderboard-container .position-n {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.position-pic {
-  position: absolute;
-  left: 27.708vw;
-  top: 1.36vw;
-  width: 2.22vw;
-  height: 2.22vw;
-  background: #7d7d7d;
-  border-radius: 50%;
+.leaderboard-container .position-pic {
+    width: 2.22vw;
+    height: 2.22vw;
+    background: #7D7D7D;
+    border-radius: 50%;
 }
 
-.position-name {
-  position: absolute;
-  font-size: 1.25vw;
-  font-weight: 600;
-  left: 30.76vw;
-  top: 1.609vw;
-  width: 6.805vw;
-  height: 1.736vw;
+.leaderboard-container .position-name {
+    margin-top: 1vw;
+    font-size: 1.25vw;
+    font-weight: 600;
+    width: 6.805vw;
+    height: 1.736vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.position-points {
-  position: absolute;
-  font-size: 1.36vw;
-  font-weight: 600;
-  left: 55.55vw;
-  top: 1.658vw;
-  width: 2.986vw;
-  height: 1.458vw;
+.leaderboard-container .position-p {
+    flex: 1;
+    font-size: 1.36vw;
+    font-weight: 600;
+    width: 2.986vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #FFB800;
 }
 
-.position-sort {
-  position: absolute;
-  font-size: 1.66vw;
-  left: 76.527vw;
-  top: 1.136vw;
-  width: 2.986vw;
-  height: 1.458vw;
+@media (max-width: 360px) {
+    .leaderboard-container .position-container {
+        top: 42vh;
+        max-width: 80vw;
+    }
+    .leaderboard-container .position-header {
+        font-size: 1.7vh;
+        height: 4.0972vh;
+    }
+    /* -------------------- Table ----------------------- */
+    .leaderboard-container .position-table {
+        margin-top: 1.5vw;
+        height: 5.486vh;
+    }
+    .leaderboard-container .position-h {
+        margin-top: 2vh;
+    }
+    .leaderboard-container .Position {
+        font-size: 1.5vh;
+        width: 9.277vw;
+        height: 2.152vh;
+    }
+    .leaderboard-container .position-n {
+        flex: 1;
+        width: 9vw;
+    }
+    .leaderboard-container .position-pic {
+        width: 3.22vh;
+        height: 3.22vh;
+    }
+    .leaderboard-container .position-name {
+        font-size: 1.5vh;
+        width: 15.805vw;
+        height: 1.736vh;
+        margin-top: 2vh;
+    }
+    .leaderboard-container .position-p {
+        flex: 1;
+        font-size: 1.6vh;
+        font-weight: 600;
+        width: 2.986vw;
+        height: 5vh;
+    }
 }
