@@ -21,7 +21,7 @@ function App() {
             <MobileNavbar />
             <Navbar />
             <Home />
-            <H2/>
+            <H2 />
             <Contact />
           </Route>
           <Route exact path="/user-profile" component={UserProfile} />
@@ -29,14 +29,13 @@ function App() {
           <Route exact path="/signin" component={Signin} />
           <Route exact path="/leaderboard" component={Leaderboard} />
           <Route exact path="/faq">
-          <Navbar/>
-<FAQs/>
+            <Navbar />
+            <FAQs />
           </Route>
           <Route exact path="/rules">
-          <Navbar/>
-          <Rules/>
+            <Navbar />
+            <Rules />
           </Route>
-
         </Switch>
       </Router>
     </div>
