@@ -12,8 +12,6 @@ const initialState={
   college:'',
   ID:'',
   memNo:'',
-  teamName:'',
-  teamEmail:'',
   password:''
 }
 
@@ -77,16 +75,6 @@ function SignUp() {
             <input className={styles.label} type='text' name='memNo' value={newUser.memNo} 
             onChange={handleOnChange}
             placeholder='IEEE Membership N.(if any)'></input>
-          </div>
-          <div className={styles.form}>
-            <input className={styles.label} type='text' name= 'teamName' value={newUser.teamName} 
-            onChange={handleOnChange}
-            placeholder='Teammate name'></input>
-          </div>
-          <div className={styles.form}>
-            <input className={styles.label} type='text' name='teamEmail' value={newUser.teamEmail} 
-            onChange={handleOnChange}
-            placeholder='Teammate Email ID'></input>
           </div>
           <div className={styles.form}>
             <input className={styles.label} type='text' name='password' value={newUser.password} 

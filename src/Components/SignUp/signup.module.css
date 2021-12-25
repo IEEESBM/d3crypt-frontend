@@ -20,7 +20,7 @@
 .bg .hero {
   box-shadow: 0px 0px 0.902vw rgba(0, 0, 0, 0.55);
   border-radius: 3.33vw;
-  height: 70vw;
+  height: 60vw;
   width: 72.9vw;
   margin: auto;
   margin-top: 4vw;
@@ -165,7 +165,7 @@ p.link > a {
   .bg .hero {
     margin-top: 13.6vw;
     display: block;
-    height: 170.2vw;
+    height: 168vw;
     border-radius: 13.3vw;
   }
   .illustration .logo {
@@ -190,7 +190,7 @@ p.link > a {
   .hero .content {
     border-radius: 0px 0px 13.3vw 13.3vw;
     background: #474747;
-    height: 150vw;
+    height: 125vw;
   }
   .container .text {
     margin-left: 0;
