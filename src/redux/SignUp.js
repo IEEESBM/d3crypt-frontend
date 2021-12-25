@@ -14,18 +14,20 @@ export const signUpSlice = createSlice({
     signUp: async (state, action) => {
       console.log(action.payload);
       await axios
-        .post('http://localhost:4000/api/auth/signup', {
-          "name": `${action.payload.name}`,
+        .post('http://localhost:4000/signup', {
+          "username": `${action.payload.username}`,
           "email": `${action.payload.email}`,
           "password": `${action.payload.password}`,
+          "phone": action.payload.phone,
           "college": `${action.payload.college}`,
-          "phoneno": `${action.payload.phone}`
+          "ID": action.payload.ID,
+          "memNo": action.payload.memNo
         })
         .then((response) => {
           console.log(response);
         })
         .catch((error)=>{
-          console.log(error.response.data);
+          console.log(error.response.data.errorMessage);
         })
 
     }

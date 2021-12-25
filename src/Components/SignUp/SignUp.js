@@ -8,15 +8,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { signUp } from '../../redux/SignUp';
 
-const initialState={
-  name:'',
-  email:'',
-  phone:'',
-  college:'',
-  ID:'',
-  memNo:'',
-  password:''
-}
+
 
 
 function SignUp() {
@@ -26,16 +18,14 @@ function SignUp() {
   const dispatch = useDispatch();
 
   const initialState = {
-    name: '',
+    username: '',
     email: '',
+    password: '',
     phone: '',
     college: '',
     ID: '',
     memNo: '',
-    teamName: '',
-    teamEmail: '',
-    password: '',
-    errorMessage: ''
+    
   }
 
   const [newUser, setNewUser] = useState(initialState);
@@ -70,7 +60,7 @@ function SignUp() {
           <div className={styles.text}>
           <p className={styles.title}>Sign Up</p>
           <div className={styles.form}>
-            <input className={styles.label} type='text' name='name' value={newUser.name} 
+            <input className={styles.label} type='text' name='username' value={newUser.username} 
             onChange={handleOnChange}
             placeholder='Full name'></input>
           </div>
