@@ -2,22 +2,26 @@ import React, { useState } from "react";
 import { ReactComponent as Ques } from "../../assets/question.svg";
 import { ReactComponent as Logos } from "../../assets/logo.svg";
 import styles from "./signin.css";
-
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { signIn } from "../../redux/Signin";
 import axios from "axios";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const dispatch = useDispatch();
+
   function handleSubmit(e) {
     e.preventDefault();
     const data = { email, password };
     console.log(data);
-    // axios
-    //   .post("https://localhost5000/login", data)
-    //   .then((res) => console.log(res))
-    //   .catch((err) => console.log(err));
+    dispatch(signIn(data));
+    
   }
-  return (
+    
+    return (
     <>
       <div className="signin col-lg-8 col-md-6 mx-auto mt-5 d-none d-sm-flex ">
         <div className="form py-3 col-lg-7 col-md-4 col-12">
