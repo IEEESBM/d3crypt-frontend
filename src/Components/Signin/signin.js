@@ -2,12 +2,21 @@ import React, { useState } from "react";
 import { ReactComponent as Ques } from "../../assets/question.svg";
 import { ReactComponent as Logos } from "../../assets/logo.svg";
 import styles from "./signin.css";
+// import { useSelector } from "react-redux";
+// import { useDispatch } from "react-redux";
+// import { signIn } from "../../redux/SignInSlice";
+// import axios from "axios";
+
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { signIn } from "../../redux/Signin";
-import axios from "axios";
+import { signIn } from '../../redux/SignInSlice';
+import { signInUser } from '../../redux/actions/authSignIn';
+import { Redirect } from 'react-router-dom';
 
 export default function Signin() {
+
+  const { errorMessage, isLoggedIn } = useSelector((state) => state.signUp);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -17,11 +26,33 @@ export default function Signin() {
     e.preventDefault();
     const data = { email, password };
     console.log(data);
-    dispatch(signIn(data));
-    
+    dispatch(signInUser(data)).then(
+      () => {
+      },
+      (error) => {
+        if (error.email) {
+          console.log("Email");
+          console.log(error.email);
+          document.querySelector('.emailError').innerHTML = error.email;
+          document.querySelector('.passwordError').innerHTML = ""
+
+        }
+        if (error.password) {
+          console.log("password");
+
+          console.log(error.password);
+          document.querySelector('.emailError').innerHTML = "";
+
+          document.querySelector('.passwordError').innerHTML = error.password;
+        }      }
+    );
   }
-    
-    return (
+
+  return (
+    isLoggedIn
+    ? <Redirect to='/' />
+    :
+
     <>
       <div className="signin col-lg-8 col-md-6 mx-auto mt-5 d-none d-sm-flex ">
         <div className="form py-3 col-lg-7 col-md-4 col-12">
@@ -37,6 +68,8 @@ export default function Signin() {
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
+                <div className='emailError error'>&nbsp;</div>
+
               <hr></hr>
               <p className="my-4"></p>
               <input
@@ -47,10 +80,12 @@ export default function Signin() {
                 required
                 onChange={(e) => setPassword(e.target.value)}
               />
+                <div className='passwordError error'>&nbsp;</div>
+
               <p className="text-light text-end mt-2 col-8 fs-5 ">
                 Forgot Password ?
               </p>
-              <a class="sign_in" href="/register">
+              <a class="sign_in">
                 <button
                   type="submit"
                   class="btn-login col-8 btn-block text-center p-2 m-2"

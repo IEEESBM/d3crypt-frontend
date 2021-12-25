@@ -1,6 +1,7 @@
 import axios from "axios"
 import { signUp, showErrorMessages } from "../SignUpSlice";
 
+
 export const register = function (newUser) {
   return function (dispatch) {
     return axios.post('http://localhost:4000/signup', {
@@ -16,7 +17,7 @@ export const register = function (newUser) {
         (response) => {
           console.log(response);
           console.log(response.data.token);
-          localStorage.setItem('jwt', response.data.token);
+          localStorage.setItem("user",JSON.stringify(response.data.token));
           dispatch(signUp(newUser));
           return Promise.resolve();
         },

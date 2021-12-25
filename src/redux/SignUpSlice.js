@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios';
 
-const user = JSON.parse(localStorage.getItem('jwt'));
-
-const initialState = user
+// const user = localStorage.getItem("user")? JSON.parse(localStorage.getItem('user')):null;
+const user=""
+const initialState = localStorage.getItem("user")
   ? { isLoggedIn: true, errorMessage: {} }
   : { isLoggedIn: false, errorMessage: {} }
 

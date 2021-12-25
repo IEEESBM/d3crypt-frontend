@@ -3,8 +3,15 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import logo from "../../assets/logo.svg";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 export default function NavBar() {
+  const { errorMessage, isLoggedIn } = useSelector((state) => state.signUp);
+  function handleLogout() {
+    localStorage.removeItem("user");
+    window.location.reload();
+  }
   return (
     <div className="nav-container">
       <div className="nav-item">
@@ -37,18 +44,29 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-      <Link to={"/register"}>
-        <button className="register-btn">
-          <span className="register">Register</span>
-        </button>
-      </Link>
+      {isLoggedIn ? (
+        <>
+          <button className="login-btn" onClick={handleLogout}>
+            <span className="login">Logout</span>
+            <AiOutlineArrowRight className="right-arrow" />
+          </button>
+        </>
+      ) : (
+        <>
+          <Link to={"/register"}>
+            <button className="register-btn">
+              <span className="register">Register</span>
+            </button>
+          </Link>
 
-      <Link to={"/signin"}>
-        <button className="login-btn">
-          <span className="login">Sign in</span>
-          <AiOutlineArrowRight className="right-arrow" />
-        </button>
-      </Link>
+          <Link to={"/signin"}>
+            <button className="login-btn">
+              <span className="login">Sign in</span>
+              <AiOutlineArrowRight className="right-arrow" />
+            </button>
+          </Link>
+        </>
+      )}
     </div>
   );
 }
