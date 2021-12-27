@@ -17,7 +17,7 @@ export const register = function (newUser) {
         (response) => {
           console.log(response);
           console.log(response.data.token);
-          localStorage.setItem("user",JSON.stringify(response.data.token));
+          localStorage.setItem("user",JSON.stringify(response.data));
           dispatch(signUp(newUser));
           return Promise.resolve();
         },
