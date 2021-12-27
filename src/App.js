@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import MobileNavbar from "./Components/MobileNav/MobileNav";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import SignUp from "./Components/SignUp/SignUp";
-import Signin from "./Components/Signin/signin";
+import Signin from "./Components/Signin/Signin";
 import Leaderboard from "./Components/Leaderboard/LeaderBoard";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Home/Contact";

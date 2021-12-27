@@ -43,7 +43,7 @@ function SignUp() {
     dispatch(register(newUser))
       .then(
         () => {
-
+          
         },
         (error) => {
           console.log(error);
