@@ -1,13 +1,46 @@
-import React from "react";
+import { React, useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import logo from "../../assets/logo.svg";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import axios from "axios";
+import { verified } from "../../redux/SignUpSlice";
 
 export default function NavBar() {
-  const { errorMessage, isLoggedIn } = useSelector((state) => state.signUp);
+
+  const { isLoggedIn } = useSelector((state) => state.signUp);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    var user = localStorage.getItem("user");
+    if(user){
+      user = JSON.parse(user);
+      axios.post('http://localhost:4000/get-user',{
+          "uid": `${user._id}`
+      })
+      .then(
+        (response)=>{
+          console.log(response);
+          console.log(response.data.isVerified);
+          if(response.data.isVerified==true){
+            console.log("dispatch for verified called");
+            dispatch(verified());
+          }
+        },
+        (error)=>{
+          console.log(error);
+        }
+      )
+    }
+    else{
+      console.log("User not found")
+    }
+  },[])
+
+  const { errorMessage } = useSelector((state) => state.signUp);
   function handleLogout() {
     localStorage.removeItem("user");
     window.location.reload();

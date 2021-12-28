@@ -8,14 +8,15 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { signUp } from '../../redux/SignUpSlice';
 import './signUpErrors.css';
-import { register } from '../../redux/actions/auth';
-import { Redirect } from 'react-router-dom';
+import { register } from '../../redux/actions/authSignup';
+import { Link, Redirect, Route } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 
 function SignUp() {
 
-  const { errorMessage, isLoggedIn } = useSelector((state) => state.signUp);
+  const { errorMessage } = useSelector((state) => state.signUp);
 
   const dispatch = useDispatch();
 
@@ -38,12 +39,14 @@ function SignUp() {
     setNewUser({ ...newUser, [name]: value });
   };
 
+  const history = useHistory();
+
   const handleOnSubmit = e => {
     e.preventDefault();
     dispatch(register(newUser))
       .then(
         () => {
-          
+          window.location.href = 'http://localhost:3000/verification';
         },
         (error) => {
           console.log(error);
@@ -77,9 +80,9 @@ function SignUp() {
   }
 
   return (
-    isLoggedIn
-      ? <Redirect to='/' />
-      :
+    // isLoggedIn
+    //   ? <Redirect to='/' />
+    //   :
       <div className={styles.bg}>
         <MobileNav />
         <div className={styles.head}><NavBar /></div>
