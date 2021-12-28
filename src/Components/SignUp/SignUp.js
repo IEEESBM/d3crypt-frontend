@@ -39,14 +39,12 @@ function SignUp() {
     setNewUser({ ...newUser, [name]: value });
   };
 
-  const history = useHistory();
-
   const handleOnSubmit = e => {
     e.preventDefault();
     dispatch(register(newUser))
       .then(
         () => {
-          window.location.href = 'http://localhost:3000/verification';
+          // window.location.href = 'http://localhost:3000/verification';
         },
         (error) => {
           console.log(error);
