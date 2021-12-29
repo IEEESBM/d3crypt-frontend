@@ -59,6 +59,12 @@ input {
 }
 .signup-text {
   color: #ffb800;
+  padding-left: 1rem;
+  text-decoration: none;
+}
+.signup-text:hover{
+  color: #ffb800;
+font-weight: 800;
 }
 .mobile {
   border-radius: 30px;

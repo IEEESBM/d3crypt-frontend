@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { ReactComponent as Ques } from "../../assets/question.svg";
 import { ReactComponent as Logos } from "../../assets/logo.svg";
 import "./signin.css";
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
-import { signInUser } from '../../redux/actions/authSignIn';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
 
 export default function Signin() {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,20 +18,18 @@ export default function Signin() {
     const data = { email, password };
     console.log(data);
     dispatch(signInUser(data)).then(
-      () => {
-
-      },
+      () => {},
       (error) => {
         console.log(error);
         if (error.email) {
           console.log(error.email);
-          document.querySelector('.emailError').innerHTML = error.email;
-          document.querySelector('.passwordError').innerHTML = ""
+          document.querySelector(".emailError").innerHTML = error.email;
+          document.querySelector(".passwordError").innerHTML = "";
         }
         if (error.password) {
           console.log(error.password);
-          document.querySelector('.emailError').innerHTML = "";
-          document.querySelector('.passwordError').innerHTML = error.password;
+          document.querySelector(".emailError").innerHTML = "";
+          document.querySelector(".passwordError").innerHTML = error.password;
         }
       }
     );
@@ -40,7 +37,7 @@ export default function Signin() {
 
   return (
     <>
-    <NavBar/>
+      <NavBar />
       <div className="signin col-lg-8 col-md-6 mx-auto mt-5 d-none d-sm-flex ">
         <div className="form py-3 col-lg-7 col-md-4 col-12">
           <Logos className=" col-3 logo mx-5 my-4 mb-4" />
@@ -55,7 +52,7 @@ export default function Signin() {
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <div className='emailError error'>&nbsp;</div>
+              <div className="emailError error">&nbsp;</div>
 
               <hr></hr>
               <p className="my-4"></p>
@@ -67,7 +64,7 @@ export default function Signin() {
                 required
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <div className='passwordError error'>&nbsp;</div>
+              <div className="passwordError error">&nbsp;</div>
 
               <p className="text-light text-end mt-2 col-8 fs-5 ">
                 Forgot Password ?
@@ -84,7 +81,8 @@ export default function Signin() {
             </div>
             <div className="d-flex flex-row para">
               <p className="text-light mt-3 ">Don’t have an account yet?</p>
-              <a className="signup-text mt-3"> Sign Up!</a>
+
+              <a className="signup-text mt-3" href="/register">  Sign Up!</a>
             </div>
           </form>
         </div>

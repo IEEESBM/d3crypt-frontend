@@ -21,9 +21,8 @@ export const signInUser = function (user) {
           return Promise.resolve();
         },
         (error) => {
-          dispatch(showErrorMessagesSignIn(error.response.data.errorMessage));
-          console.log(error.response.data);
-          return Promise.reject(error.response.data.errorMessage);
+          dispatch(showErrorMessagesSignIn(error.response.data));
+          return Promise.reject(error.response.data);
         }
       );
   };
