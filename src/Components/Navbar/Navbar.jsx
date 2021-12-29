@@ -40,7 +40,6 @@ export default function NavBar() {
     }
   }, []);
 
-  const { errorMessage } = useSelector((state) => state.signUp);
   function handleLogout() {
     localStorage.removeItem("user");
     window.location.reload();

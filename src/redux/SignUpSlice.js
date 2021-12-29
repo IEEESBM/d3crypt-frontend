@@ -1,11 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-
-// const user = localStorage.getItem("user")? JSON.parse(localStorage.getItem('user')):null;
-const user=""
-const initialState = localStorage.getItem("user")
-  ? {  errorMessage: {} , isLoggedIn: false}
-  : { errorMessage: {}, isLoggedIn: false}
+const initialState = {
+  SignUpErrorMessage: {},
+  SignInErrorMessage: {},
+  isLoggedIn: false
+}
 
 
 export const signUpSlice = createSlice({
@@ -14,19 +13,57 @@ export const signUpSlice = createSlice({
   reducers: {
     signUp: (state, action) => {
       console.log(action.payload);
-      return { ...state,  errorMessage: {}, isLoggedIn:false }
+      return {
+        ...state,
+        SignUpErrorMessage: {},
+        SignInErrorMessage: {},
+        isLoggedIn: false
+      }
     },
-    showErrorMessages: (state, action) => {
-      return { ...state, errorMessage: action.payload, isLoggedIn:false}
+    showErrorMessagesSignUp: (state, action) => {
+      return {
+        ...state,
+        SignUpErrorMessage: action.payload,
+        SignInErrorMessage: {},
+        isLoggedIn: false
+      }
     },
-    verified: (state, action ) => {
+    verified: (state, action) => {
       console.log(action.payload);
-      return {...state, errorMessage:{}, isLoggedIn:true}
-    }
+      return {
+        ...state,
+        SignUpErrorMessage: {},
+        SignInErrorMessage: {},
+        isLoggedIn: true
+      }
+    },
+    signIn: (state, action) => {
+      console.log(action.payload);
+      return {
+        ...state,
+        SignUpErrorMessage: {},
+        SignInErrorMessage: {},
+        isLoggedIn: false
+      };
+    },
+    showErrorMessagesSignIn: (state, action) => {
+      return {
+        ...state,
+        SignUpErrorMessage: {},
+        SignInErrorMessage: action.payload,
+        isLoggedIn: false
+      };
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { signUp, showErrorMessages, verified } = signUpSlice.actions
+export const {
+  signUp,
+  showErrorMessagesSignUp,
+  verified,
+  signIn,
+  showErrorMessagesSignIn
+} = signUpSlice.actions
 
 export default signUpSlice.reducer

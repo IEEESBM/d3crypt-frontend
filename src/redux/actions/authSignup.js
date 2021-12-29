@@ -1,5 +1,5 @@
 import axios from "axios"
-import { signUp, showErrorMessages } from "../SignUpSlice";
+import { signUp, showErrorMessagesSignUp } from "../SignUpSlice";
 
 
 export const register = function (newUser) {
@@ -16,13 +16,12 @@ export const register = function (newUser) {
       .then(
         (response) => {
           console.log(response);
-          console.log(response.data.token);
           localStorage.setItem("user",JSON.stringify(response.data));
           dispatch(signUp(newUser));
           return Promise.resolve();
         },
         (error) => {
-          dispatch(showErrorMessages(error.response.data.errorMessage));
+          dispatch(showErrorMessagesSignUp(error.response.data.errorMessage));
           return Promise.reject(error.response.data.errorMessage);
         }
       )
