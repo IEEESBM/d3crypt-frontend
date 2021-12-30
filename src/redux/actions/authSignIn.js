@@ -1,5 +1,5 @@
 import axios from "axios";
-import { signIn, showErrorMessagesSignIn } from "../SignUpSlice";
+import { signIn, showErrorMessagesSignIn } from "../authSlice";
 
 export const signInUser = function (user) {
   return function (dispatch) {

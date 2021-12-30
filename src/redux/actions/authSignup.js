@@ -1,5 +1,5 @@
 import axios from "axios"
-import { signUp, showErrorMessagesSignUp } from "../SignUpSlice";
+import { signUp, showErrorMessagesSignUp } from "../authSlice";
 
 
 export const register = function (newUser) {

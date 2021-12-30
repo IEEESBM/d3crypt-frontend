@@ -6,7 +6,7 @@ import logo from "../../assets/logo.svg";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import { verified } from "../../redux/SignUpSlice";
+import { verified } from "../../redux/authSlice";
 
 export default function NavBar() {
   const { isLoggedIn } = useSelector((state) => state.signUp);

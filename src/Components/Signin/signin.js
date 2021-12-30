@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ReactComponent as Ques } from "../../assets/question.svg";
 import { ReactComponent as Logos } from "../../assets/logo.svg";
 import "./signin.css";
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
