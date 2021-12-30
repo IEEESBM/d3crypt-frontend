@@ -15,6 +15,17 @@ body {
   vertical-align: middle;
   display: inline-block;
 }
+.img{
+  animation: fadeIn 2.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .signin {
   border-radius: 30px;
   background: #474747;
