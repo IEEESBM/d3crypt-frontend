@@ -4,7 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import MobileNavbar from "./Components/MobileNav/MobileNav";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import SignUp from "./Components/SignUp/SignUp";
-import Signin from "./Components/Signin/SignIn";
+import SignIn from "./Components/Signin/SignIn";
 import Leaderboard from "./Components/Leaderboard/LeaderBoard";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Home/Contact";
@@ -28,7 +28,7 @@ function App() {
           </Route>
           <Route exact path="/user-profile" component={UserProfile} />
           <Route exact path="/register" component={SignUp} />
-          <Route exact path="/signin" component={Signin} />
+          <Route exact path="/signin" component={SignIn} />
           <Route exact path="/leaderboard" component={Leaderboard} />
           <Route exact path="/faq">
             <Navbar />
