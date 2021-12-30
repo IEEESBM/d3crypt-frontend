@@ -118,6 +118,11 @@ function SignUp() {
                   placeholder='Application ID'></input>
               </div>
               <div>&nbsp;</div>
+              <div className={styles.radioForm}>
+              <div className={styles.radio}>ieee member?</div>
+              <input type="radio" value="yes" name="mem"/><span className={styles.options}>yes</span>
+              <input type="radio" value="no" name="mem" /><span className={styles.options}>no</span>
+          </div>
               <div className={styles.form}>
                 <input className={styles.label} type='text' name='memNo' value={newUser.memNo}
                   onChange={handleOnChange}

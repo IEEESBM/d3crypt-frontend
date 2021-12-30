@@ -92,7 +92,7 @@ export default function Signin() {
           </form>
         </div>
         <div className="col-lg-5 col-md-4 img-fluid my-auto p-3 col-12">
-          <Ques className="col-10 my-3 mx-5" />
+          <Ques className="col-10 my-3 mx-5 img" />
           <p className="text-light text-center">
             Small info tidbit about D3Crypt. dolore magna aliqua. Ut enim ad
             minim veniam, quis nostrud exercitation.
@@ -102,7 +102,7 @@ export default function Signin() {
 
       <div className="col-10 d-flex flex-column d-sm-none justify-content-around mx-auto mobile my-auto mt-5 ">
         <div className="col-10 mx-auto img-fluid">
-          <Ques className="col-12 m-3" />
+          <Ques className="col-12 m-3 img" />
         </div>
         <div className="form-mobile p-3 col-lg-6 d-inline-block">
           <form>
