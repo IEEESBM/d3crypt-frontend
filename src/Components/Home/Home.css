@@ -36,7 +36,7 @@
     left: 0.6741573%;
     top: 35.8490566%;
   }
-  .h-text {
+  #h-text {
     left: 21.797752%;
     top: 0px;
     position: absolute;
@@ -681,7 +681,7 @@ color: #FFFFFF;
     top: 5.89px;
     left: 0;
   }
-  .h-text {
+  #h-text {
     position: absolute;
     width: 100%;
     height: 52px;

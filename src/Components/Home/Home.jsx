@@ -3,14 +3,17 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 // import FlipDown from '../../../public/flipdown';
 import disc from "../../assets/disc.svg";
 import logo from "../../assets/logo.svg";
+import { useSelector } from "react-redux";
 
 import "./Home.css";
 export default function Home() {
+  const { isLoggedIn } = useSelector((state) => state.signUp);
+
   return (
     <div className="h-container">
       <div className="head">
         <img src={logo} className="logo2" />
-        <span className="h-text">Crypt</span>
+      <div id="h-text">Crypt</div>  
       </div>
       <img src={disc} className="disc-img" />
       <div className="head_text">
@@ -24,9 +27,9 @@ export default function Home() {
         <div id="flipdown" class="flipdown"></div>
       </div>
 
-      <button className="register-btn-2">
+     {!isLoggedIn && <button className="register-btn-2">
         <span className="register-2">Register Now!</span>
-      </button>
+      </button>}
       <a href="#contact">
         <div className="r-more">Read More</div>
         <AiOutlineArrowDown className="down-arrow" />
