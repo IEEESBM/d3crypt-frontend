@@ -12,6 +12,7 @@ import H2 from "./Components/Home/H2";
 import FAQs from "./Components/FAQs/FAQ";
 import Rules from "./Components/Rules/Rules";
 import Verification from "./Components/Verification/Verification";
+import Competition from "./Components/Competition/Competition";
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
             <Rules />
           </Route>
           <Route exact path='/verification' component={Verification}></Route>
+          <Route exact path='/competition' component={Competition}></Route>
+
         </Switch>
       </Router>
     </div>

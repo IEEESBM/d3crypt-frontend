@@ -1,6 +1,6 @@
-import "./App.css";
+import "./Competition.css";
 
-function App() {
+function Competition() {
   return (
     <div className="App">
       <div className="sidebar"></div>
@@ -69,4 +69,4 @@ function App() {
   );
 }
 
-export default App;
+export default Competition;
