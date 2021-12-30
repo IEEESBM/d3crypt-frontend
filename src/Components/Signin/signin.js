@@ -23,12 +23,18 @@ export default function Signin() {
         if (error.email) {
           console.log(error.email);
           document.querySelector(".emailError").innerHTML = error.email;
+          document.querySelector(".emailError2").innerHTML = error.email;
           document.querySelector(".passwordError").innerHTML = "";
+          document.querySelector(".passwordError2").innerHTML = "";
+
         }
         if (error.password) {
           console.log(error.password);
           document.querySelector(".emailError").innerHTML = "";
+          document.querySelector(".emailError2").innerHTML = "";
           document.querySelector(".passwordError").innerHTML = error.password;
+          document.querySelector(".passwordError2").innerHTML = error.password;
+
         }
       }
     );
@@ -110,6 +116,8 @@ export default function Signin() {
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
+              <div className="emailError2 error">&nbsp;</div>
+
               <p className="my-4"></p>
               <input
                 type="password"
@@ -119,6 +127,8 @@ export default function Signin() {
                 required
                 onChange={(e) => setPassword(e.target.value)}
               />
+              <div className="passwordError2 error">&nbsp;</div>
+
               <p className="text-light text-end mt-2 me-4 fs-6">
                 Forgot Password ?
               </p>

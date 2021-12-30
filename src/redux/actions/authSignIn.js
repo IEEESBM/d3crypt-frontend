@@ -15,7 +15,7 @@ export const signInUser = function (user) {
           document.querySelector('.emailError').innerHTML = "";
 
           document.querySelector('.passwordError').innerHTML = "";
-          // window.location.href="/"
+          window.location.href="/competition"
   
           dispatch(signIn(user));
           return Promise.resolve();

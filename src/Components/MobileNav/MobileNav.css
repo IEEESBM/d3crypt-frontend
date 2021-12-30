@@ -15,7 +15,50 @@
   display: none;
 }
 
+
 @media screen and (max-width: 576px) {
+  
+.nav-profile2{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+}
+.nav-profile2:hover{
+  cursor: pointer;
+}
+
+.hover-div2{
+  position: absolute;
+  right: 5%;
+  top: 50px;
+  background-color: #ffb800;
+  z-index: 1000;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: #292929;
+}
+.hover-item2{
+  display: block;
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border-radius:10px ;
+  font-weight: 700;
+
+}
+.hover-item2:hover{
+  background-color: #161616;
+  color: white;
+  cursor: pointer;
+}
+
+
   .mobilenavbar {
     display: block;
     height: 61px !important;

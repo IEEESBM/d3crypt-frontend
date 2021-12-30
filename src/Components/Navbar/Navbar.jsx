@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -20,7 +20,7 @@ export default function NavBar() {
       console.log(user);
       axios
         .post("http://localhost:4000/get-user", {
-          "uid": `${user._id}`,
+          uid: `${user._id}`,
         })
         .then(
           (response) => {
@@ -44,61 +44,92 @@ export default function NavBar() {
     localStorage.removeItem("user");
     window.location.reload();
   }
+  const [visible, setVisible] = useState(false);
   return (
-    <div className="nav-container">
-      <div className="nav-item">
-        <Link to={"/"} id="nav-link">
-          <img src={logo} className="logo-1" />
-          <span className="nav-crypt-2">Crypt</span>
-        </Link>
-      </div>
-      <div className="nav-left">
-        <div className="main-nav">
-          <div className="nav-item">
-            <Link to={"/about"} id="nav-link">
+    <>
+      <div className="nav-container">
+        <div className="nav-item">
+          <Link to={"/"} id="nav-link">
+            <img src={logo} className="logo-1" />
+            <span className="nav-crypt-2">Crypt</span>
+          </Link>
+        </div>
+        <div className="nav-left">
+          <div className="main-nav">
+            <div className="nav-item">
+            <a href="/#about" id="nav-link">
               About
-            </Link>
-          </div>{" "}
-          <div className="nav-item">
-            <Link to={"/faq"} id="nav-link">
-              FAQ
-            </Link>
-          </div>{" "}
-          <div className="nav-item">
-            <Link to={"/rules"} id="nav-link">
-              Rules
-            </Link>
-          </div>{" "}
-          <div className="nav-item">
-            <a id="nav-link" href="#contact">
-              Contact
             </a>
+            </div>{" "}
+            <div className="nav-item">
+              <Link to={"/faq"} id="nav-link">
+                FAQ
+              </Link>
+            </div>{" "}
+            <div className="nav-item">
+              <Link to={"/rules"} id="nav-link">
+                Rules
+              </Link>
+            </div>{" "}
+            <div className="nav-item">
+              <a id="nav-link" href="#contact">
+                Contact
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      {isLoggedIn ? (
-        <>
-          <button className="login-btn" onClick={handleLogout}>
+        {isLoggedIn ? (
+          <>
+            <Link to={"/competition"}>
+              <button className="comp-btn">
+                <span className="comp">Head over to the competition</span>
+              </button>
+            </Link>
+
+            <img
+              onMouseOver={() => {
+                setVisible(true);
+              }}
+              className="nav-profile"
+              src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
+            />
+
+            {/* <button className="login-btn" onClick={handleLogout}>
             <span className="login">Logout</span>
             <AiOutlineArrowRight className="right-arrow" />
-          </button>
-        </>
-      ) : (
-        <>
-          <Link to={"/register"}>
-            <button className="register-btn">
-              <span className="register">Register</span>
-            </button>
-          </Link>
+          </button> */}
+          </>
+        ) : (
+          <>
+            <Link to={"/register"}>
+              <button className="register-btn">
+                <span className="register">Register</span>
+              </button>
+            </Link>
 
-          <Link to={"/signin"}>
-            <button className="login-btn">
-              <span className="login">Sign in</span>
-              <AiOutlineArrowRight className="right-arrow" />
-            </button>
-          </Link>
-        </>
+            <Link to={"/signin"}>
+              <button className="login-btn">
+                <span className="login">Sign in</span>
+                <AiOutlineArrowRight className="right-arrow" />
+              </button>
+            </Link>
+          </>
+        )}
+      </div>
+      {visible && (
+        <div
+          className="hover-div"
+          onMouseOver={() => {
+            setVisible(true);
+          }}
+          onMouseLeave={() => {
+            setVisible(false);
+          }}
+        >
+          <a className="hover-item" href={'/user-profile'}>Profile</a>
+          <a className="hover-item" onClick={handleLogout}>Logout</a>
+        </div>
       )}
-    </div>
+    </>
   );
 }

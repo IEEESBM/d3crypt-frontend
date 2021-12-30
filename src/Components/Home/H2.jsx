@@ -7,7 +7,7 @@ import rules from "../../assets/rules.svg";
 
 export default function H2() {
   return (
-    <div class="hcontainer2">
+    <div class="hcontainer2"  id="about" >
       <img src={ieee} className="ieee-img" />
       <div class="about-head">About Us</div>
 
