@@ -56,9 +56,8 @@ function App() {
             <Navbar />
             </Route>
           <Route exact path="/leaderboard">
-            <Leaderboard/>
             <MobileNavbar />
-        <Navbar />
+            <Leaderboard/>
           </Route>
           <Route exact path="/faq">
           <MobileNavbar />

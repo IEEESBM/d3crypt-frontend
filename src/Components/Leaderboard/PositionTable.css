@@ -124,9 +124,10 @@
     color: #FFB800;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 578px) {
     .leaderboard-container .position-container {
-        top: 42vh;
+        top: 45vh;
+        left: 9vw;
         max-width: 80vw;
     }
     .leaderboard-container .position-header {
@@ -166,5 +167,12 @@
         font-weight: 600;
         width: 2.986vw;
         height: 5vh;
+    }
+}
+
+@media (max-width: 360px) {
+    .leaderboard-container .position-container {
+        top: 45vh;
+        max-width: 80vw;
     }
 }

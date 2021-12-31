@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "./Sidebar";
+import Sidebar from "../UserProfile/Sidebar";
 import Ranks from "./Ranks";
 import PositionTable from "./PositionTable";
 import "./LeaderBoard.css";
@@ -7,7 +7,10 @@ import "./LeaderBoard.css";
 function LeaderBoard() {
   return (
     <div className="leaderboard-container">
-      <Sidebar></Sidebar>
+      <div id="leaderboard-container">
+        <Sidebar></Sidebar>
+      </div>
+      
       <div className="leaderboard-main">
         <h1 className="header">
           <p className="heading">Leaderboard</p>

@@ -40,6 +40,11 @@
     top: 11.33vw;
 }
 
+.leaderboard-container .ranks-suffix {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
 .leaderboard-container .rank-box2 {
     background-color: #6D6D6D;
     position: absolute;
@@ -132,10 +137,10 @@
 
 /* Mobile View */
 
-@media (max-width: 360px) {
+@media (max-width: 578px) {
     .leaderboard-container .ranks-container {
         position: relative;
-        top: -7vh;
+        top: -10vh;
     }
     .leaderboard-container .rank-box1 {
         width: 30.94vw;
@@ -211,5 +216,12 @@
     }
     .leaderboard-container .ranks-suffix {
         font-size: 3vw;
+    }
+}
+
+@media (max-width: 360px) {
+    .leaderboard-container .ranks-container {
+        position: relative;
+        top: -7vh;
     }
 }
