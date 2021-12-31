@@ -1,0 +1,395 @@
+@media only screen and (max-width: 600px) {
+   
+    
+    .hcontainer2_1{
+      position: absolute;
+      height: 230vh;
+      top: 100vh;
+      width:100vw;
+      background-color:#191919;
+      overflow-x:hidden;
+    }
+    .hcontainer2_2{
+        position: absolute;
+        height: 180vh;
+        top: 330vh;                             
+        width:100vw;
+        background-color: #191919;
+        overflow-x:hidden;
+      }
+    .ieee-img
+    {
+      position: absolute;
+  width: 288px;
+  height: 284px;
+ left:17%;
+  top:1%;
+  margin: auto;
+  
+  
+    }
+    .faq-img
+    {
+      position: absolute;
+  width: 400px;
+  height: auto;
+  left: 0%;
+  top: 31.9659%;
+    }
+    .rules-img
+    {
+      position: absolute;
+  width: 100vw;
+  height: auto;
+  left: -12%;
+  top: 3%;
+  
+    }
+   
+  .about-text
+  {
+    position: absolute;
+  width: 90vw;
+  height: 114px;
+  left: 5%;
+  top: 26%;
+  
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.005em;
+  
+  color: #FFFFFF;
+  
+  }
+  .faq-head
+  {
+    position: absolute;
+  width: 463px;
+  height: 76px;
+  left:29%;
+  top: 47%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 160%;
+  /* or 102px */
+  text-align: left;
+  
+  color: #FFB800;
+  }
+  .about-head
+  {
+    position: absolute;
+  width: 80vw;
+  height: 76px;
+  left: 7%;
+  top: 19%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 160%;
+  /* or 102px */
+  
+  text-align: right;
+  
+  color: #FFB800;
+  
+  }
+  .faq-list1
+  {
+    position: absolute;
+  width: 80vw;
+  height: 104px;
+  left: 12.805555%;
+  top: 53%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+  
+  align-items: center;
+  letter-spacing: 0.005em;
+  text-align: left;
+  color: #FFFFFF;
+  
+  }
+  .faq-list2
+  {
+    position: absolute;
+    width: 80vw;
+    height: 104px;
+    left: 11.805555%;
+    top: 66%;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+   
+  align-items: center;
+    text-align: left;
+    letter-spacing: 0.005em;
+    
+    color: #FFFFFF;
+  }
+  .faq-list3
+  {
+    position: absolute;
+    width: 80vw;
+    height: 104px;
+    left: 11.805555%;
+    top: 79%;
+   
+  align-items: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight:normal;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+    
+    
+    text-align: left;
+    letter-spacing: 0.005em;
+    
+    color: #FFFFFF;
+  }
+  .bold
+  {
+    font-weight: bold;
+  }
+  
+  .faq-btn
+  {
+    box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+    position: absolute;
+  width: 182px;
+  height: 46px;
+  left: 27%;
+  top: 94.558866%;
+  border: none;
+  background: #292929;
+  
+  border-radius: 50px;
+  }
+  .faq-btn-text
+  {
+    position: absolute;
+  width: 87px;
+  height: 20px;
+  left: 28px;
+  top:13px;
+  
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 750;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+  
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.005em;
+  
+  color: #FFFFFF;
+  
+  }
+  .rules-head
+  {
+    position: absolute;
+  width: 80vw;
+  height: 76px;
+  left: -8%;
+  top: 22%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 160%;
+  /* or 102px */
+  
+  text-align: right;
+  
+  color: #FFB800;
+  
+  }
+  .rules-list1
+  {
+    position: absolute;
+  width: 90vw;
+  height: 51px;
+  left: 10%;
+  top: 30.218959%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  /* or 29px */
+  
+  text-align: left;
+  align-items: center;
+  letter-spacing: 0.005em;
+  
+  color: #FFFFFF;
+  
+  }
+  .rules-list2
+  {
+    position: absolute;
+    width: 90vw;
+    height: 51px;
+    left: 10%;
+  top: 40.17051%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  /* or 29px */
+  
+  text-align: left;
+  align-items: center;
+  letter-spacing: 0.005em;
+  
+  color: #FFFFFF;
+  
+  }
+  .rules-list3
+  {
+    position: absolute;
+    width: 90vw;
+    height: 51px;
+    left: 10%;
+  top: 50.17051%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  /* or 29px */
+  
+  text-align: left;;
+  align-items: center;
+  letter-spacing: 0.005em;
+  
+  color: #FFFFFF;
+  }
+  .rules-list4
+  {
+    position: absolute;
+    width: 90vw;
+    height: 51px;
+    left: 10%;
+  top: 60.17051%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  /* or 29px */
+  
+  text-align: left;
+  align-items: center;
+  letter-spacing: 0.005em;
+  
+  color: #FFFFFF;
+  }
+  .rules-list5
+  {
+    position: absolute;
+    width: 90vw;
+    height: 51px;
+    left: 10%;
+  top: 70.17051%;
+  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  /* or 29px */
+  
+  text-align: left;
+  align-items: center;
+  letter-spacing: 0.005em;
+  
+  color: #FFFFFF;
+  
+  }
+  
+  
+  .rules-btn
+  {
+    position: absolute;
+  width: 182px;
+  height: 46px;
+  left: 29%;
+  top: 85.1851454%;
+  border: none;
+  background: #292929;
+  box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+  border-radius: 50px;
+  }
+  .rules-btn-text
+  {
+    position: absolute;
+  width: 87px;
+  height: 20px;
+  left: 35px;
+  top: 13px;
+  
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 750;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+  
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.005em;
+  
+  color: #FFFFFF;
+  
+  }
+  
+  
+  }
+  @media only screen and (min-width: 600px)
+  {
+      .hcontainer2_1
+      {
+          display:none;
+          width:0px;
+          height:0px;
+      }
+      .hcontainer2_2
+      {
+          display:none;
+          width:0px;
+          height:0px;
+      }
+  }
+  

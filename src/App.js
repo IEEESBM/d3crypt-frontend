@@ -9,6 +9,9 @@ import Leaderboard from "./Components/Leaderboard/LeaderBoard";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Home/Contact";
 import H2 from "./Components/Home/H2";
+import Mobileh2 from "./Components/Home/Mobileh2";
+import ForgotPassword from "./Components/ForgotPassword/ForgotPassword";
+import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import FAQs from "./Components/FAQs/FAQ";
 import Rules from "./Components/Rules/Rules";
 import Verification from "./Components/Verification/Verification";
@@ -26,6 +29,7 @@ function App() {
         <Navbar />
             <Home />
             <H2 />
+            <Mobileh2 />
             <Contact />
           </Route>
           <Route exact path="/user-profile" component={UserProfile} />
@@ -34,11 +38,23 @@ function App() {
             <MobileNavbar />
             <Navbar />
           </Route>
+          <Route exact path="/resetpassword">
+            
+            <MobileNavbar />
+            <Navbar />
+            <ResetPassword />
+          </Route>
+          <Route exact path="/forgotpassword">
+         
+          <MobileNavbar />
+            <Navbar />
+            <ForgotPassword />
+          </Route>
           <Route exact path="/signin" >
             <SignIn/>
             <MobileNavbar />
-        <Navbar />
-          </Route>
+            <Navbar />
+            </Route>
           <Route exact path="/leaderboard">
             <Leaderboard/>
             <MobileNavbar />

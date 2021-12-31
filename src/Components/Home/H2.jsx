@@ -2,7 +2,7 @@ import React from "react";
 import FAQs from "../../assets/FAQs.svg";
 import ieee from "../../assets/ieee.svg";
 import rules from "../../assets/rules.svg";
-
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 
 export default function H2() {
@@ -57,59 +57,59 @@ export default function H2() {
       </div>
 
       <button class="faq-btn">
-        <span class="faq-btn-text">Read More</span>
+        <span class="faq-btn-text">Read More <AiOutlineArrowRight className="arrow-right" /></span>
       </button>
       <img src={rules} className="rules-img" />
       <div class="rules-head">Rules</div>
       <span class="ellipse4"></span>
       <div class="rules-list1">
         <span class="bold">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           <br />
         </span>
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore e u
+        dolore 
       </div>
       <span class="ellipse5"></span>
       <div class="rules-list2">
         <span class="bold">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
           <br />
         </span>
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore e u
+        dolore 
       </div>
 
       <span class="ellipse6"></span>
       <div class="rules-list3">
         <span class="bold">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           <br />
         </span>
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore e u
+        dolore
       </div>
       <span class="ellipse7"></span>
       <div class="rules-list4">
         <span class="bold">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           <br />
         </span>
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore e u
+        dolore 
       </div>
       <span class="ellipse8"></span>
       <div class="rules-list5">
         <span class="bold">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           <br />
         </span>
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-        dolore e u
+        dolore
       </div>
 
       <button class="rules-btn">
-        <span class="rules-btn-text">Read More</span>
+        <span class="rules-btn-text">Read More    <AiOutlineArrowRight className="arrow-right" /> </span>
       </button>
     </div>
   );

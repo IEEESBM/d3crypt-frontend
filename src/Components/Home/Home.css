@@ -462,6 +462,19 @@ letter-spacing: 0.005em;
 color: #FFFFFF;
 
 }
+.arrow-right
+{
+  position: absolute;
+
+color: #FFB800;
+
+right:-30px;
+}
+AiOutlineArrowRight
+{
+width:18px;
+}
+
 .rules-list2
 {
   position: absolute;
@@ -765,5 +778,11 @@ color: #FFFFFF;
   }
   .down-arrow {
     display: none;
+  }
+  .hcontainer2
+  {
+    display:none;
+    width:0px;
+    height:0px;
   }
 }
