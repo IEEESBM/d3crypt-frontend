@@ -32,8 +32,6 @@ function SignUp() {
 
   const handleOnChange = e => {
     const { name, value } = e.target;
-    console.log(e.target.value);
-
     setNewUser({ ...newUser, [name]: value });
   };
 

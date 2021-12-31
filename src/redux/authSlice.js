@@ -29,7 +29,6 @@ export const signUpSlice = createSlice({
       }
     },
     verified: (state, action) => {
-      console.log(action.payload);
       return {
         ...state,
         SignUpErrorMessage: {},

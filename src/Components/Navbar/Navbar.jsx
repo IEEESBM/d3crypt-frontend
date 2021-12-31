@@ -14,13 +14,19 @@ export default function NavBar() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    var user = localStorage.getItem("user");
-    if (user) {
-      user = JSON.parse(user);
-      console.log(user);
+    var token = localStorage.getItem("jwt");
+
+    // var user = await User.findOne({ _id: userID });
+    if (token) {
+      var base64Payload = token.split(".")[1];
+      var payload = Buffer.from(base64Payload, "base64");
+      var userID = JSON.parse(payload.toString()).id;
+      console.log(userID);
+      //user = JSON.parse(user);
+      //console.log(user);
       axios
         .post("http://localhost:4000/get-user", {
-          uid: `${user._id}`,
+          uid: `${userID}`,
         })
         .then(
           (response) => {
@@ -41,7 +47,7 @@ export default function NavBar() {
   }, []);
 
   function handleLogout() {
-    localStorage.removeItem("user");
+    localStorage.removeItem("jwt");
     window.location.reload();
   }
   const [visible, setVisible] = useState(false);
@@ -57,9 +63,9 @@ export default function NavBar() {
         <div className="nav-left">
           <div className="main-nav">
             <div className="nav-item">
-            <a href="/#about" id="nav-link">
-              About
-            </a>
+              <a href="/#about" id="nav-link">
+                About
+              </a>
             </div>{" "}
             <div className="nav-item">
               <Link to={"/faq"} id="nav-link">
@@ -126,8 +132,12 @@ export default function NavBar() {
             setVisible(false);
           }}
         >
-          <a className="hover-item" href={'/user-profile'}>Profile</a>
-          <a className="hover-item" onClick={handleLogout}>Logout</a>
+          <a className="hover-item" href={"/user-profile"}>
+            Profile
+          </a>
+          <a className="hover-item" onClick={handleLogout}>
+            Logout
+          </a>
         </div>
       )}
     </>

@@ -11,7 +11,7 @@ export const signInUser = function (user) {
       .then(
         (response) => {
           console.log(response);
-          localStorage.setItem("user",JSON.stringify(response.data));
+          localStorage.setItem("jwt",JSON.stringify(response.data));
           document.querySelector('.emailError').innerHTML = "";
 
           document.querySelector('.passwordError').innerHTML = "";
