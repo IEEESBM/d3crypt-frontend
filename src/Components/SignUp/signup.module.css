@@ -96,9 +96,6 @@
   margin-bottom: 3.54vw;
 }
 
-.radioForm{
-  margin-bottom: 1vw;
-}
 .radio,span
 {
   font-family: Avenir LT Std;
@@ -210,7 +207,7 @@ p.link > a {
   .hero .content {
     border-radius: 0px 0px 13.3vw 13.3vw;
     background: #474747;
-    height: 125vw;
+    height: 167vw;
   }
   .container .text {
     margin-left: 0;
@@ -237,12 +234,29 @@ p.link > a {
     color: #fafafa;
     margin-bottom: 2vw;
   }
+
+  .radioForm{
+    margin-bottom: 0vw;
+    margin-left: 8.89vw;
+  }
+  .radio,span
+  {
+    font-size: 3.89vw;
+    color: #fafafa;
+  }
+  span{
+    margin-right: 3vw;
+    margin-left: 0.5vw;
+  }
+
   .container .form {
     width: 55vw;
     margin-left: 8.89vw;
     /* margin-bottom: 3.89vw; */
     box-shadow: 0 4px 4px -6px rgba(0, 0, 0, 0.25);
   }
+
+  
 
   .container .register {
     width: 30.8vw;

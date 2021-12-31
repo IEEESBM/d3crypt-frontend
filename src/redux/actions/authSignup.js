@@ -11,6 +11,7 @@ export const register = function (newUser) {
       "phone": newUser.phone,
       "college": `${newUser.college}`,
       "ID": newUser.ID,
+      "mem":newUser.mem,
       "memNo": newUser.memNo
     })
       .then(
@@ -21,6 +22,7 @@ export const register = function (newUser) {
           return Promise.resolve();
         },
         (error) => {
+          console.log(error);
           dispatch(showErrorMessagesSignUp(error.response.data.errorMessage));
           return Promise.reject(error.response.data.errorMessage);
         }

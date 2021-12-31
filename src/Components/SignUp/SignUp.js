@@ -23,6 +23,7 @@ function SignUp() {
     phone: '',
     college: '',
     ID: '',
+    mem:null,
     memNo: ''
   }
 
@@ -31,6 +32,7 @@ function SignUp() {
 
   const handleOnChange = e => {
     const { name, value } = e.target;
+    console.log(e.target.value);
 
     setNewUser({ ...newUser, [name]: value });
   };
@@ -49,6 +51,7 @@ function SignUp() {
           document.querySelector('.passwordError').innerHTML = '&nbsp;';
           document.querySelector('.phoneError').innerHTML = '&nbsp;';
           document.querySelector('.collegeError').innerHTML = '&nbsp;';
+          document.querySelector('.memError').innerHTML = '&nbsp;';
           if (error.username) {
             console.log(error.username);
             document.querySelector('.nameError').innerHTML = error.username;
@@ -68,6 +71,10 @@ function SignUp() {
           if (error.college) {
             console.log(error.college);
             document.querySelector('.collegeError').innerHTML = error.college;
+          }
+          if (error.mem) {
+            console.log(error.mem);
+            document.querySelector('.memError').innerHTML = error.mem;
           }
         }
       )
@@ -119,10 +126,11 @@ function SignUp() {
               </div>
               <div>&nbsp;</div>
               <div className={styles.radioForm}>
-              <div className={styles.radio}>ieee member?</div>
-              <input type="radio" value="yes" name="mem"/><span className={styles.options}>yes</span>
-              <input type="radio" value="no" name="mem" /><span className={styles.options}>no</span>
-          </div>
+                <div className={styles.radio}>ieee member?</div>
+                <input type="radio" value={true} name="mem"  onChange={handleOnChange}/><span className={styles.options}>yes</span>
+                <input type="radio" value={false} name="mem" onChange={handleOnChange}/><span className={styles.options}>no</span>
+              </div>
+              <div className='memError error'>&nbsp;</div>
               <div className={styles.form}>
                 <input className={styles.label} type='text' name='memNo' value={newUser.memNo}
                   onChange={handleOnChange}
