@@ -6,6 +6,7 @@ import ProfilePhoto from "./ProfilePhoto";
 import Contact from "./Contact";
 import College from "./College";
 import Teammate from "./Teammate";
+import ImageUpload from "./ImageUpload";
 
 function UserProfile() {
   const [person, setPerson] = useState({
@@ -43,6 +44,7 @@ function UserProfile() {
   return (
     <>
       <MobileNavbar />
+      <ImageUpload />
 
       <div id="userprofile">
         <Sidebar />

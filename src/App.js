@@ -25,8 +25,8 @@ function App() {
         <Navbar /> */}
         <Switch>
           <Route exact path="/">
-          <MobileNavbar />
-        <Navbar />
+            <MobileNavbar />
+            <Navbar />
             <Home />
             <H2 />
             <Mobileh2 />
@@ -39,41 +39,41 @@ function App() {
             <Navbar />
           </Route>
           <Route exact path="/resetpassword">
-            
+
             <MobileNavbar />
             <Navbar />
             <ResetPassword />
           </Route>
           <Route exact path="/forgotpassword">
-         
-          <MobileNavbar />
+
+            <MobileNavbar />
             <Navbar />
             <ForgotPassword />
           </Route>
           <Route exact path="/signin" >
-            <SignIn/>
+            <SignIn />
             <MobileNavbar />
             <Navbar />
-            </Route>
+          </Route>
           <Route exact path="/leaderboard">
             <MobileNavbar />
-            <Leaderboard/>
+            <Leaderboard />
           </Route>
           <Route exact path="/faq">
-          <MobileNavbar />
+            <MobileNavbar />
             <Navbar />
             <FAQs />
           </Route>
           <Route exact path="/rules">
-          <MobileNavbar />
+            <MobileNavbar />
             <Navbar />
             <Rules />
           </Route>
           <Route exact path="/verification" component={Verification}></Route>
           <Route exact path="/competition">
-          <MobileNavbar />
-            <Competition/>
-        <Navbar />
+            <MobileNavbar />
+            <Competition />
+            <Navbar />
           </Route>
         </Switch>
       </Router>

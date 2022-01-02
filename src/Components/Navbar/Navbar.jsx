@@ -40,7 +40,10 @@ export default function NavBar() {
           (error) => {
             console.log(error);
           }
-        );
+        )
+        .catch((error) => {
+          console.log(error);
+        });
     } else {
       console.log("User not found");
     }
