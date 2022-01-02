@@ -7,6 +7,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
 
+#imageInput{
+visibility: hidden;
+}
+
+.modal-click{
+  position: absolute;
+  z-index: 500;
+  margin-top: 48%;
+  margin-left: 20%;
+  border: none;
+  padding: 0.8rem;
+  width: 15rem;
+  border-radius: 20px;
+  background-color: #e3a300;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 600;
+
+}
+#img-submit{
+  position: absolute;
+  z-index: 500;
+  margin-top: 48%;
+  margin-left: 0%;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 20px;
+  width: 15rem;
+  background-color: #e3a300;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 600;
+visibility: hidden;
+}
+
+
 .image-upload{
   position: absolute;
   color: white;
@@ -372,6 +408,37 @@
 /******************************************/
 
 @media screen and (max-width: 576px) {
+  .modal-click{
+    position: absolute;
+    z-index: 500;
+    margin-top: 110vw;
+    left: 50vw;
+    border: none;
+    padding: 0.5rem;
+    width: 40vw;
+    border-radius: 20px;
+    background-color: #e3a300;
+    font-size:3vw;
+    font-weight: 600;
+    transform: translateX(-100%);
+  
+  }
+  #img-submit{
+    position: absolute;
+    z-index: 500;
+    margin-top: 110vw;
+    left: 50vw;
+    border: none;
+    padding: 0.5rem;
+    width: 40vw;
+    border-radius: 20px;
+    background-color: #e3a300;
+    font-size:3vw;
+    font-weight: 600;
+    transform: translateX(-50%);
+    visibility: hidden;
+  }
+  
   #userprofile {
     height: 400vw;
   }
