@@ -26,7 +26,6 @@ export default function Signin() {
           document.querySelector(".emailError2").innerHTML = error.email;
           document.querySelector(".passwordError").innerHTML = "";
           document.querySelector(".passwordError2").innerHTML = "";
-
         }
         if (error.password) {
           console.log(error.password);
@@ -34,7 +33,6 @@ export default function Signin() {
           document.querySelector(".emailError2").innerHTML = "";
           document.querySelector(".passwordError").innerHTML = error.password;
           document.querySelector(".passwordError2").innerHTML = error.password;
-
         }
       }
     );
@@ -87,7 +85,10 @@ export default function Signin() {
             <div className="d-flex flex-row para">
               <p className="text-light mt-3 ">Don’t have an account yet?</p>
 
-              <a className="signup-text mt-3" href="/register">  Sign Up!</a>
+              <a className="signup-text mt-3" href="/register">
+                {" "}
+                Sign Up!
+              </a>
             </div>
           </form>
         </div>

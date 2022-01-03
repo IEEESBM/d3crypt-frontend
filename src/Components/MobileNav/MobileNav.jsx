@@ -59,17 +59,17 @@ export default function MobileNavbar() {
   return (
     <>
       <nav className="mobilenavbar">
-      {isLoggedIn ? (
-           
-            <img
-              onMouseOver={() => {
-                setVisible(true);
-              }}
-              className="nav-profile2"
-              src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
-            />
-
-      ):(<div></div>)}
+        {isLoggedIn ? (
+          <img
+            onMouseOver={() => {
+              setVisible(true);
+            }}
+            className="nav-profile2"
+            src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
+          />
+        ) : (
+          <div></div>
+        )}
         {/* <vaHamburger className="hamburger" onClick={displayNavbar}></Hamburger> */}
 
         {/* <a href="#"><DecryptLogo className="decryptlogo"></DecryptLogo></a> */}
@@ -142,11 +142,14 @@ export default function MobileNavbar() {
             setVisible(false);
           }}
         >
-          <a className="hover-item2" href={'/user-profile'}>Profile</a>
-          <a className="hover-item2" onClick={handleLogout}>Logout</a>
+          <a className="hover-item2" href={"/user-profile"}>
+            Profile
+          </a>
+          <a className="hover-item2" onClick={handleLogout}>
+            Logout
+          </a>
         </div>
       )}
-
     </>
   );
 }

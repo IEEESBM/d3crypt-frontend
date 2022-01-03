@@ -1,14 +1,13 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   SignUpErrorMessage: {},
   SignInErrorMessage: {},
-  isLoggedIn: false
-}
-
+  isLoggedIn: false,
+};
 
 export const signUpSlice = createSlice({
-  name: 'sign-up',
+  name: "sign-up",
   initialState,
   reducers: {
     signUp: (state, action) => {
@@ -17,24 +16,24 @@ export const signUpSlice = createSlice({
         ...state,
         SignUpErrorMessage: {},
         SignInErrorMessage: {},
-        isLoggedIn: false
-      }
+        isLoggedIn: false,
+      };
     },
     showErrorMessagesSignUp: (state, action) => {
       return {
         ...state,
         SignUpErrorMessage: action.payload,
         SignInErrorMessage: {},
-        isLoggedIn: false
-      }
+        isLoggedIn: false,
+      };
     },
     verified: (state, action) => {
       return {
         ...state,
         SignUpErrorMessage: {},
         SignInErrorMessage: {},
-        isLoggedIn: true
-      }
+        isLoggedIn: true,
+      };
     },
     signIn: (state, action) => {
       console.log(action.payload);
@@ -42,7 +41,7 @@ export const signUpSlice = createSlice({
         ...state,
         SignUpErrorMessage: {},
         SignInErrorMessage: {},
-        isLoggedIn: false
+        isLoggedIn: false,
       };
     },
     showErrorMessagesSignIn: (state, action) => {
@@ -50,11 +49,11 @@ export const signUpSlice = createSlice({
         ...state,
         SignUpErrorMessage: {},
         SignInErrorMessage: action.payload,
-        isLoggedIn: false
+        isLoggedIn: false,
       };
     },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
 export const {
@@ -62,7 +61,7 @@ export const {
   showErrorMessagesSignUp,
   verified,
   signIn,
-  showErrorMessagesSignIn
-} = signUpSlice.actions
+  showErrorMessagesSignIn,
+} = signUpSlice.actions;
 
-export default signUpSlice.reducer
+export default signUpSlice.reducer;

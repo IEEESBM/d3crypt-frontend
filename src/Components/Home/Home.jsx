@@ -13,7 +13,7 @@ export default function Home() {
     <div className="h-container">
       <div className="head">
         <img src={logo} className="logo2" />
-      <div id="h-text">Crypt</div>  
+        <div id="h-text">Crypt</div>
       </div>
       <img src={disc} className="disc-img" />
       <div className="head_text">
@@ -27,16 +27,17 @@ export default function Home() {
         <div id="flipdown" class="flipdown"></div>
       </div>
 
-     {!isLoggedIn && <button className="register-btn-2">
-        <span className="register-2">Register Now!</span>
-      </button>}
+      {!isLoggedIn && (
+        <a href="/register">
+          <button className="register-btn-2">
+            <span className="register-2">Register Now!</span>
+          </button>
+        </a>
+      )}
       <a href="#contact">
         <div className="r-more">Read More</div>
         <AiOutlineArrowDown className="down-arrow" />
       </a>
-      
-
     </div>
   );
 }
-

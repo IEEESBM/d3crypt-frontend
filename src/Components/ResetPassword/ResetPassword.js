@@ -7,9 +7,6 @@ import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 export default function ResetPassword() {
- 
-  
-
   return (
     <>
       <NavBar />
@@ -18,43 +15,35 @@ export default function ResetPassword() {
           <Logos className=" col-3 logo mx-5 my-4 mb-4" />
           <form>
             <div class="container text-left col-12 ms-5">
-              
-            <p className="text-light text-left signin-text">Reset Password</p>
+              <p className="text-light text-left signin-text">Reset Password</p>
               <input
                 type="password"
                 className="email"
                 placeholder="New Password"
                 name="password1"
                 required
-               
               />
-                <p className="my-4"></p>
+              <p className="my-4"></p>
               <input
                 type="password"
                 className="pwd"
                 placeholder="Re-enter new Password"
                 name="psw"
                 required
-                
               />
               <div className="emailError error">&nbsp;</div>
 
               <hr></hr>
-           
-            
-            
-            
+
               <a class="sign_in">
                 <button
                   type="submit"
                   class="btn-login col-8 btn-block text-center p-2 m-2"
-                 
                 >
                   Reset Password
                 </button>
               </a>
             </div>
-        
           </form>
         </div>
         <div className="col-lg-5 col-md-4 img-fluid my-auto p-3 col-12">
@@ -73,14 +62,15 @@ export default function ResetPassword() {
         <div className="form-mobile p-3 col-lg-6 d-inline-block">
           <form>
             <div class="container text-left col-12 ">
-              <p className="text-light text-center fs-3 m pos1">Forgot Password?</p>
+              <p className="text-light text-center fs-3 m pos1">
+                Forgot Password?
+              </p>
               <input
                 type="password"
                 className="fs-5 m"
                 placeholder="New Password"
                 name="email"
                 required
-              
               />
               <input
                 type="password"
@@ -88,18 +78,14 @@ export default function ResetPassword() {
                 placeholder="Re-enter new Password"
                 name="psw"
                 required
-               
               />
-                <Link to={"/signin"}>
-              
-            
-              <button
-                type="submit"
-                class="btn-login col-10 btn-block p-2 m-2 fs-4 text-center m"
-               
-              >
-               Reset Password
-              </button>
+              <Link to={"/signin"}>
+                <button
+                  type="submit"
+                  class="btn-login col-10 btn-block p-2 m-2 fs-4 text-center m"
+                >
+                  Reset Password
+                </button>
               </Link>
             </div>
           </form>
@@ -108,4 +94,3 @@ export default function ResetPassword() {
     </>
   );
 }
-

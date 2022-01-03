@@ -10,7 +10,7 @@ function LeaderBoard() {
       <div id="leaderboard-container">
         <Sidebar></Sidebar>
       </div>
-      
+
       <div className="leaderboard-main">
         <h1 className="header">
           <p className="heading">Leaderboard</p>

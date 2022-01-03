@@ -89,6 +89,7 @@
   .contact-container {
     width: 100%;
     min-height: 800px;
+    top: calc(550vw + 900px);
   }
   .contact-h {
     font-size: 30px;

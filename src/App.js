@@ -1,5 +1,10 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import MobileNavbar from "./Components/MobileNav/MobileNav.jsx";
 import UserProfile from "./Components/UserProfile/UserProfile";
@@ -18,11 +23,11 @@ import Verification from "./Components/Verification/Verification";
 import Competition from "./Components/Competition/Competition";
 
 function App() {
+  var token = localStorage.getItem("jwt");
+
   return (
     <div className="App">
       <Router>
-        {/* <MobileNavbar />
-        <Navbar /> */}
         <Switch>
           <Route exact path="/">
             <MobileNavbar />
@@ -32,32 +37,50 @@ function App() {
             <Mobileh2 />
             <Contact />
           </Route>
-          <Route exact path="/user-profile" component={UserProfile} />
+          <Route exact path="/user-profile">
+            {token ? <UserProfile /> : <Redirect to={"/"} />}{" "}
+          </Route>
           <Route exact path="/register">
-            <SignUp />
-            <MobileNavbar />
-            <Navbar />
+            {token ? (
+              <Redirect to={"/"} />
+            ) : (
+              <>
+                <Navbar />
+                <MobileNavbar />
+                <SignUp />
+              </>
+            )}
           </Route>
           <Route exact path="/resetpassword">
-
             <MobileNavbar />
             <Navbar />
             <ResetPassword />
           </Route>
           <Route exact path="/forgotpassword">
-
             <MobileNavbar />
             <Navbar />
             <ForgotPassword />
           </Route>
-          <Route exact path="/signin" >
-            <SignIn />
-            <MobileNavbar />
-            <Navbar />
+          <Route exact path="/signin">
+            {token ? (
+              <Redirect to={"/"} />
+            ) : (
+              <>
+                <Navbar />
+                <MobileNavbar />
+                <SignIn />
+              </>
+            )}
           </Route>
           <Route exact path="/leaderboard">
-            <MobileNavbar />
-            <Leaderboard />
+            {token ? (
+              <>
+                <MobileNavbar />
+                <Leaderboard />
+              </>
+            ) : (
+              <Redirect to={"/"} />
+            )}
           </Route>
           <Route exact path="/faq">
             <MobileNavbar />
@@ -69,11 +92,19 @@ function App() {
             <Navbar />
             <Rules />
           </Route>
-          <Route exact path="/verification" component={Verification}></Route>
+          <Route exact path="/verification">
+            <Verification />
+          </Route>
           <Route exact path="/competition">
-            <MobileNavbar />
-            <Competition />
-            <Navbar />
+            {token ? (
+              <>
+                <Navbar />
+                <MobileNavbar />
+                <Competition />
+              </>
+            ) : (
+              <Redirect to={"/"} />
+            )}
           </Route>
         </Switch>
       </Router>

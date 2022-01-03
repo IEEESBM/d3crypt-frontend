@@ -13,9 +13,7 @@ function PositionBox(props) {
           <p className="position-name">{props.name}</p>
         </div>
 
-        <p className="position-p">
-          {props.points}
-        </p>
+        <p className="position-p">{props.points}</p>
       </div>
     </>
   );

@@ -1,48 +1,45 @@
-.rules-container{
-    background-color: #191919;
-    min-height: calc(100vh - 90px);
-    position: absolute;
-    width: 100%;
-    top: 90px;
-    overflow-x: hidden;
-
+.rules-container {
+  background-color: #191919;
+  min-height: calc(100vh - 90px);
+  position: absolute;
+  width: 100%;
+  top: 90px;
+  overflow-x: hidden;
 }
 
-.rules-h{
-    margin-top: 20px;
-    color: white;
-    font-size: 48px;
-    text-align: center;
-    font-weight: 800;
-    font-family: 'Avenir LT Std';
-    margin-bottom: 45px;
+.rules-h {
+  margin-top: 20px;
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  font-weight: 800;
+  font-family: "Avenir LT Std";
+  margin-bottom: 45px;
 }
 
-.rules-box{
-    width: 70%;
-    margin-left: 15%;
-    /* height: 160px; */
-    background-color: black;
-    background: #292929;
-    height: auto;
-    margin-bottom: 26px;
+.rules-box {
+  width: 70%;
+  margin-left: 15%;
+  /* height: 160px; */
+  background-color: black;
+  background: #292929;
+  height: auto;
+  margin-bottom: 26px;
 }
 
-.rules-q{
-    color: white;
-    padding-top: 19px;
-    margin-left: 29px;
-    font-weight: 700;
-    font-size: 24px;
+.rules-q {
+  color: white;
+  padding-top: 19px;
+  margin-left: 29px;
+  font-weight: 700;
+  font-size: 24px;
 }
 
-.rules-a{
-    color:#9C9C9C;
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 29px;
-    padding-top: 19px;
-    padding-bottom: 19px;
-
-
+.rules-a {
+  color: #9c9c9c;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 29px;
+  padding-top: 19px;
+  padding-bottom: 19px;
 }

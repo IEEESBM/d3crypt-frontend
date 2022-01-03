@@ -7,9 +7,6 @@ import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
 
 export default function ForgotPassword() {
- 
-  
-
   return (
     <>
       <NavBar />
@@ -18,22 +15,20 @@ export default function ForgotPassword() {
           <Logos className=" col-3 logo mx-5 my-4 mb-4" />
           <form>
             <div class="container text-left col-12 ms-5">
-              
-            <p className="text-light text-left signin-text">Forgot Password ?</p>
+              <p className="text-light text-left signin-text">
+                Forgot Password ?
+              </p>
               <input
                 type="email"
                 className="email"
                 placeholder="email"
                 name="email"
                 required
-               
               />
               <div className="emailError error">&nbsp;</div>
 
               <hr></hr>
-           
-            
-            
+
               <p className="text-light text-end mt-2 col-8 fs-5 pos2">
                 <span className="pos2">Please enter registered email id</span>
               </p>
@@ -41,13 +36,11 @@ export default function ForgotPassword() {
                 <button
                   type="submit"
                   class="btn-login col-8 btn-block text-center p-2 m-2"
-                 
                 >
                   Request Password Reset
                 </button>
               </a>
             </div>
-        
           </form>
         </div>
         <div className="col-lg-5 col-md-4 img-fluid my-auto p-3 col-12">
@@ -66,27 +59,26 @@ export default function ForgotPassword() {
         <div className="form-mobile p-3 col-lg-6 d-inline-block">
           <form>
             <div class="container text-left col-12 ">
-              <p className="text-light text-center fs-3 m pos1">Forgot Password?</p>
+              <p className="text-light text-center fs-3 m pos1">
+                Forgot Password?
+              </p>
               <input
                 type="email"
                 className="fs-5"
                 placeholder="email"
                 name="email"
                 required
-              
               />
-                <p className="text-light text-end  m pos1">
+              <p className="text-light text-end  m pos1">
                 Please enter registered email id
               </p>
-             
+
               <button
                 type="submit"
                 class="btn-login col-10 btn-block p-2 m-2 fs-3 text-center m"
-               
               >
-               Submit
+                Submit
               </button>
-              
             </div>
           </form>
         </div>
@@ -94,4 +86,3 @@ export default function ForgotPassword() {
     </>
   );
 }
-

@@ -11,12 +11,12 @@ export const signInUser = function (user) {
       .then(
         (response) => {
           console.log(response);
-          localStorage.setItem("jwt",JSON.stringify(response.data));
-          document.querySelector('.emailError').innerHTML = "";
+          localStorage.setItem("jwt", JSON.stringify(response.data));
+          document.querySelector(".emailError").innerHTML = "";
 
-          document.querySelector('.passwordError').innerHTML = "";
-          window.location.href="/competition"
-  
+          document.querySelector(".passwordError").innerHTML = "";
+          window.location.href = "/competition";
+
           dispatch(signIn(user));
           return Promise.resolve();
         },
