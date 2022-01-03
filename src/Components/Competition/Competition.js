@@ -36,7 +36,7 @@ function Competition() {
 
   return (
     <div className="App">
-      <div className="sidebar"></div>
+      <div className="competition-sidebar"></div>
 
       <div className="competition-main-outer">
         <div className="temp">

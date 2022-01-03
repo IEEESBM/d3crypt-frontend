@@ -34,7 +34,7 @@ function ImageUpload() {
       .post("http://localhost:4000/image", imageInput)
       .then(
         (response) => {
-          const key = response.data.imagePath.split("/")[2];
+          const key = response.data;
           const data = {
             key,
             id,
@@ -42,7 +42,9 @@ function ImageUpload() {
           console.log(data);
           axios
             .post("http://localhost:4000/user-img", data)
-            .then((res) => window.location.reload());
+            .then((response) => {
+              window.location.reload()
+            });
         },
         (error) => {
           console.log(error);
@@ -71,9 +73,9 @@ function ImageUpload() {
         .then(
           (response) => {
             console.log(response.data.imgKey);
-            axios
-              .get("http://localhost:4000/image/" + response.data.imgKey)
-              .then((res) => console.log(res.data));
+            // axios
+            //   .get("http://localhost:4000/image/" + response.data.imgKey)
+            //   .then((res) => console.log(res.data));
 
             setKey(response.data.imgKey);
 
@@ -100,14 +102,12 @@ function ImageUpload() {
         Select Profile Image
       </button>
 
-      {/* <div className="image-upload"> */}
-      <form id="imageForm">
+      
         <input id="imageInput" type="file" accept="image/*" />
         <button id="img-submit" type="submit" onClick={handleUpload}>
           Upload
         </button>
-      </form>
-      {/* </div> */}
+      
     </>
   );
 }

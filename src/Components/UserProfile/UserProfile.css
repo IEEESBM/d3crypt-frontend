@@ -8,7 +8,7 @@
 @import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
 
 #imageInput {
-  visibility: hidden;
+  display: none;
 }
 
 .modal-click {
@@ -39,15 +39,6 @@
   font-size: 18px;
   font-weight: 600;
   visibility: hidden;
-}
-
-.image-upload {
-  position: absolute;
-  color: white;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 50%;
-  transform: translateY(50%);
 }
 
 #userprofile {
@@ -106,12 +97,12 @@
   margin-bottom: 40px;
 }
 
-#userprofile .line {
+#userprofile .heading-line {
   flex: 1;
   padding-left: 2vw;
 }
 
-#userprofile .line hr {
+#userprofile .heading-line hr {
   width: 100%;
   border: 0.75px solid #ffffff;
   opacity: 1;

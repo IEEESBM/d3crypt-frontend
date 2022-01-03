@@ -52,7 +52,7 @@ function UserProfile() {
         <div className="content">
           <h1 className="header">
             <p className="page-heading">User Profile</p>
-            <p className="line">
+            <p className="heading-line">
               <hr />
             </p>
           </h1>
