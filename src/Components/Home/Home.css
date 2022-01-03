@@ -532,3 +532,94 @@
     height: 0px;
   }
 }
+
+.muzieknootjes {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  min-width: 300px;
+  height: 200px;
+  border: 0px solid #000;
+}
+
+.noot-1,
+.noot-2,
+.noot-3,
+.noot-4 {
+  position: absolute;
+  animation: notes 2s infinite linear;
+  font-size: 35px;
+  opacity: 0;
+  color: white;
+}
+
+.noot-2 {
+  top: 160px;
+  right: 18%;
+  animation-delay: 1s;
+}
+
+.noot-3 {
+  top: 90px;
+  right: 25%;
+  animation-delay: 1.5s;
+}
+
+.noot-4 {
+  top: 120px;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+@keyframes notes {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) translate(50%, -50%);
+  }
+  80% {
+    opacity: 0;
+    transform: scale(1.5) translate(100%, -100%);
+  }
+  100% {
+    transform: scale(1.5) translate(100%, -100%);
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .noot-1,
+  .noot-2,
+  .noot-3,
+  .noot-4 {
+    position: absolute;
+    animation: notes 2s infinite linear;
+    font-size: 25px;
+    opacity: 0;
+    color: white;
+  }
+  
+  .noot-2 {
+    top: 100px;
+    right: 42%;
+    animation-delay: 1s;
+  }
+  
+  .noot-3 {
+    top: 65px;
+    right: 55%;
+    animation-delay: 1.5s;
+  }
+  
+  .noot-4 {
+    top: 100px;
+    right: 40%;
+    animation-delay: 2s;
+  }
+  
+}

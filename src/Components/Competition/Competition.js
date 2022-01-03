@@ -29,7 +29,7 @@ function Competition() {
   }, []);
 
   const handleSubmit = (e) => {
-    axios.post("http://localhost:4000/submit", { id, ans }).then((res) => {
+    axios.post("http://localhost:4000/submit", { ind, ans }).then((res) => {
       console.log(res);
     });
   };
@@ -130,7 +130,6 @@ function Competition() {
         </div>
       </div>
 
-    </div>
   );
 }
 
