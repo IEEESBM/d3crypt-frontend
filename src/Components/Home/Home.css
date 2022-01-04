@@ -37,7 +37,7 @@
     top: 35.8490566%;
   }
   #h-text {
-    left: 21.797752%;
+    left: 21%;
     top: 0px;
     position: absolute;
   }
@@ -46,7 +46,7 @@
     position: absolute;
     width: 566px;
     height: 114px;
-    left: 11.31944%;
+    left: 11%;
     top: 29.7%;
     font-family: "Avenir LT Std";
     font-style: normal;
@@ -63,7 +63,7 @@
     position: absolute;
     width: 185px;
     height: 32px;
-    left: 11.25%;
+    left: 11%;
     top: 48.64%;
     font-family: "Avenir LT Std";
     font-style: normal;
@@ -80,7 +80,7 @@
     position: absolute;
     width: 119px;
     height: 20px;
-    left: 12.162162%;
+    left: 11.25%;
     top: 13px;
     font-family: "Avenir";
     font-style: normal;
@@ -98,20 +98,15 @@
     position: absolute;
     width: 148px;
     height: 46px;
-    left: 11.25%;
-    top: 76.8%;
+    left: 11%;
+    top: 81%;
     background: #ffb800;
     box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
     border-radius: 50px;
   }
 
   .r-more {
-    position: absolute;
-    width: 123px;
-    height: 29px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* font-family: "Avenir"; */
+    font-family: "Avenir";
     bottom: 6.67%;
     font-style: normal;
     font-weight: 400;
@@ -122,13 +117,41 @@
     font-weight: 400;
   }
 
-  .down-arrow {
+
+  .r-container {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    bottom: 3%;
+  }
+  .down-arrow {
+    width: fit-content;
     color: #ffb800;
     bottom: 2.7%;
-    font-size: 20px;
+    height: 20px;
+    font-size: 35px;
+    animation-name: down-arrow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    margin-top: 10px;
+  }
+  @keyframes down-arrow {
+    0% {
+      transform: translateY(-40%);
+    }
+    /* 25%  {transform: translateY(0%);} */
+    50% {
+      transform: translateY(30%);
+    }
+    /* 75% {transform: translateY(0%);} */
+    100% {
+      transform: translateY(-40%);
+    }
   }
 
   .disc-img {
@@ -145,33 +168,8 @@
     position: absolute;
     width: 526px;
     height: 83px;
-    left: 10.416666%;
-    top: 55.59%;
-  }
-  .r-more {
-    position: absolute;
-    width: 123px;
-    height: 29px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* font-family: "Avenir"; */
-    bottom: 6.67%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 140%;
-    letter-spacing: -0.3px;
-    color: #ffffff;
-    font-weight: 400;
-  }
-
-  .down-arrow {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #ffb800;
-    bottom: 2.7%;
-    font-size: 20px;
+    left: 11%;
+    top: 58.5%;
   }
 
   .disc-img {
@@ -183,13 +181,7 @@
     height: 544.7px;
     /* background-color: saddlebrown; */
   }
-  .flipdown-container {
-    position: absolute;
-    width: 526px;
-    height: 83px;
-    left: 10.416666%;
-    top: 55.59%;
-  }
+
   .hcontainer2 {
     position: absolute;
     height: 300vh;
@@ -202,7 +194,8 @@
     width: 288px;
     height: 284px;
     left: 11.25%;
-    top: 0.00602861px;
+    top: calc(50vh);
+    transform: translateY(-50%);
   }
   .faq-img {
     position: absolute;
@@ -349,6 +342,7 @@
     position: absolute;
     left: 45%;
     top: 74%;
+    margin-right: 5%;
   }
   .rules-list li {
     color: white;
@@ -378,7 +372,7 @@
     width: 182px;
     height: 46px;
     right: 5%;
-    top: 97%;
+    top: 98%;
     border: none;
     background: #292929;
     box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
@@ -549,7 +543,7 @@
 .noot-4 {
   position: absolute;
   animation: notes 2s infinite linear;
-  font-size: 35px;
+  font-size: 25px;
   opacity: 0;
   color: white;
 }
@@ -592,34 +586,32 @@
 }
 
 @media only screen and (max-width: 600px) {
-
   .noot-1,
   .noot-2,
   .noot-3,
   .noot-4 {
     position: absolute;
     animation: notes 2s infinite linear;
-    font-size: 25px;
+    font-size: 20px;
     opacity: 0;
     color: white;
   }
-  
+
   .noot-2 {
     top: 100px;
     right: 42%;
     animation-delay: 1s;
   }
-  
+
   .noot-3 {
     top: 65px;
     right: 55%;
     animation-delay: 1.5s;
   }
-  
+
   .noot-4 {
     top: 100px;
     right: 40%;
     animation-delay: 2s;
   }
-  
 }

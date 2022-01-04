@@ -1,7 +1,7 @@
 @media only screen and (max-width: 600px) {
   .hcontainer2_1 {
     position: absolute;
-    height: 600vw;
+    height: 700vw;
     top: 900px;
     width: 100%;
     background-color: #191919;
@@ -20,28 +20,28 @@
     width: 60vw;
     height: 60vw;
     margin-left: 20vw;
-    top: 1%;
+    top: 60vw;
   }
   .faq-img {
     position: absolute;
     width: 70vw;
     height: 50vw;
     left: 15vw;
-    top: 280vw;
+    top: 290vw;
   }
   .rules-img {
     position: absolute;
     width: 60vw;
     height: 40vw;
     left: 10vw;
-    top: 495vw;
+    top: 520vw;
   }
 
   .about-text {
     position: absolute;
     width: 90vw;
     height: 114px;
-    top: 100vw;
+    top: 20vw;
 
     font-family: "Avenir LT Std";
     font-style: normal;
@@ -61,7 +61,7 @@
   .faq-head {
     position: absolute;
     left: 50%;
-    top: 135vw;
+    top: 145vw;
     transform: translateX(-50%);
     font-family: Poppins;
     font-style: normal;
@@ -75,7 +75,7 @@
   .about-head {
     position: absolute;
     left: 7%;
-    top: 80vw;
+    top:5vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -92,7 +92,7 @@
     width: 80vw;
     height: 104px;
     left: 10%;
-    top: 150vw;
+    top: 160vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -111,7 +111,7 @@
     width: 80vw;
     height: 104px;
     left: 10%;
-    top: 190vw;
+    top: 200vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -131,7 +131,7 @@
     width: 80vw;
     height: 104px;
     left: 10%;
-    top: 230vw;
+    top: 240vw;
     align-items: center;
     font-family: Poppins;
     font-style: normal;
@@ -155,7 +155,7 @@
     width: 200px;
     height: 46px;
     left: 27%;
-    top: 265vw;
+    top: 275vw;
     border: none;
     background: #292929;
     left: 50%;
@@ -190,7 +190,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 330vw;
+    top: 355vw;
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
@@ -202,7 +202,7 @@
   .rules-list1 {
     position: absolute;
     left: 10%;
-    top: 350vw;
+    top: 375vw;
     width: 80vw;
     font-family: Poppins;
     font-style: normal;
@@ -217,7 +217,7 @@
   .rules-list2 {
     position: absolute;
     left: 10%;
-    top: 375vw;
+    top: 400vw;
     width: 80vw;
     font-family: Poppins;
     font-style: normal;
@@ -235,7 +235,7 @@
 
     height: 51px;
     left: 10%;
-    top: 400vw;
+    top: 425vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -254,7 +254,7 @@
     position: absolute;
 
     left: 10%;
-    top: 425vw;
+    top: 450vw;
     width: 80vw;
 
     font-family: Poppins;
@@ -275,7 +275,7 @@
     width: 80vw;
 
     left: 10%;
-    top: 450vw;
+    top: 475vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -297,7 +297,7 @@
     width: 200px;
     height: 46px;
     left: 27%;
-    top: 475vw;
+    top: 500vw;
     border: none;
     background: #292929;
     left: 50%;

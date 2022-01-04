@@ -51,9 +51,13 @@ export default function Home() {
           </button>
         </a>
       )}
-      <a href="#contact">
+      <a href="#about">
+      <div className="r-container">
+
         <div className="r-more">Read More</div>
         <AiOutlineArrowDown className="down-arrow" />
+      </div>
+
       </a>
     </div>
     </>

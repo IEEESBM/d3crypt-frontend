@@ -83,13 +83,21 @@
   margin-top: 200px;
   width: 24px;
   height: 24px;
+  background-color: #ffb800;
+  border-radius: 50%;
+  border: none;
+
+}
+
+.footer-icon:hover{
+  background-color: white;
 }
 
 @media only screen and (max-width: 600px) {
   .contact-container {
     width: 100%;
     min-height: 800px;
-    top: calc(550vw + 900px);
+    top: calc(570vw + 900px);
   }
   .contact-h {
     font-size: 30px;
@@ -111,7 +119,10 @@
     transform: translateX(-50%);
     width: 55px;
     height: 55px;
+    color: #ffb800;
   }
+  
+    
   .logo-img {
     height: 55px;
     width: 55px;
@@ -154,7 +165,11 @@
     margin-top: 180px;
     width: 24px;
     height: 24px;
+    background-color: #ffb800;
+    border-radius: 50%;
+    border: none;
   }
+
   .footer-c {
     position: absolute;
     height: 250px;

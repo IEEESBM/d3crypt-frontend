@@ -7,6 +7,13 @@ import logo from "../../assets/ieee_logo.svg";
 import ig_logo from "../../assets/Instagram_Icon.svg";
 import twitter_logo from "../../assets/Twitter_Icon.svg";
 import fb_logo from "../../assets/Facebook_Icon.svg";
+
+import { SiFacebook,SiInstagram } from 'react-icons/si';
+import { AiFillTwitterCircle } from 'react-icons/ai';
+
+
+
+
 export default function Contact() {
   return (
     <div className="contact-container">
@@ -36,9 +43,12 @@ export default function Contact() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </div>
         <div>
-          <img src={fb_logo} className="footer-icon" />
-          <img src={twitter_logo} className="footer-icon" />
-          <img src={ig_logo} className="footer-icon" />
+        <SiFacebook className="footer-icon"/>
+        <AiFillTwitterCircle className="footer-icon"/>
+          {/* <img src={fb_logo} className="footer-icon" /> */}
+          {/* <img src={twitter_logo} className="footer-icon" /> */}
+          {/* <img src={ig_logo} className="footer-icon" /> */}
+          <SiInstagram className="footer-icon"/>
         </div>
       </div>
     </div>

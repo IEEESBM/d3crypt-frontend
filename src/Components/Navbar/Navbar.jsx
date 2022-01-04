@@ -81,7 +81,7 @@ export default function NavBar() {
               </Link>
             </div>{" "}
             <div className="nav-item">
-              <a id="nav-link" href="#contact">
+              <a id="nav-link" href="/#contact">
                 Contact
               </a>
             </div>
@@ -89,6 +89,8 @@ export default function NavBar() {
         </div>
         {isLoggedIn ? (
           <>
+          <div className="isLoggedin">
+
             <Link to={"/competition"}>
               <button className="comp-btn">
                 <span className="comp">Head over to the competition</span>
@@ -102,6 +104,7 @@ export default function NavBar() {
               className="nav-profile"
               src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
             />
+          </div>
 
             {/* <button className="login-btn" onClick={handleLogout}>
             <span className="login">Logout</span>
