@@ -1,4 +1,5 @@
 import React from "react";
+import ImageUpload from "./ImageUpload";
 
 function ProfilePhoto() {
   return (
@@ -10,6 +11,7 @@ function ProfilePhoto() {
       />
       <div className="name">jonathan byres</div>
       <div className="year">2nd year</div>
+      <ImageUpload />
     </div>
   );
 }

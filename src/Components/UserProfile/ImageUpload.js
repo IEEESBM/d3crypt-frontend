@@ -18,7 +18,7 @@ function handleClick() {
 function ImageUpload() {
   const [id, setId] = useState("");
   const [key, setKey] = useState("");
-  const [img, setImg] = useState();
+  const [img, setImg] = useState('https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg');
 
   const handleUpload = (e) => {
     e.preventDefault();

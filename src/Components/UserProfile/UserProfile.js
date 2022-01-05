@@ -44,7 +44,7 @@ function UserProfile() {
   return (
     <>
       <MobileNavbar />
-      <ImageUpload />
+      {/* <ImageUpload /> */}
 
       <div id="userprofile">
         <Sidebar />
