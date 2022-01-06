@@ -94,8 +94,10 @@
 .leaderboard-container .position-pic {
   width: 2.22vw;
   height: 2.22vw;
-  background: #7d7d7d;
+  /* border: 5px solid blue; */
+  /* background: #7d7d7d; */
   border-radius: 50%;
+  
 }
 
 .leaderboard-container .position-name {

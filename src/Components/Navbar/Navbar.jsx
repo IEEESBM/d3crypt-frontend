@@ -116,15 +116,15 @@ export default function NavBar() {
           <>
             <Link to={"/register"}>
               <button className="register-btn">
+                <div className="register-overlay"></div>
                 <span className="register">Register</span>
-                <div className="overlay"></div>
               </button>
             </Link>
 
             <Link to={"/signin"}>
               <button className="login-btn">
                 <span className="login">Sign in</span>
-                <div className="overlay"></div>
+                <div className="login-overlay"></div>
                 <AiOutlineArrowRight className="right-arrow" />
               </button>
             </Link>
