@@ -188,6 +188,7 @@ function SignUp() {
             </div>
             <button className={styles.register} type="submit">
               Register
+              <div className={styles.overlay}></div>
             </button>
           </form>
           <p className={styles.link}>

@@ -114,19 +114,22 @@ export default function MobileNavbar() {
         {isLoggedIn ? (
           <div className="btn-c">
             <Link to={"/competition"}>
-              <button className="reg-button">Competition</button>
+              <button className="reg-button">Competition<div className="overlay"></div></button>
+              
             </Link>
           </div>
         ) : (
           <>
             <div className="btn-c">
               <Link to={"/register"}>
-                <button className="reg-button">Register</button>
+                <button className="reg-button">Register<div className="overlay"></div></button>
+                
               </Link>
             </div>
             <div className="btn-c">
               <Link to={"/signin"}>
-                <button className="log-button">Sign in</button>
+                <button className="log-button">Sign in<div className="overlay"></div></button>
+                
               </Link>
             </div>
           </>

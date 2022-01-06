@@ -100,12 +100,14 @@ function ImageUpload() {
     <>
       <button type="button" class="modal-click" onClick={handleClick}>
         Select Profile Image
+        <div className="overlay"></div>
       </button>
 
       
         <input id="imageInput" type="file" accept="image/*" />
         <button id="img-submit" type="submit" onClick={handleUpload}>
           Upload
+          <div className="overlay"></div>
         </button>
       
     </>

@@ -94,6 +94,7 @@ export default function NavBar() {
             <Link to={"/competition"}>
               <button className="comp-btn">
                 <span className="comp">Head over to the competition</span>
+                <div className="overlay"></div>
               </button>
             </Link>
 
@@ -116,12 +117,14 @@ export default function NavBar() {
             <Link to={"/register"}>
               <button className="register-btn">
                 <span className="register">Register</span>
+                <div className="overlay"></div>
               </button>
             </Link>
 
             <Link to={"/signin"}>
               <button className="login-btn">
                 <span className="login">Sign in</span>
+                <div className="overlay"></div>
                 <AiOutlineArrowRight className="right-arrow" />
               </button>
             </Link>
