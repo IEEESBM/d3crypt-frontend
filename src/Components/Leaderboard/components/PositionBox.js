@@ -1,5 +1,10 @@
 function PositionBox(props) {
-  var imgSrc = "http://localhost:4000/image/"+props.src;
+  if (props.src) {
+    var imgSrc = "http://localhost:4000/image/" + props.src;
+  }
+  else {
+    var imgSrc = 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg';
+  }
   console.log(props);
   return (
     <>

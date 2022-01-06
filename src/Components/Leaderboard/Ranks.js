@@ -1,12 +1,30 @@
 import "./Ranks.css";
 
 function Ranks({ remainingList, first, second, third }) {
+  if (first.imgKey) {
+    var firstImgSrc = "http://localhost:4000/image/" + first.imgKey;
+  }
+  else {
+    var firstImgSrc = 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg';
+  }
+  if (second.imgKey) {
+    var secondImgSrc = "http://localhost:4000/image/" + second.imgKey;
+  }
+  else {
+    var secondImgSrc = 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg';
+  }
+  if (third.imgKey) {
+    var thirdImgSrc = "http://localhost:4000/image/" + third.imgKey;
+  }
+  else {
+    var thirdImgSrc = 'https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg';
+  }
+
   return (
     <div className="ranks-container">
       <div className="rank-box1 ranks-box d-flex flex-column align-items-center">
         <img
-          src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
-          alt="ProfilePic"
+          src={firstImgSrc}
           className="profileimage rank-box1-pic"
         />
         <p className="ranks-name rank-box1-name">{first.username}</p>
@@ -17,8 +35,7 @@ function Ranks({ remainingList, first, second, third }) {
 
       <div className="rank-box2 ranks-box d-flex flex-column align-items-center">
         <img
-          src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
-          alt="ProfilePic"
+          src={secondImgSrc}
           className="profileimage rank-box2-pic"
         />
         <p className="ranks-name rank-box2-name">{second.username}</p>
@@ -29,8 +46,7 @@ function Ranks({ remainingList, first, second, third }) {
 
       <div className="rank-box3 ranks-box d-flex flex-column align-items-center">
         <img
-          src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
-          alt="ProfilePic"
+          src={thirdImgSrc}
           className="profileimage rank-box3-pic"
         />
         <p className="ranks-name rank-box3-name">{third.username}</p>

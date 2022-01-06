@@ -25,7 +25,7 @@ function PositionTable({ remainingList, first, second, third }) {
       </div>
       <div className="position-box">
         <PositionBox
-          
+          src={second.imgKey}
           bg="#D3D3D3"
           pos="2"
           name={second.username}
@@ -34,6 +34,7 @@ function PositionTable({ remainingList, first, second, third }) {
       </div>
       <div className="position-box">
         <PositionBox
+          src={third.imgKey}
           bg="#EB8D00"
           pos="3"
           name={third.username}
@@ -42,10 +43,11 @@ function PositionTable({ remainingList, first, second, third }) {
       </div>
       {
         remainingList.map((listItem, index) => {
-          console.log(listItem);
+          
           return (
             <div className="position-box">
               <PositionBox
+                src={listItem.imgKey}
                 bg="#EB8D00"
                 pos={`${index + 4}`}
                 name={listItem.username}
