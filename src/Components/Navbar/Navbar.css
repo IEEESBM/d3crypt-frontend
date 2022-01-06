@@ -111,6 +111,22 @@
   border: none;
 }
 
+.login-overlay {
+  border-radius: 2.89vw;
+  /* position: absolute; */
+  /* left: 68%; */
+  /* top: 24.44444%; */
+  width: 148px;
+  height: 46px;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.login-btn:hover .login-overlay {
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+
 .login {
   position: absolute;
   width: 100%;

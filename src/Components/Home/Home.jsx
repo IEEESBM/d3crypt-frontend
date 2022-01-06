@@ -48,7 +48,7 @@ export default function Home() {
         <a href="/register">
           <button className="register-btn-2">
             <span className="register-2">Register Now!</span>
-            <div className="overlay"></div>
+            <div className="register-btn-2-overlay"></div>
           </button>
         </a>
       )}
