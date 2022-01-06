@@ -30,10 +30,10 @@ function Contact({ person, setPerson, handleChange, editField }) {
           onChange={handleChange}
           readOnly
         />
-        <AiFillEdit
+        {/* <AiFillEdit
           className="editfield email"
           onClick={() => editField("email")}
-        />
+        /> */}
       </div>
 
       <p className="contacttitle">Mobile Number</p>
