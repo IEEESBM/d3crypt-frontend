@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: Avenir LT Std;
   background: #161616;
+  height: 1067px;
 }
 
 .form {
@@ -57,7 +58,23 @@ input {
   border-radius: 43px;
   font-size: 1.5em;
   color: #000000;
+  position: relative;
 }
+.overlay {
+  border-radius: 43px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+.btn-login:hover .overlay {
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+
 .signin-text {
   font-weight: 600;
   font-size: 2.2em;

@@ -38,6 +38,7 @@ export default function ForgotPassword() {
                   class="btn-login col-8 btn-block text-center p-2 m-2"
                 >
                   Request Password Reset
+                  <div className="overlay"></div>
                 </button>
               </a>
             </div>

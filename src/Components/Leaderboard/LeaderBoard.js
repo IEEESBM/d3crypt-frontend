@@ -38,7 +38,7 @@ function LeaderBoard() {
           </p>
         </h1>
         <div className="leaderboard-content">
-          <Ranks></Ranks>
+          <Ranks remainingList={remainingList} first={first} second={second} third={third}></Ranks>
           <PositionTable remainingList={remainingList} first={first} second={second} third={third}></PositionTable>
         </div>
       </div>

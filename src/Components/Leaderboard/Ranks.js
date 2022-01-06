@@ -1,6 +1,6 @@
 import "./Ranks.css";
 
-function Ranks() {
+function Ranks({ remainingList, first, second, third }) {
   return (
     <div className="ranks-container">
       <div className="rank-box1 ranks-box d-flex flex-column align-items-center">
@@ -9,7 +9,7 @@ function Ranks() {
           alt="ProfilePic"
           className="profileimage rank-box1-pic"
         />
-        <p className="ranks-name rank-box1-name">Alpha Beta</p>
+        <p className="ranks-name rank-box1-name">{first.username}</p>
         <p className="ranks-position rank-box1-pos">
           1<span className="ranks-suffix">st</span>
         </p>
@@ -21,7 +21,7 @@ function Ranks() {
           alt="ProfilePic"
           className="profileimage rank-box2-pic"
         />
-        <p className="ranks-name rank-box2-name">Alpha Beta</p>
+        <p className="ranks-name rank-box2-name">{second.username}</p>
         <p className="ranks-position rank-box2-pos">
           2<span className="ranks-suffix">nd</span>
         </p>
@@ -33,7 +33,7 @@ function Ranks() {
           alt="ProfilePic"
           className="profileimage rank-box3-pic"
         />
-        <p className="ranks-name rank-box3-name">Alpha Beta</p>
+        <p className="ranks-name rank-box3-name">{third.username}</p>
         <p className="ranks-position rank-box3-pos">
           3<span className="ranks-suffix">rd</span>
         </p>

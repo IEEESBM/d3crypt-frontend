@@ -84,10 +84,16 @@ function UserProfile() {
 
           <div className="buttons">
             <a href="#">
-              <div className="updatebutton">Update</div>
+              <div className="updatebutton">
+                Update
+                <div className="overlay"></div>
+              </div>
             </a>
             <a href="#">
-              <div className="backbutton">Back</div>
+              <div className="backbutton">
+                Back
+                <div className="overlay"></div>
+              </div>
             </a>
           </div>
         </div>

@@ -118,6 +118,7 @@
   line-height: 3.722vw;
   font-weight: 600;
   border-radius: 1.388vw;
+  text-align: center;
 }
 
 .leaderboard-container .ranks-position {

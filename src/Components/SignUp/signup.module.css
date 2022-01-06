@@ -156,7 +156,26 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
 }
+.overlay {
+  border-radius: 2.89vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.register:hover {
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+
+
 
 .link {
   margin-top: 2.36vw;

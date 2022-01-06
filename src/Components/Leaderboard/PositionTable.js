@@ -16,6 +16,7 @@ function PositionTable({ remainingList, first, second, third }) {
       {/* ----------------- Table ---------------------- */}
       <div className="position-box">
         <PositionBox
+          src={first.imgKey}
           bg="#FFDF00"
           pos="1"
           name={first.username}
@@ -24,6 +25,7 @@ function PositionTable({ remainingList, first, second, third }) {
       </div>
       <div className="position-box">
         <PositionBox
+          
           bg="#D3D3D3"
           pos="2"
           name={second.username}
