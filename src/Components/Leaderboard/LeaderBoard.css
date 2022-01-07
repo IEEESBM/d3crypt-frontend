@@ -6,9 +6,13 @@
   box-sizing: border-box;
 }
 
+body{
+  height: 100%;
+}
+
 .leaderboard-container {
   width: 100vw;
-  height: calc(100vh + 600px);
+  height: calc(100vh + 500px);
   /* min-height: 100vw; */
   background: #191919;
   display: grid;
@@ -19,7 +23,7 @@
 
 #leaderboard-container .sidebar {
   flex: 6.25%;
-  height: calc(100vh + 600px);
+  height: calc(100vh + 500px);
   background: #121212;
   box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.03);
   display: flex;
@@ -29,21 +33,24 @@
 
 #leaderboard-container .homeicon,
 #leaderboard-container .leaderboardicon,
-#leaderboard-container .settingsicon {
+#leaderboard-container .competitionicon,
+#leaderboard-container .userprofileicon {
   color: #ffffff;
   transition: 0.2s;
 }
 
 #leaderboard-container .homeicon:hover,
 #leaderboard-container .leaderboardicon:hover,
-#leaderboard-container .settingsicon:hover {
+#leaderboard-container .competitionicon:hover,
+#leaderboard-container .userprofileicon:hover {
   color: #ffb800;
 }
 
 #leaderboard-container .smallicon,
 #leaderboard-container .homeicon,
 #leaderboard-container .leaderboardicon,
-#leaderboard-container .settingsicon {
+#leaderboard-container .competitionicon,
+#leaderboard-container .userprofileicon {
   margin-top: 40px;
   font-size: 3vw;
 }
@@ -113,9 +120,7 @@
   #leaderboard-container {
     display: none;
   }
-  #leaderboard-container .sidebar {
-    height: 100vh;
-  }
+  
   .leaderboard-container {
     display: flex;
     flex-direction: column;

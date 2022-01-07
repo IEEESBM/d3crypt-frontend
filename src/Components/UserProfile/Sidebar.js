@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as Smallicon } from "./smallicon.svg";
-import { AiFillHome, AiFillSetting, AiFillEdit } from "react-icons/ai";
+import { AiFillHome, AiFillSetting } from "react-icons/ai";
+import {FaFootballBall, FaUserAlt} from 'react-icons/fa'
 import { MdLeaderboard } from "react-icons/md";
 
 function Sidebar() {
@@ -15,8 +16,11 @@ function Sidebar() {
       <a href="/leaderboard">
         <MdLeaderboard className="leaderboardicon" />
       </a>
-      <a href="#">
-        <AiFillSetting className="settingsicon" />
+      <a href="/competition">
+        <FaFootballBall className="competitionicon" />
+      </a>
+      <a href="/user-profile">
+        <FaUserAlt className="userprofileicon" />
       </a>
     </div>
   );

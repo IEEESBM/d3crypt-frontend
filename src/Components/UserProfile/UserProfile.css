@@ -83,21 +83,24 @@
 
 #userprofile .homeicon,
 #userprofile .leaderboardicon,
-#userprofile .settingsicon {
+#userprofile .competitionicon,
+#userprofile .userprofileicon {
   color: #ffffff;
   transition: 0.2s;
 }
 
 #userprofile .homeicon:hover,
 #userprofile .leaderboardicon:hover,
-#userprofile .settingsicon:hover {
+#userprofile .competitionicon:hover,
+#userprofile .userprofileicon:hover {
   color: #ffb800;
 }
 
 #userprofile .smallicon,
 #userprofile .homeicon,
 #userprofile .leaderboardicon,
-#userprofile .settingsicon {
+#userprofile .competitionicon,
+#userprofile .userprofileicon {
   margin-top: 40px;
   font-size: 3vw;
 }

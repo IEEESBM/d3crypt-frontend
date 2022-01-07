@@ -19,7 +19,6 @@
   
   .sidebar2 .sidebar {
     flex: 6.25%;
-    height: 116.5vw;
     background: #121212;
     box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.03);
     display: flex;
@@ -31,21 +30,24 @@
   .sidebar2 .smallicon,
   .sidebar2 .homeicon,
   .sidebar2 .leaderboardicon,
-  .sidebar2 .settingsicon {
+  .sidebar2 .competitionicon,
+  .sidebar2 .userprofileicon {
     margin-top: 40px;
     font-size: 8vw;
   }
 
   .sidebar2 .homeicon,
   .sidebar2 .leaderboardicon,
-  .sidebar2 .settingsicon {
+  .sidebar2 .competitionicon,
+  .sidebar2 .userprofileicon {
     color: #ffffff;
     transition: 0.2s;
   }
 
   .sidebar2 .homeicon:hover,
   .sidebar2 .leaderboardicon:hover,
-  .sidebar2 .settingsicon:hover {
+  .sidebar2 .competitionicon:hover,
+  .sidebar2 .userprofileicon:hover {
     color: #ffb800;
   }
 
