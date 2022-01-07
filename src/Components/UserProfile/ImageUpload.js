@@ -16,12 +16,18 @@ function handleClick() {
 }
 
 function ImageUpload() {
+  const defaultImg=  "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
   const [id, setId] = useState("");
   const [key, setKey] = useState("");
-  const [img, setImg] = useState('https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg');
+  
+  const [img, setImg] = useState(defaultImg);
 
-  const handleUpload = (e) => {
+  const handleUpload = async(e) => {
     e.preventDefault();
+
+    if(img!==defaultImg){
+      await axios.post("http://localhost:4000/delete-image/"+key).then((res)=>console.log(res))
+    }
 
     var imageInput = document.getElementById("imageInput");
     const file = imageInput.files[0];
@@ -29,6 +35,7 @@ function ImageUpload() {
 
     var imageInput = new FormData();
     imageInput.append("image", file);
+
 
     axios
       .post("http://localhost:4000/image", imageInput)
@@ -43,7 +50,7 @@ function ImageUpload() {
           axios
             .post("http://localhost:4000/user-img", data)
             .then((response) => {
-              window.location.reload()
+              window.location.reload();
             });
         },
         (error) => {
@@ -103,13 +110,11 @@ function ImageUpload() {
         <div className="overlay"></div>
       </button>
 
-      
-        <input id="imageInput" type="file" accept="image/*" />
-        <button id="img-submit" type="submit" onClick={handleUpload}>
-          Upload
-          <div className="overlay"></div>
-        </button>
-      
+      <input id="imageInput" type="file" accept="image/*" />
+      <button id="img-submit" type="submit" onClick={handleUpload}>
+        Upload
+        <div className="overlay"></div>
+      </button>
     </>
   );
 }
