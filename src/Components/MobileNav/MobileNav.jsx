@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { ReactComponent as Hamburger } from "../../assets/hamburger.svg";
 import "./MobileNav.css";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
@@ -78,9 +77,6 @@ export default function MobileNavbar() {
         ) : (
           <div></div>
         )}
-        {/* <vaHamburger className="hamburger" onClick={displayNavbar}></Hamburger> */}
-
-        {/* <a href="#"><DecryptLogo className="decryptlogo"></DecryptLogo></a> */}
 
         <div id="nav-icon2" onClick={toggleClass}>
           <span></span>
@@ -93,7 +89,6 @@ export default function MobileNavbar() {
       </nav>
 
       <div className="slidenavbar">
-        {/* <Hamburger className="hamburger" onClick={displayNavbar}></Hamburger> */}
         <div className="mobile-c">
           <img src={logo} className="mobile-logo"></img>
           <span className="mobile-span">CRYPT</span>

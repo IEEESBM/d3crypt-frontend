@@ -19,7 +19,7 @@
 
 #leaderboard-container .sidebar {
   flex: 6.25%;
-  height: 116.5vw;
+  height: calc(100vh + 600px);
   background: #121212;
   box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.03);
   display: flex;

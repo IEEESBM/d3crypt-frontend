@@ -75,7 +75,6 @@ function App() {
           <Route exact path="/leaderboard">
             {token ? (
               <>
-                <MobileNavbar />
                 <Leaderboard />
               </>
             ) : (

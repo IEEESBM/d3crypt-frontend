@@ -4,6 +4,7 @@ import Ranks from "./Ranks";
 import PositionTable from "./PositionTable";
 import "./LeaderBoard.css";
 import axios from "axios";
+import MobileNavbar2 from "../MobileNav2/MobileNav2";
 
 function LeaderBoard() {
   const [remainingList, setRemainingList] = useState([]);
@@ -25,24 +26,27 @@ function LeaderBoard() {
   }, []);
 
   return (
-    <div className="leaderboard-container">
-      <div id="leaderboard-container">
-        <Sidebar></Sidebar>
-      </div>
+    <>
+      <MobileNavbar2></MobileNavbar2>
+      <div className="leaderboard-container">
+        <div id="leaderboard-container">
+          <Sidebar></Sidebar>
+        </div>
 
-      <div className="leaderboard-main">
-        <h1 className="header">
-          <p className="heading">Leaderboard</p>
-          <p className="heading-line">
-            <hr />
-          </p>
-        </h1>
-        <div className="leaderboard-content">
-          <Ranks remainingList={remainingList} first={first} second={second} third={third}></Ranks>
-          <PositionTable remainingList={remainingList} first={first} second={second} third={third}></PositionTable>
+        <div className="leaderboard-main">
+          <h1 className="header">
+            <p className="heading">Leaderboard</p>
+            <p className="heading-line">
+              <hr />
+            </p>
+          </h1>
+          <div className="leaderboard-content">
+            <Ranks remainingList={remainingList} first={first} second={second} third={third}></Ranks>
+            <PositionTable remainingList={remainingList} first={first} second={second} third={third}></PositionTable>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
