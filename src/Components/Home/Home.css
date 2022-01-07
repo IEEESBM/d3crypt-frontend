@@ -105,6 +105,19 @@
     border-radius: 50px;
   }
 
+  .register-btn-2-overlay {
+    border-radius: 2.89vw;
+    width: 148px;
+    height: 46px;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+  }
+  
+  .register-btn-2:hover  .register-btn-2-overlay {
+    display: block;
+    background: rgba(248, 246, 246, 0.3);
+  }
+
   .r-more {
     font-family: "Avenir";
     bottom: 6.67%;
