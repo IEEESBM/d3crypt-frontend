@@ -48,7 +48,7 @@ function PositionTable({ remainingList, first, second, third }) {
             <div className="position-box">
               <PositionBox
                 src={listItem.imgKey}
-                bg="#EB8D00"
+                bg="#455A64"
                 pos={`${index + 4}`}
                 name={listItem.username}
                 points={listItem.points}
