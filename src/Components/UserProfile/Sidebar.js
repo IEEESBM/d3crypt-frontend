@@ -9,10 +9,10 @@ function Sidebar() {
       <a href="/">
         <Smallicon className="smallicon" />
       </a>
-      <a href="#">
+      <a href="/">
         <AiFillHome className="homeicon" />
       </a>
-      <a href="#">
+      <a href="/leaderboard">
         <MdLeaderboard className="leaderboardicon" />
       </a>
       <a href="#">

@@ -1,22 +1,52 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./UserProfile.css";
-import MobileNavbar from "../MobileNav/MobileNav";
+// import MobileNavbar from "../MobileNav/MobileNav";
 import Sidebar from "./Sidebar";
 import ProfilePhoto from "./ProfilePhoto";
 import Contact from "./Contact";
 import College from "./College";
-import Teammate from "./Teammate";
 import ImageUpload from "./ImageUpload";
+import ChangePassword from "./ChangePassword";
+import axios from "axios";
+import MobileNavbar2 from "../MobileNav2/MobileNav2";
 
 function UserProfile() {
+
+  useEffect(() => {
+    var token = localStorage.getItem("jwt");
+    if (token) {
+      var base64Payload = token.split(".")[1];
+      var payload = Buffer.from(base64Payload, "base64");
+      var userID = JSON.parse(payload.toString()).id;
+      console.log(userID);
+      axios
+        .post("http://localhost:4000/get-user", {
+          uid: `${userID}`,
+        })
+        .then(
+          (response) => {
+            console.log(response.data);
+            if ((response.data.mem === true) && (response.data.memNo !== null)) {
+              setPerson({ ...person, memNo: response.data.memNo });
+            }
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
+    } else {
+      console.log("User not found");
+    }
+  }, [])
+
   const [person, setPerson] = useState({
     fullName: "shreyas shah",
     email: "shreyaslshah@gmail.com",
     mobileNo: "9136698199",
     college: "mit",
     applicationId: "200905404",
-    teamMateName: "teammate",
-    teamMateEmail: "teammate@google.com",
+    password: "teammate",
+    memNo: ""
   });
 
   function handleChange(e) {
@@ -39,12 +69,17 @@ function UserProfile() {
       field.readOnly = true;
       field.classList.toggle("datafocus");
     }
+    if (field.type === 'password') {
+      field.type = 'text';
+    }
+    else {
+      field.type = 'password';
+    }
   }
 
   return (
     <>
-      <MobileNavbar />
-      {/* <ImageUpload /> */}
+      <MobileNavbar2 />
 
       <div id="userprofile">
         <Sidebar />
@@ -74,7 +109,7 @@ function UserProfile() {
               handleChange={handleChange}
               editField={editField}
             />
-            <Teammate
+            <ChangePassword
               person={person}
               setPerson={setPerson}
               handleChange={handleChange}

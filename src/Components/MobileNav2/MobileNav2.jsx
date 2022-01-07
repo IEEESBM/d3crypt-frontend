@@ -1,29 +1,24 @@
 import React, { useState, useEffect } from "react";
-import { ReactComponent as Hamburger } from "../../assets/hamburger.svg";
-import "./MobileNav.css";
-import logo from "../../assets/logo.svg";
-import { Link } from "react-router-dom";
+import "./MobileNav2.css";
 
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { verified } from "../../redux/authSlice";
+import Sidebar from "../UserProfile/Sidebar";
 
-export default function MobileNavbar() {
+export default function MobileNavbar2() {
   const { isLoggedIn } = useSelector((state) => state.signUp);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     var token = localStorage.getItem("jwt");
-    // var user = await User.findOne({ _id: userID });
     if (token) {
       var base64Payload = token.split(".")[1];
       var payload = Buffer.from(base64Payload, "base64");
       var userID = JSON.parse(payload.toString()).id;
       console.log(userID);
-      //user = JSON.parse(user);
-      //console.log(user);
       axios
         .post("http://localhost:4000/get-user", {
           uid: `${userID}`,
@@ -62,7 +57,8 @@ export default function MobileNavbar() {
   function toggleClass() {
     var div = document.getElementById("nav-icon2");
     div.classList.toggle("open");
-    document.querySelector(".slidenavbar").classList.toggle("slide");
+    // document.querySelector(".slidenavbar").classList.toggle("slide");
+    document.querySelector(".sidebar2").classList.toggle("slidein");
   }
   return (
     <>
@@ -92,61 +88,10 @@ export default function MobileNavbar() {
         </div>
       </nav>
 
-      <div className="slidenavbar">
-        {/* <Hamburger className="hamburger" onClick={displayNavbar}></Hamburger> */}
-        <div className="mobile-c">
-          <img src={logo} className="mobile-logo"></img>
-          <span className="mobile-span">CRYPT</span>
-        </div>
-
-        <div className="list-item i-1">
-          <Link className="list-link" to={"/#about"}>
-            <p>About</p>
-          </Link>
-        </div>
-        <div className="list-item">
-          <Link className="list-link" to={"/faq"}>
-            <p>FAQ</p>
-          </Link>
-        </div>
-        <div className="list-item">
-          <Link className="list-link" to={"/rules"}>
-            <p>Rules</p>
-          </Link>
-        </div>
-
-        <div className="list-item">
-          <a id="nav-link" href="#contact">
-            Contact
-          </a>
-        </div>
-        {isLoggedIn ? (
-          <div className="btn-c">
-            <Link to={"/competition"}>
-              <button className="reg-button">
-                Competition<div className="overlay"></div>
-              </button>
-            </Link>
-          </div>
-        ) : (
-          <>
-            <div className="btn-c">
-              <Link to={"/register"}>
-                <button className="reg-button">
-                  Register<div className="overlay"></div>
-                </button>
-              </Link>
-            </div>
-            <div className="btn-c">
-              <Link to={"/signin"}>
-                <button className="log-button">
-                  Sign in<div className="overlay"></div>
-                </button>
-              </Link>
-            </div>
-          </>
-        )}
+      <div className="sidebar2">
+        <Sidebar></Sidebar>
       </div>
+
       {visible && (
         <div
           className="hover-div2"

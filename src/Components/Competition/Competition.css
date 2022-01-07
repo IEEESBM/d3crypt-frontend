@@ -256,9 +256,6 @@
 }
 
 @media only screen and (max-width: 890px) {
-  .sidebar {
-    display: none;
-  }
 
   .competition-main-outer {
     margin-left: 0;
