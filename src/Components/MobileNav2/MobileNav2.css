@@ -25,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     width: 20vw;
+    /* height: 100vh; */
   }
 
   .sidebar2 .smallicon,
