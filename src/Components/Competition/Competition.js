@@ -12,8 +12,11 @@ function Competition() {
 
   const [points, setPoints] = useState(0);
   const [ans, setAns] = useState("");
+  const handleAnsChange = (e)=>{
+    setAns(e.target.value);
+  }
 
-  const [ind, setInd] = useState(1);
+  const [index, setIndex] = useState(1);
 
   var userID = ''
 
@@ -23,7 +26,7 @@ function Competition() {
       var base64Payload = token.split(".")[1];
       var payload = Buffer.from(base64Payload, "base64");
       userID = JSON.parse(payload.toString()).id;
-      console.log(userID);
+      // console.log(userID);
     }
 
     axios.post("http://localhost:4000/questions", {
@@ -38,12 +41,22 @@ function Competition() {
       setImg3(res.data.image_3);
       setImg4(res.data.image_4);
     });
-  }, []);
+  }, [index]);
 
   const handleSubmit = (e) => {
-    axios.post("http://localhost:4000/submit", { userID, ans }).then((res) => {
-      console.log(res);
-    });
+    e.preventDefault();
+    console.log('submitting');
+    axios.post("http://localhost:4000/submit", {
+      'answer': ans,
+      'userId': userID
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error)=>{
+        console.log(error);
+      })
+    setIndex(index + 1);
   };
 
   return (
@@ -61,7 +74,7 @@ function Competition() {
             <div className="competition-question-outer">
               <div className="competition-question-content">
                 <div className="question-counter">
-                  Question <span>{ind}</span> of 8
+                  Question <span>{index}</span> of 8
                 </div>
 
                 <div className="question-title">
@@ -103,10 +116,10 @@ function Competition() {
                 </div>
               </div>
               <div className="submit-outer">
-                <textarea className="answer"></textarea>
+                <textarea className="answer" placeholder="Enter you answer here" name="ans" onChange={handleAnsChange}></textarea>
                 <button
                   className="btn btn-primary submit"
-                  onSubmit={handleSubmit}
+                  onClick={handleSubmit}
                 >
                   Submit
                 </button>
