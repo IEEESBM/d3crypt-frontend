@@ -16,7 +16,7 @@ function PositionBox(props) {
         </div>
 
         <div className="position-n">
-          <img className="position-pic" src={imgSrc}
+          <img className="position-pic" src={imgSrc} alt=""
           >
           </img>
           <p className="position-name">{props.name}</p>
