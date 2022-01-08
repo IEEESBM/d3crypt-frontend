@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { store } from "./redux/Store";
 import { Provider } from "react-redux";
+import Competition from "./Components/Competition/Competition";
 
 ReactDOM.render(
   <React.StrictMode>

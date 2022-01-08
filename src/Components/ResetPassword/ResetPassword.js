@@ -6,7 +6,50 @@ import { useDispatch } from "react-redux";
 import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
 export default function ResetPassword() {
+  const current_url = window.location.href;
+  const param_array = current_url.split("/");
+  const id = param_array[4];
+  const token = param_array[5];
+
+  const url = "http://localhost:4000";
+
+  const [newPass, setNewPass] = useState("");
+  const [confirmNewPass, setConfirmNewPass] = useState("");
+  const [err, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [msg, setMsg] = useState("");
+
+  function handleSubmit() {
+    const data = {
+      id,
+      token,
+      newPass,
+    };
+
+    if(newPass!=confirmNewPass) {
+
+      setMsg("Password Mismatch");
+
+      return;
+    }
+
+    axios
+      .patch(url + "/reset", data)
+      .then(
+        (res) =>
+          (res.data.status = "success"
+            ? (setError(false),
+              setSuccess(true),
+              setMsg("Password Updated Successfully"))
+            : null)
+      )
+      .catch((err) => console.log(err.message));
+
+    console.log(data);
+  }
   return (
     <>
       <NavBar />
@@ -17,21 +60,29 @@ export default function ResetPassword() {
             <div class="container text-left col-12 ms-5">
               <p className="text-light text-left signin-text">Reset Password</p>
               <input
+                className="form-item"
+                onChange={(e) => setNewPass(e.target.value)}
+                placeholder="New password"
                 type="password"
-                className="email"
-                placeholder="New Password"
-                name="password1"
-                required
               />
               <p className="my-4"></p>
               <input
+                className="form-item"
+                onChange={(e) => setConfirmNewPass(e.target.value)}
+                placeholder="Re-Enter New password"
                 type="password"
-                className="pwd"
-                placeholder="Re-enter new Password"
-                name="psw"
-                required
               />
-              <div className="emailError error">&nbsp;</div>
+              <div className="emailError error">
+                {msg !== "" ? (
+                  <div
+                    className={
+                      err ? "failure" : success ? "success" : "no-class"
+                    }
+                  >
+                    {msg}
+                  </div>
+                ) : null}
+              </div>
 
               <hr></hr>
 
@@ -39,6 +90,10 @@ export default function ResetPassword() {
                 <button
                   type="submit"
                   class="btn-login col-8 btn-block text-center p-2 m-2"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSubmit();
+                  }}
                 >
                   Reset Password
                 </button>

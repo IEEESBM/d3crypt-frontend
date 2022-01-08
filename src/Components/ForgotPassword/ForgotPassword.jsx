@@ -5,8 +5,38 @@ import "./ForgotPassword.css";
 import { useDispatch } from "react-redux";
 import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
+import axios from "axios";
 
 export default function ForgotPassword() {
+  const [email, setEmail] = useState("");
+  const [err, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [msg, setMsg] = useState("");
+
+  const url = "http://localhost:4000";
+
+  function handleSubmit() {
+    const data = {
+      email,
+    };
+    console.log(data);
+
+    axios
+      .post(url + "/forgot", data)
+      .then((res) =>
+        res.data.status === "error"
+          ? (setError(true), setMsg(res.data.error))
+          : res.data.status === "success"
+          ? (setError(false),
+            setSuccess(true),
+            setMsg("Mail with password reset link has been sent."))
+          : null
+      )
+      .catch((err) => console.log(err.message));
+
+    console.log(data);
+  }
+
   return (
     <>
       <NavBar />
@@ -19,23 +49,33 @@ export default function ForgotPassword() {
                 Forgot Password ?
               </p>
               <input
+                className="email-field"
                 type="email"
-                className="email"
-                placeholder="email"
-                name="email"
-                required
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter registered Email ID"
               />
-              <div className="emailError error">&nbsp;</div>
+              <div className="emailError error">
+                {msg !== "" ? (
+                  <div
+                    className={
+                      err ? "failure" : success ? "success" : "no-class"
+                    }
+                  >
+                    {msg}
+                  </div>
+                ) : null}
+              </div>
 
               <hr></hr>
 
-              <p className="text-light text-end mt-2 col-8 fs-5 pos2">
-                <span className="pos2">Please enter registered email id</span>
-              </p>
               <a class="sign_in">
                 <button
                   type="submit"
                   class="btn-login col-8 btn-block text-center p-2 m-2"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSubmit();
+                  }}
                 >
                   Request Password Reset
                   <div className="overlay"></div>

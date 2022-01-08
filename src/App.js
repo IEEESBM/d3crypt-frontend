@@ -51,12 +51,12 @@ function App() {
               </>
             )}
           </Route>
-          <Route exact path="/resetpassword">
+          <Route exact path="/reset/:id/:token">
             <MobileNavbar />
             <Navbar />
             <ResetPassword />
           </Route>
-          <Route exact path="/forgotpassword">
+          <Route exact path="/forgot">
             <MobileNavbar />
             <Navbar />
             <ForgotPassword />
@@ -95,16 +95,16 @@ function App() {
             <Verification />
           </Route>
           <Route exact path="/competition">
-            {token ? (
-              <>
-                <Navbar />
-                <MobileNavbar />
-                <Competition />
-              </>
-            ) : (
-              <Redirect to={"/"} />
-            )}
-          </Route>
+          {token ? (
+            <>
+              <Navbar />
+              <MobileNavbar />
+              <Competition />
+            </>
+          ) : (
+            <Redirect to={"/"} />
+          )}
+        </Route>
         </Switch>
       </Router>
     </div>

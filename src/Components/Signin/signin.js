@@ -5,19 +5,24 @@ import "./signin.css";
 import { useDispatch } from "react-redux";
 import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [dis, setDis] = useState(false);
 
   const dispatch = useDispatch();
 
   function handleSubmit(e) {
     e.preventDefault();
+    setDis(true);
     const data = { email, password };
     console.log(data);
     dispatch(signInUser(data)).then(
-      () => {},
+      () => {
+        setDis(false);
+      },
       (error) => {
         console.log(error);
         if (error.email) {
@@ -69,8 +74,13 @@ export default function Signin() {
               />
               <div className="passwordError error">&nbsp;</div>
 
-              <p className="text-light text-end mt-2 col-8 fs-5 ">
-                Forgot Password ?
+              <p className="text-light text-end mt-2 col-8 fs-5">
+                <Link
+                  to={"/forgot"}
+                  style={({ color: "white" }, { textDecoration: "none" })}
+                >
+                  Forgot Password?
+                </Link>
               </p>
               <a class="sign_in">
                 <button
@@ -131,13 +141,14 @@ export default function Signin() {
               />
               <div className="passwordError2 error">&nbsp;</div>
 
-              <p className="text-light text-end mt-2 me-4 fs-6">
+              <p className="text-light text-end mt-2 me-4 fs-6 forgot">
                 Forgot Password ?
               </p>
               <button
                 type="submit"
                 class="btn-login col-10 btn-block p-2 m-2 fs-3 text-center"
                 onClick={(e) => handleSubmit(e)}
+                disabled={dis}
               >
                 Sign in
               </button>
