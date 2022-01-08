@@ -16,17 +16,24 @@ function handleClick() {
 }
 
 function ImageUpload() {
-  const defaultImg=  "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
+  const defaultImg = "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
   const [id, setId] = useState("");
   const [key, setKey] = useState("");
-  
+
   const [img, setImg] = useState(defaultImg);
 
-  const handleUpload = async(e) => {
+  const handleUpload = async (e) => {
     e.preventDefault();
 
-    if(img!==defaultImg){
-      await axios.post("http://localhost:4000/delete-image/"+key).then((res)=>console.log(res))
+    console.log(key);
+    if (img !== defaultImg) {
+      await axios.post("http://localhost:4000/delete-image/" + key)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
     }
 
     var imageInput = document.getElementById("imageInput");
@@ -69,7 +76,7 @@ function ImageUpload() {
       var base64Payload = token.split(".")[1];
       var payload = Buffer.from(base64Payload, "base64");
       var userID = JSON.parse(payload.toString()).id;
-      console.log(userID);
+      // console.log(userID);
       setId(userID);
       //user = JSON.parse(user);
       //console.log(user);
@@ -80,13 +87,10 @@ function ImageUpload() {
         .then(
           (response) => {
             console.log(response.data.imgKey);
-            // axios
-            //   .get("http://localhost:4000/image/" + response.data.imgKey)
-            //   .then((res) => console.log(res.data));
-
-            setKey(response.data.imgKey);
-
-            setImg("http://localhost:4000/image/" + response.data.imgKey);
+            if (response.data.imgKey) {
+              setKey(response.data.imgKey);
+              setImg("http://localhost:4000/image/" + response.data.imgKey);
+            }
           },
           (error) => {
             console.log(error);
