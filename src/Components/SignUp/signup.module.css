@@ -170,7 +170,7 @@ input::placeholder {
   transition: background 0.5s ease;
 }
 
-.register:hover {
+.register:hover .overlay{
   display: block;
   background: rgba(248, 246, 246, 0.3);
 }

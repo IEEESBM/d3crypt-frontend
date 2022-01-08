@@ -16,12 +16,25 @@ function handleClick() {
 }
 
 function ImageUpload() {
+  const defaultImg = "https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg"
   const [id, setId] = useState("");
   const [key, setKey] = useState("");
-  const [img, setImg] = useState('https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-social-media-user-portrait-176256935.jpg');
 
-  const handleUpload = (e) => {
+  const [img, setImg] = useState(defaultImg);
+
+  const handleUpload = async (e) => {
     e.preventDefault();
+
+    console.log(key);
+    if (img !== defaultImg) {
+      await axios.post("http://localhost:4000/delete-image/" + key)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+    }
 
     var imageInput = document.getElementById("imageInput");
     const file = imageInput.files[0];
@@ -29,6 +42,7 @@ function ImageUpload() {
 
     var imageInput = new FormData();
     imageInput.append("image", file);
+
 
     axios
       .post("http://localhost:4000/image", imageInput)
@@ -43,7 +57,7 @@ function ImageUpload() {
           axios
             .post("http://localhost:4000/user-img", data)
             .then((response) => {
-              window.location.reload()
+              window.location.reload();
             });
         },
         (error) => {
@@ -62,7 +76,7 @@ function ImageUpload() {
       var base64Payload = token.split(".")[1];
       var payload = Buffer.from(base64Payload, "base64");
       var userID = JSON.parse(payload.toString()).id;
-      console.log(userID);
+      // console.log(userID);
       setId(userID);
       //user = JSON.parse(user);
       //console.log(user);
@@ -73,13 +87,10 @@ function ImageUpload() {
         .then(
           (response) => {
             console.log(response.data.imgKey);
-            // axios
-            //   .get("http://localhost:4000/image/" + response.data.imgKey)
-            //   .then((res) => console.log(res.data));
-
-            setKey(response.data.imgKey);
-
-            setImg("http://localhost:4000/image/" + response.data.imgKey);
+            if (response.data.imgKey) {
+              setKey(response.data.imgKey);
+              setImg("http://localhost:4000/image/" + response.data.imgKey);
+            }
           },
           (error) => {
             console.log(error);
@@ -103,13 +114,11 @@ function ImageUpload() {
         <div className="overlay"></div>
       </button>
 
-      
-        <input id="imageInput" type="file" accept="image/*" />
-        <button id="img-submit" type="submit" onClick={handleUpload}>
-          Upload
-          <div className="overlay"></div>
-        </button>
-      
+      <input id="imageInput" type="file" accept="image/*" />
+      <button id="img-submit" type="submit" onClick={handleUpload}>
+        Upload
+        <div className="overlay"></div>
+      </button>
     </>
   );
 }

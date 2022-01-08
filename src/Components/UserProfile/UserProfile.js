@@ -7,9 +7,12 @@ import Contact from "./Contact";
 import College from "./College";
 import ImageUpload from "./ImageUpload";
 import ChangePassword from "./ChangePassword";
-import axios from "axios";
 import MobileNavbar2 from "../MobileNav2/MobileNav2";
+var data;
 
+var idy='61d1dae0257b9f167e0aef15';
+const axios = require('axios');
+var db;
 function UserProfile() {
 
   useEffect(() => {
@@ -37,6 +40,32 @@ function UserProfile() {
     } else {
       console.log("User not found");
     }
+  
+    axios.get("http://localhost:4000/users/:idy", { params: {id: idy} }).then(res => {
+      console.log(res.data);
+      db=res.data;
+      data=res.data;
+      setPerson({ 
+       ...person,
+         fullName: data.username,
+        email:data.email,
+        mobileNo:data.phone,
+        college:data.college,
+        password:data.password,
+        memNo:data.memNo,
+    applicationId:data.ID,
+        
+        });
+    });
+  
+  
+  
+  
+  
+  
+  
+  
+  
   }, [])
 
   const [person, setPerson] = useState({
@@ -48,7 +77,30 @@ function UserProfile() {
     password: "teammate",
     memNo: ""
   });
+  function submitHandler(e) {
+    
+    axios.get("http://localhost:4000/users/u",
+     {
+       params: {
 
+       
+       id: idy ,
+       username:person.fullName,
+       password:person.password,
+       college:person.college,
+       phone:person.mobileNo,
+       ID:person.applicationId,
+       memNo:person.memNo,
+       }
+      }).then(res => {
+    
+    
+     console.log(res.data);
+    });
+ 
+      
+    
+  }
   function handleChange(e) {
     const name = e.target.name;
     const value = e.target.value;
@@ -119,7 +171,7 @@ function UserProfile() {
 
           <div className="buttons">
             <a href="#">
-              <div className="updatebutton">
+              <div className="updatebutton" onClick={submitHandler}>
                 Update
                 <div className="overlay"></div>
               </div>
