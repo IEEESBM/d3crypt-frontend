@@ -53,7 +53,7 @@ function UserProfile() {
         college:data.college,
         password:data.password,
         memNo:data.memNo,
-    applicationId:data.id,
+    applicationId:data.ID,
         
         });
     });
