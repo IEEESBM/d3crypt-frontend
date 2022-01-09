@@ -31,6 +31,9 @@ export default function Signin() {
           document.querySelector(".emailError2").innerHTML = error.email;
           document.querySelector(".passwordError").innerHTML = "";
           document.querySelector(".passwordError2").innerHTML = "";
+          document.querySelector('.verifyError').innerHTML="";
+          document.querySelector('.verifyError2').innerHTML="";
+
         }
         if (error.password) {
           console.log(error.password);
@@ -38,6 +41,19 @@ export default function Signin() {
           document.querySelector(".emailError2").innerHTML = "";
           document.querySelector(".passwordError").innerHTML = error.password;
           document.querySelector(".passwordError2").innerHTML = error.password;
+          document.querySelector('.verifyError').innerHTML="";
+          document.querySelector('.verifyError2').innerHTML="";
+
+        }
+        if(error.verify){
+
+          document.querySelector(".emailError").innerHTML = "";
+          document.querySelector(".emailError2").innerHTML = "";
+          document.querySelector(".passwordError").innerHTML = "";
+          document.querySelector(".passwordError2").innerHTML = "";
+          document.querySelector('.verifyError').innerHTML=error.verify;
+          document.querySelector('.verifyError2').innerHTML=error.verify;
+
         }
       }
     );
@@ -52,6 +68,8 @@ export default function Signin() {
           <form>
             <div class="container text-left col-12 ms-5">
               <p className="text-light text-left signin-text">Sign in</p>
+              <div className="verifyError error">&nbsp;</div>
+
               <input
                 type="email"
                 className="email"
@@ -61,6 +79,7 @@ export default function Signin() {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <div className="emailError error">&nbsp;</div>
+
 
               <hr></hr>
               <p className="my-4"></p>
@@ -120,6 +139,8 @@ export default function Signin() {
           <form>
             <div class="container text-left col-12 ">
               <p className="text-light text-center fs-3">Sign in</p>
+              <div className="verifyError2 error">&nbsp;</div>
+
               <input
                 type="email"
                 className="fs-5"

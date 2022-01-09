@@ -21,9 +21,12 @@ import FAQs from "./Components/FAQs/FAQ";
 import Rules from "./Components/Rules/Rules";
 import Verification from "./Components/Verification/Verification";
 import Competition from "./Components/Competition/Competition";
+import { useSelector } from "react-redux";
 
 function App() {
-  var token = localStorage.getItem("jwt");
+ const { isLoggedIn } = useSelector((state) => state.signUp);
+
+console.log("check ",isLoggedIn)
 
   return (
     <div className="App">
@@ -38,15 +41,15 @@ function App() {
             <Contact />
           </Route>
           <Route exact path="/user-profile">
-            {token ? <UserProfile /> : <Redirect to={"/"} />}{" "}
+            {isLoggedIn ? <UserProfile /> : <Redirect to={"/"} />}{" "}
           </Route>
           <Route exact path="/register">
-            {token ? (
+            {isLoggedIn ? (
               <Redirect to={"/"} />
             ) : (
               <>
                 <Navbar />
-                <MobileNavbar />
+                {/* <MobileNavbar /> */}
                 <SignUp />
               </>
             )}
@@ -62,7 +65,7 @@ function App() {
             <ForgotPassword />
           </Route>
           <Route exact path="/signin">
-            {token ? (
+            {isLoggedIn ? (
               <Redirect to={"/"} />
             ) : (
               <>
@@ -73,7 +76,7 @@ function App() {
             )}
           </Route>
           <Route exact path="/leaderboard">
-            {token ? (
+            {isLoggedIn ? (
               <>
                 <Leaderboard />
               </>
@@ -95,16 +98,16 @@ function App() {
             <Verification />
           </Route>
           <Route exact path="/competition">
-          {token ? (
-            <>
-              <Navbar />
-              <MobileNavbar />
-              <Competition />
-            </>
-          ) : (
-            <Redirect to={"/"} />
-          )}
-        </Route>
+            {isLoggedIn ? (
+              <>
+                <Navbar />
+                <MobileNavbar />
+                <Competition />
+              </>
+            ) : (
+              <Redirect to={"/"} />
+            )}
+          </Route>
         </Switch>
       </Router>
     </div>
