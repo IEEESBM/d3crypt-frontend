@@ -19,16 +19,15 @@ function App() {
   };
 
   const [index, setIndex] = useState(1);
-
-  var userID = "";
+  const [userID, setUserID] = useState("");
 
   useEffect(() => {
     var token = localStorage.getItem("jwt");
     if (token) {
       var base64Payload = token.split(".")[1];
       var payload = Buffer.from(base64Payload, "base64");
-      userID = JSON.parse(payload.toString()).id;
-      // console.log(userID);
+      setUserID(JSON.parse(payload.toString()).id);
+      console.log(userID);
     }
 
     axios
@@ -49,21 +48,24 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setDis(true);
+    // setDis(true);
+    console.log(userID);
     console.log("submitting");
+
     axios
       .post("http://localhost:4000/submit", {
         answer: ans,
-        userId: userID,
+        id: userID,
       })
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
         setDis(false);
+        if (res.data.isCorrect === true)
+          setIndex(index + 1);
       })
       .catch((error) => {
         console.log(error);
       });
-    setIndex(index + 1);
   };
   return (
     <div className="App">
