@@ -100,8 +100,8 @@ console.log("check ",isLoggedIn)
           <Route exact path="/competition">
             {isLoggedIn ? (
               <>
-                <Navbar />
-                <MobileNavbar />
+                {/* <Navbar /> */}
+                {/* <MobileNavbar /> */}
                 <Competition />
               </>
             ) : (

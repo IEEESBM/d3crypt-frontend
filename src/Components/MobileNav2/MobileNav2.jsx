@@ -13,7 +13,7 @@ export default function MobileNavbar2() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let windowHeight = document.documentElement.scrollHeight - 61;
+    let windowHeight = document.documentElement.scrollHeight;
     console.log(windowHeight);
     document.querySelector('.sidebar2 .sidebar').style.height = `${windowHeight}px`;
 

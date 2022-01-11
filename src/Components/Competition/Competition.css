@@ -7,12 +7,39 @@
   box-sizing: border-box;
 }
 
-.sidebar {
+.competitions-container .sidebar {
   background-color: #121212;
   height: 100vh;
   width: 90px;
   margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
+}
+
+.App .homeicon,
+.App .leaderboardicon,
+.App .competitionicon,
+.App .userprofileicon {
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+.App .homeicon:hover,
+.App .leaderboardicon:hover,
+.App .competitionicon:hover,
+.App .userprofileicon:hover {
+  color: #ffb800;
+}
+
+.App .smallicon,
+.App .homeicon,
+.App .leaderboardicon,
+.App .competitionicon,
+.App .userprofileicon {
+  margin-top: 40px;
+  font-size: 3vw;
 }
 
 .temp {
@@ -281,10 +308,6 @@ button:focus {
 }
 
 @media only screen and (max-width: 890px) {
-  .sidebar {
-    display: none;
-  }
-
   .competition-main-outer {
     margin-left: 0;
   }
@@ -302,14 +325,12 @@ button:focus {
     height: 20rem;
     grid-gap: 25px;
   }
-  
 }
 
 @media only screen and (max-width: 690px) {
   .competition-question-outer {
     width: 30rem;
   }
-
 
   .boxes {
     display: grid;
@@ -326,6 +347,20 @@ button:focus {
 @media only screen and (max-width: 690px) {
   .competition-question-outer {
     width: 25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .competitions-container .sidebar {
+    display: none;
+  }
+  .sidebar2 .smallicon,
+  .sidebar2 .homeicon,
+  .sidebar2 .leaderboardicon,
+  .sidebar2 .competitionicon,
+  .sidebar2 .userprofileicon {
+    margin-top: 40px;
+    font-size: 8vw;
   }
 }
 
