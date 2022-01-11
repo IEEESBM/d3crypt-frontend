@@ -1,0 +1,91 @@
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.hint-content{
+  width: 18.54vw;
+  height: 26.875vw;
+  border-radius: 2.5vw;  
+  box-shadow: 0px 1px 10px rgba(255, 184, 0, 0.15);
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #474747;
+}
+
+.hint-title{
+  background: #292929;
+  height: 4.722vw;
+  border-radius: 2.5vw 2.5vw 0 0;
+}
+
+.hint-title-text{
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding-top: 1.81vw;
+  text-align: center;
+}
+
+.hint-body{
+  background: #474747;
+  border-radius: 0 0 2.5vw 2.5vw;
+}
+
+.hint-body-title{
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 22px;
+  color: #EB8D00;
+  padding-top: 2.78vw;
+  margin-left: 1.32vw;
+}
+
+.hint-body-content{
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 1.25vw;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-left: 1.32vw;
+  margin-right: 1.04vw;
+  margin-top: 1.25vw;
+}
+
+.hint-button{
+  width:10.49vw;
+  height:3.125vw;
+  background: #FBB800;
+  box-shadow: -2px -2px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 3vw;
+  border: 0;
+  margin-left: 4vw;
+  margin-top: 2.8vw;
+  margin-bottom: 2vw;
+}
+
+.hint-button-text{
+ 
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 750;
+  font-size: 1.25vw;
+  line-height: 22px;
+  vertical-align: top; 
+}
+
+.hint-right-arrow{
+  font-size: 1.39vw;
+}
+
