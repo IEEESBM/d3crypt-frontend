@@ -22,11 +22,48 @@ import Rules from "./Components/Rules/Rules";
 import Verification from "./Components/Verification/Verification";
 import Competition from "./Components/Competition/Competition";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import axios from "axios";
+import { verified } from "./redux/authSlice";
+import { useDispatch } from "react-redux";
 
 function App() {
- const { isLoggedIn } = useSelector((state) => state.signUp);
+  const dispatch = useDispatch();
+  const isLoggedIn = useSelector((state) => state.signUp.isLoggedIn);
+  console.log(isLoggedIn);
+  useEffect(() => {
+    var token = localStorage.getItem("jwt");
 
-console.log("check ",isLoggedIn)
+    if (token) {
+      var base64Payload = token.split(".")[1];
+      var payload = Buffer.from(base64Payload, "base64");
+      var userID = JSON.parse(payload.toString()).id;
+      console.log(userID);
+      axios
+        .post("http://localhost:4000/get-user", {
+          uid: `${userID}`,
+        })
+        .then(
+          (response) => {
+            if (response.data.isVerified == true) {
+              console.log("dispatch for verified called");
+              dispatch(verified());
+              console.log(isLoggedIn)
+            }
+          },
+          (error) => {
+            console.log(error);
+          }
+        )
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      console.log("User not found");
+    }
+  }, []);
+
+  console.log("check ", isLoggedIn);
 
   return (
     <div className="App">
@@ -81,7 +118,7 @@ console.log("check ",isLoggedIn)
                 <Leaderboard />
               </>
             ) : (
-              <Redirect to={"/"} />
+              <Leaderboard />
             )}
           </Route>
           <Route exact path="/faq">
