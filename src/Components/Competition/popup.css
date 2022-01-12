@@ -16,6 +16,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: #474747;
+  z-index: 5;
 }
 
 .hint-title{
@@ -83,9 +84,17 @@
   font-size: 1.25vw;
   line-height: 22px;
   vertical-align: top; 
+  color: black;
 }
 
 .hint-right-arrow{
   font-size: 1.39vw;
 }
 
+.hint-close{
+  color: #FBB800;
+  position: absolute;
+  top:10px;
+  right: 20px;
+  font-size: 20px;
+}

@@ -323,9 +323,9 @@ button:focus {
     align-items: center;
   }
 
-  .competition-score {
+  /* .competition-score {
     display: none;
-  }
+  } */
 
   .competition-title {
     font-size: 2.8rem;

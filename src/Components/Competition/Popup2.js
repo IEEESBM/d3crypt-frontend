@@ -2,7 +2,10 @@ import React from 'react'
 import { AiOutlineArrowRight } from "react-icons/ai";
 import './popup.css';
 
-function Popup2() {
+function Popup2({remove2}) {
+  const handleClick = () => {
+    remove2(false);
+  }
   return (
     <div>
       <div className='hint-content'>
@@ -14,7 +17,7 @@ function Popup2() {
           <p className='hint-body-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <p className='hint-body-title'>hint 2</p>
           <p className='hint-body-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button className='hint-button'>
+          <button className='hint-button' onClick={handleClick}>
             <span className='hint-button-text'>Close</span>
             <AiOutlineArrowRight className="hint-right-arrow" />
           </button>
@@ -24,4 +27,4 @@ function Popup2() {
   )
 }
 
-export default Hints2
+export default Popup2

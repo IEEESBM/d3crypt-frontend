@@ -5,8 +5,34 @@ import Navbar from "../Navbar/Navbar";
 import MobileNavbar2 from "../MobileNav2/MobileNav2";
 import Sidebar from "../UserProfile/Sidebar";
 import { RiLightbulbFlashLine } from "react-icons/ri";
+import Popup0 from './Popup0';
+import Popup1 from './Popup1';
+import Popup2 from './Popup2';
 
 function App() {
+
+  const [popup0, setPopup0] = useState(false);
+  const [popup1, setPopup1] = useState(false);
+  const [popup2, setPopup2] = useState(false);
+  const [first,setFirst]=useState(0);
+
+  const onClick = () => {
+    if(first==0){
+      setPopup0(true);
+    }
+    else if(first==1){
+      setPopup1(true);
+    }
+    else{
+      setPopup2(true);
+    }
+
+  }
+
+
+
+
+
   const [qtitle, setQTitle] = useState("Dummy data");
   const [diff, setDiff] = useState("Medium");
   const [img1, setImg1] = useState("");
@@ -74,6 +100,9 @@ function App() {
       <MobileNavbar2></MobileNavbar2>
       <div className="App competitions-container">
         <Sidebar></Sidebar>
+        {popup0 ? <Popup0 remove0={setPopup0} add1={setPopup1} first={setFirst}/> : null}
+      {popup1 ? <Popup1 remove1={setPopup1} add2={setPopup2} first={setFirst}/> : null }
+      {popup2 ? <Popup2 remove2={setPopup2}/> : null}
         <div className="competition-main-outer">
           <div className="temp">
             <div className="competition-title">
@@ -145,7 +174,7 @@ function App() {
                       <div className="line"></div>
                       <div className="div3"></div>
                     </div>
-                    <button className="first">
+                    <button className="first" onClick={onClick}>
                       <RiLightbulbFlashLine className="first-logo" />
                       <p className="first-text">Need a hint?</p>
                     </button>
