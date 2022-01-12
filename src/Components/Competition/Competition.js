@@ -4,6 +4,7 @@ import axios from "axios";
 import Navbar from "../Navbar/Navbar";
 import MobileNavbar2 from "../MobileNav2/MobileNav2";
 import Sidebar from "../UserProfile/Sidebar";
+import { RiLightbulbFlashLine } from "react-icons/ri";
 
 function App() {
   const [qtitle, setQTitle] = useState("Dummy data");
@@ -62,8 +63,7 @@ function App() {
       .then((res) => {
         console.log(res.data);
         setDis(false);
-        if (res.data.isCorrect === true)
-          setIndex(index + 1);
+        if (res.data.isCorrect === true) setIndex(index + 1);
       })
       .catch((error) => {
         console.log(error);
@@ -145,6 +145,10 @@ function App() {
                       <div className="line"></div>
                       <div className="div3"></div>
                     </div>
+                    <button className="first">
+                      <RiLightbulbFlashLine className="first-logo" />
+                      <p className="first-text">Need a hint?</p>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -157,3 +161,4 @@ function App() {
 }
 
 export default App;
+
