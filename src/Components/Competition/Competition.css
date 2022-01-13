@@ -42,10 +42,6 @@
   font-size: 3vw;
 }
 
-.temp {
-  margin-top: 6rem;
-}
-
 .competition-main-outer {
   margin-left: 90px;
   min-height: 100vh;
@@ -73,7 +69,6 @@
 
 .competition-content-outer {
   display: flex;
-  margin-top: 0.5rem;
 }
 .competition-question-outer {
   min-height: 36rem;
@@ -207,6 +202,12 @@ img {
   align-items: center;
 }
 
+.first {
+  margin-left: 8rem;
+  margin-top: 1.2rem;
+
+}
+
 .timer1 {
   width: 9rem;
   height: 9rem;
@@ -291,6 +292,30 @@ button:focus {
   outline: none;
 }
 
+.first {
+  background: #fbb800;
+  box-shadow: -2px -2px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 2.29vw;
+  border: 0;
+  width: 13.89vw;
+  height: 4.72vw;
+  display: flex;
+  align-items: center;
+}
+
+.first-text {
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 22px;
+  color: #292929;
+}
+
+.first-logo {
+  font-size: 3.611vw;
+  margin-left: 1.1vw;
+}
 @media only screen and (max-width: 1300px) {
   .competition-content-outer {
     display: flex;
@@ -298,9 +323,9 @@ button:focus {
     align-items: center;
   }
 
-  .competition-score {
+  /* .competition-score {
     display: none;
-  }
+  } */
 
   .competition-title {
     font-size: 2.8rem;
