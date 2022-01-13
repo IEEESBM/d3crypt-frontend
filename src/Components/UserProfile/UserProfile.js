@@ -45,6 +45,9 @@ function UserProfile() {
       console.log(res.data);
       db=res.data;
       data=res.data;
+      if(isNan(data.phone)==true)
+      res.send('Invalid phone number!')
+      else 
       setPerson({ 
        ...person,
          fullName: data.username,
