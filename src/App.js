@@ -48,7 +48,6 @@ function App() {
             if (response.data.isVerified == true) {
               console.log("dispatch for verified called");
               dispatch(verified());
-              console.log(isLoggedIn)
             }
           },
           (error) => {
@@ -78,7 +77,7 @@ function App() {
             <Contact />
           </Route>
           <Route exact path="/user-profile">
-            {isLoggedIn ? <UserProfile /> : <Redirect to={"/"} />}{" "}
+            {isLoggedIn ? <UserProfile /> : <Redirect to={"/"} />}
           </Route>
           <Route exact path="/register">
             {isLoggedIn ? (

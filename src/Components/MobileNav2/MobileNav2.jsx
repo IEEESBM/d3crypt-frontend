@@ -13,43 +13,43 @@ export default function MobileNavbar2() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    let windowHeight = document.documentElement.scrollHeight;
+    let windowHeight = document.documentElement.scrollHeight-61;
     console.log(windowHeight);
     document.querySelector('.sidebar2 .sidebar').style.height = `${windowHeight}px`;
 
-    var token = localStorage.getItem("jwt");
-    if (token) {
-      var base64Payload = token.split(".")[1];
-      var payload = Buffer.from(base64Payload, "base64");
-      var userID = JSON.parse(payload.toString()).id;
-      console.log(userID);
-      axios
-        .post("http://localhost:4000/get-user", {
-          uid: `${userID}`,
-        })
-        .then(
-          (response) => {
-            console.log(response);
-            console.log(response.data.isVerified);
-            if (response.data.isVerified == true) {
-              console.log("dispatch for verified called");
-              dispatch(verified());
-            }
-          },
-          (error) => {
-            console.log(error);
-          }
-        )
-        .catch((error) => {
-          console.log(error);
-        });
-    } else {
-      console.log("User not found");
-    }
+    // var token = localStorage.getItem("jwt");
+    // if (token) {
+    //   var base64Payload = token.split(".")[1];
+    //   var payload = Buffer.from(base64Payload, "base64");
+    //   var userID = JSON.parse(payload.toString()).id;
+    //   console.log(userID);
+    //   axios
+    //     .post("http://localhost:4000/get-user", {
+    //       uid: `${userID}`,
+    //     })
+    //     .then(
+    //       (response) => {
+    //         console.log(response);
+    //         console.log(response.data.isVerified);
+    //         if (response.data.isVerified == true) {
+    //           console.log("dispatch for verified called");
+    //           dispatch(verified());
+    //         }
+    //       },
+    //       (error) => {
+    //         console.log(error);
+    //       }
+    //     )
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    // } else {
+    //   console.log("User not found");
+    // }
   }, []);
 
   function handleLogout() {
-    localStorage.removeItem("user");
+    localStorage.removeItem("jwt");
     window.location.reload();
   }
   const [visible, setVisible] = useState(false);
