@@ -21,6 +21,7 @@ function UserProfile() {
       var base64Payload = token.split(".")[1];
       var payload = Buffer.from(base64Payload, "base64");
       var userID = JSON.parse(payload.toString()).id;
+      idy=userID;
       console.log(userID);
       axios
         .post("http://localhost:4000/get-user", {
