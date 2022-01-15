@@ -1,8 +1,9 @@
-import React from 'react'
+import { React, useState, useEffect} from 'react'
 import { AiOutlineArrowRight,AiOutlineClose } from "react-icons/ai";
 import './popup.css';
 
 function Popup0({remove0, add1 ,first}) {
+
   const handleClick = () => {
     remove0(false);
     add1(true);

@@ -93,12 +93,12 @@ function App() {
       <div className="App competitions-container">
         <Sidebar></Sidebar>
         {popup0 ? (
-          <Popup0 remove0={setPopup0} add1={setPopup1} first={setFirst} />
+          <Popup0 remove0={setPopup0} add1={setPopup1} first={setFirst}  />
         ) : null}
         {popup1 ? (
-          <Popup1 remove1={setPopup1} add2={setPopup2} first={setFirst} />
+          <Popup1 remove1={setPopup1} add2={setPopup2} first={setFirst} userID={userID} />
         ) : null}
-        {popup2 ? <Popup2 remove2={setPopup2} /> : null}
+        {popup2 ? <Popup2 remove2={setPopup2} userID={userID}/> : null}
         <div className="competition-main-outer">
           <div className="temp">
             <div className="competition-title">
