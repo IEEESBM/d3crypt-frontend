@@ -22,6 +22,7 @@ function Contact({ person, setPerson, handleChange, editField }) {
       </div>
 
       <p className="contacttitle">Email</p>
+<div className="phoneError error"></div>
       <div className="data-and-button">
         <input
           className="contactdata email"
