@@ -33,7 +33,7 @@ function App() {
   console.log(isLoggedIn);
   useEffect(() => {
     var token = localStorage.getItem("jwt");
-
+    
     if (token) {
       var base64Payload = token.split(".")[1];
       var payload = Buffer.from(base64Payload, "base64");
@@ -77,7 +77,8 @@ function App() {
             <Contact />
           </Route>
           <Route exact path="/user-profile">
-            {isLoggedIn ? <UserProfile /> : <Redirect to={"/"} />}
+            {isLoggedIn ? (<UserProfile />) : (<Redirect to={"/"} />)}
+            {/* {isLoggedIn ? (<UserProfile />) : (<UserProfile />)} */}
           </Route>
           <Route exact path="/register">
             {isLoggedIn ? (

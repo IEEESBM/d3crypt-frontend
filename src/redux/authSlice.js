@@ -1,10 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+const jwt = JSON.parse(localStorage.getItem("jwt"));
+
+const initialState = jwt?{
+  SignUpErrorMessage: {},
+  SignInErrorMessage: {},
+  isLoggedIn: true,
+}:{
   SignUpErrorMessage: {},
   SignInErrorMessage: {},
   isLoggedIn: false,
 };
+
 
 export const signUpSlice = createSlice({
   name: "sign-up",
@@ -41,7 +48,7 @@ export const signUpSlice = createSlice({
         ...state,
         SignUpErrorMessage: {},
         SignInErrorMessage: {},
-        isLoggedIn: false,
+        isLoggedIn: true,
       };
     },
     showErrorMessagesSignIn: (state, action) => {
