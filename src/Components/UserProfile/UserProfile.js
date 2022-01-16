@@ -97,8 +97,9 @@ function UserProfile() {
        memNo:person.memNo,
        }
       }).then(res => {
-    
-    
+    if(isNaN(person.mobileNo)==true)
+        document.querySelector(".phoneError").innerHTML="Please enter a valid phone number"
+        else
      console.log(res.data);
     });
  
