@@ -316,7 +316,7 @@ button:focus {
   margin-left: 1.1vw;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1100px) {
   .competition-content-outer {
     display: flex;
     justify-content: center;
