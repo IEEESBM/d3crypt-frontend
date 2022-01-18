@@ -39,6 +39,7 @@ function Popup2({remove2, userID}) {
           <button className='hint-button' onClick={handleClick}>
             <span className='hint-button-text'>Close</span>
             <AiOutlineArrowRight className="hint-right-arrow" />
+            <div className='hint-button-overlay'></div>
           </button>
         </div>
       </div>

@@ -26,6 +26,7 @@ function Popup0({remove0, add1 ,first}) {
           <button className='hint-button' onClick={handleClick}>
             <span className='hint-button-text' >Proceed</span>
             <AiOutlineArrowRight className="hint-right-arrow" />
+            <div className='hint-button-overlay'></div>
           </button>
         </div>
       </div>

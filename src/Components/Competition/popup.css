@@ -74,6 +74,7 @@
   margin-left: 4vw;
   margin-top: 2.8vw;
   margin-bottom: 2vw;
+  position: relative;
 }
 
 .hint-button-text{
@@ -97,4 +98,20 @@
   top:10px;
   right: 20px;
   font-size: 20px;
+}
+
+.hint-button-overlay {
+  border-radius: 2.89vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:10.49vw;
+  height:3.125vw;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.hint-button:hover .hint-button-overlay{
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
 }

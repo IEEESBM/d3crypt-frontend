@@ -43,6 +43,7 @@ export default function Popup1({remove1, add2, first,userID}) {
           <button className='hint-button' onClick={handleClick}>
             <span className='hint-button-text'>Proceed</span>
             <AiOutlineArrowRight className="hint-right-arrow" />
+            <div className='hint-button-overlay'></div>
           </button>
         </div>
       </div>

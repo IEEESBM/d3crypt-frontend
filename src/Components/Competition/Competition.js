@@ -56,6 +56,7 @@ function App() {
         id: userID,
       })
       .then((res) => {
+        console.log(res)
         setQTitle(res.data.title);
         setDiff(res.data.difficulty);
         setPoints(res.data.points);
@@ -93,12 +94,12 @@ function App() {
       <div className="App competitions-container">
         <Sidebar></Sidebar>
         {popup0 ? (
-          <Popup0 remove0={setPopup0} add1={setPopup1} first={setFirst}  />
+          <Popup0 remove0={setPopup0} add1={setPopup1} first={setFirst} />
         ) : null}
         {popup1 ? (
           <Popup1 remove1={setPopup1} add2={setPopup2} first={setFirst} userID={userID} />
         ) : null}
-        {popup2 ? <Popup2 remove2={setPopup2} userID={userID}/> : null}
+        {popup2 ? <Popup2 remove2={setPopup2} userID={userID} /> : null}
         <div className="competition-main-outer">
           <div className="temp">
             <div className="competition-title">
@@ -110,7 +111,7 @@ function App() {
               <div className="competition-question-outer">
                 <div className="competition-question-content">
                   <div className="question-counter">
-                    Question <span>{index}</span> of 8
+                    Question <span>{index}</span> of 15
                   </div>
 
                   <div className="question-title">{qtitle}</div>
@@ -173,8 +174,10 @@ function App() {
                   </div>
 
                   <button className='first' onClick={onClick}>
-        <RiLightbulbFlashLine className='first-logo'/>
-        <p className='first-text'>Need a hint?</p></button>
+                    <RiLightbulbFlashLine className='first-logo' />
+                    <p className='first-text'>Need a hint?</p>
+                    <div className='first-overlay'></div>
+                  </button>
                 </div>
               </div>
             </div>
