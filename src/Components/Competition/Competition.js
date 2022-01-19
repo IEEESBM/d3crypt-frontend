@@ -26,15 +26,15 @@ function App() {
   };
 
   const [qtitle, setQTitle] = useState("Dummy data");
-  const [diff, setDiff] = useState("Medium");
+  const [diff, setDiff] = useState(0);
   const [img1, setImg1] = useState("");
   const [img2, setImg2] = useState("");
   const [img3, setImg3] = useState("");
   const [img4, setImg4] = useState("");
   const [dis, setDis] = useState(false);
   const [ind,setInd] = useState();
-
   const [points, setPoints] = useState(0);
+  const [score, setScore] = useState(0);
   const [ans, setAns] = useState("");
   const handleAnsChange = (e) => {
     setAns(e.target.value);
@@ -60,14 +60,31 @@ function App() {
         console.log(res)
         setQTitle(res.data.question.title);
         setDiff(res.data.question.difficulty);
-        setPoints(res.data.user.points);
+        setScore(res.data.user.points);
+        setPoints(res.data.question.points);
         setInd(res.data.user.currentQuestion);
         setImg1(res.data.question.image_1);
         setImg2(res.data.question.image_2);
         setImg3(res.data.question.image_3);
         setImg4(res.data.question.image_4);
+        document.querySelector('.div1').style.backgroundColor='transparent';
+        document.querySelector('.div2').style.backgroundColor='transparent';
+        document.querySelector('.div3').style.backgroundColor='transparent';
+
+        if(diff===1){
+          document.querySelector('.div1').style.backgroundColor='#ffb800';
+          document.querySelector('.difficulty').innerHTML = "Easy";
+        }
+        if(diff===2){
+          document.querySelector('.div2').style.backgroundColor='#ffb800';
+          document.querySelector('.difficulty').innerHTML = "Medium";
+        }
+        if(diff===3){
+          document.querySelector('.div3').style.backgroundColor='#ffb800';
+          document.querySelector('.difficulty').innerHTML = "Hard";
+        }
       });
-  }, [index]);
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -81,9 +98,14 @@ function App() {
         id: userID,
       })
       .then((res) => {
+        document.querySelector('.answer-error').innerHTML='&nbsp;'
         console.log(res.data);
         setDis(false);
+        document.querySelector('.answer').value=''
         if (res.data.isCorrect === true) setIndex(index + 1);
+        if (res.data.isCorrect === false){
+          document.querySelector('.answer-error').innerHTML = "Wrong answer";
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -148,23 +170,24 @@ function App() {
                       Submit
                     </button>
                   </div>
+                  <div className="answer-error">&nbsp;</div>
                 </div>
               </div>
               <div className="competition-score">
                 <div className="score-upper">
-                  <div className="timer1">02</div>
+                  <div className="timer1">{points}</div>
                 </div>
 
                 <div className="score-middle">
                   <div className="timer2">
-                    {points}
+                    {score}
                     <div className="score">Score</div>
                   </div>
                 </div>
 
                 <div className="score-lower">
                   <div className="out">
-                    <span>{diff}</span>
+                    <span className="difficulty">&nbsp;</span>
                     <div className="level-outer">
                       <div className="div1"></div>
                       <div className="line"></div>

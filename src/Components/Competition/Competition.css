@@ -236,6 +236,10 @@ img {
   color: white;
 }
 
+.difficulty{
+  color: white;
+}
+
 .level-outer {
   display: flex;
   justify-content: center;
@@ -257,7 +261,7 @@ img {
 }
 
 .div2 {
-  background-color: #ffb800;
+  /* background-color: #ffb800; */
   height: 1.5rem;
   width: 1.5rem;
   border-radius: 2rem;
