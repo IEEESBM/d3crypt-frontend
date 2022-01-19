@@ -32,6 +32,7 @@ function App() {
   const [img3, setImg3] = useState("");
   const [img4, setImg4] = useState("");
   const [dis, setDis] = useState(false);
+  const [ind,setInd] = useState();
 
   const [points, setPoints] = useState(0);
   const [ans, setAns] = useState("");
@@ -57,14 +58,14 @@ function App() {
       })
       .then((res) => {
         console.log(res)
-        setQTitle(res.data.title);
-        setDiff(res.data.difficulty);
-        setPoints(res.data.points);
-        // setInd(res.data.index);
-        setImg1(res.data.image_1);
-        setImg2(res.data.image_2);
-        setImg3(res.data.image_3);
-        setImg4(res.data.image_4);
+        setQTitle(res.data.question.title);
+        setDiff(res.data.question.difficulty);
+        setPoints(res.data.user.points);
+        setInd(res.data.user.currentQuestion);
+        setImg1(res.data.question.image_1);
+        setImg2(res.data.question.image_2);
+        setImg3(res.data.question.image_3);
+        setImg4(res.data.question.image_4);
       });
   }, [index]);
 
@@ -111,7 +112,7 @@ function App() {
               <div className="competition-question-outer">
                 <div className="competition-question-content">
                   <div className="question-counter">
-                    Question <span>{index}</span> of 15
+                    Question <span>{ind}</span> of 15
                   </div>
 
                   <div className="question-title">{qtitle}</div>
