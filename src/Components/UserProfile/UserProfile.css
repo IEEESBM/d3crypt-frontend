@@ -10,9 +10,28 @@
 #imageInput {
   display: none;
 }
-
+.modal-but
+{
+  background-color: #e3a300;
+  font-size: 1.2vw;
+}
+.buttext
+{
+  color: #121212;
+  float:clear;
+  position: relative;
+  width:10vw;
+  display: block;
+  
+  padding: 0em;
+ left:14%;
+  background-color: #e3a300;
+  font-weight: 600;
+  font-size: 1.2vw;
+}
 .modal-click {
-  margin-top: 1vw;
+  margin-top: 1.25vw;
+  margin-bottom: 1.25vw;
   z-index: 500;
   border: none;
   padding: 0.5vw;
@@ -436,6 +455,7 @@
 /******************************************/
 
 @media screen and (max-width: 576px) {
+
   .modal-click {
     margin-top: 8vw;
     z-index: 500;
@@ -568,7 +588,7 @@
     margin: 0;
     margin-bottom: 4.72vw;
   }
-
+  
   #userprofile .detailstitle {
     font-size: 3.333vw;
     margin: 0px;
@@ -617,4 +637,23 @@
     font-size: 5vw;
     margin-left: 1vw;
   }
+  .buttext
+{
+  color: #121212;
+  float:clear;
+  
+width:15vw;
+  display: block;
+  font-size: 1.9vw;
+  padding: 0em;
+ text-align: center;
+  background-color: #e3a300;
+  
+ 
+}
+.modal-click {
+  margin-top: 3.25vw;
+  margin-bottom: 3.25vw;
+  
+}
 }
