@@ -46,6 +46,7 @@ function UserProfile() {
       console.log(res.data);
       db=res.data;
       data=res.data;
+      document.querySelector(".name").innerHTML=data.username;
       setPerson({ 
        ...person,
          fullName: data.username,
