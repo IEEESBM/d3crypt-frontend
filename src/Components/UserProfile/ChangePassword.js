@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { AiFillEdit } from "react-icons/ai";
-
+import { Link } from "react-router-dom";
 function ChangePassword({ person, setPerson, handleChange, editField }) {
 
   useEffect(() => {
@@ -11,20 +11,17 @@ function ChangePassword({ person, setPerson, handleChange, editField }) {
     <div className="details">
       <div className="detailsheading">Utilities</div>
 
-      <p className="detailstitle">Password</p>
+      <p className="detailstitle">Forgot your Password ?</p>
       <div className="data-and-button">
-        <input
-          type='password'
-          className="detailsdata password"
-          name="password"
-          value={person.password}
-          onChange={handleChange}
-          readOnly
-        />
-        <AiFillEdit
-          className="editfield password"
-          onClick={() => editField("password")}
-        />
+      <Link to={"/forgot"} class="modal-click">
+      <button type="button" class="modal-but" >
+     <span class="buttext">
+                  Forgot Password
+                  </span>
+                  <div className="overlay"></div>
+                 
+                </button>
+                </Link>
       </div>
 
       {
