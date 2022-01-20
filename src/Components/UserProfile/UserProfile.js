@@ -127,7 +127,7 @@ function UserProfile() {
       field.type = 'text';
     }
     else {
-      field.type = 'password';
+      field.type = 'text';
     }
   }
 
