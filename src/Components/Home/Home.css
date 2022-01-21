@@ -37,7 +37,7 @@
     top: 35.8490566%;
   }
   #h-text {
-    left: 21%;
+    left: 24%;
     top: 0px;
     position: absolute;
   }
@@ -47,7 +47,7 @@
     width: 566px;
     height: 114px;
     left: 11%;
-    top: 29.7%;
+    top: 33%;
     font-family: "Avenir LT Std";
     font-style: normal;
     font-weight: normal;
@@ -64,7 +64,7 @@
     width: 185px;
     height: 32px;
     left: 11%;
-    top: 48.64%;
+    top: 54%;
     font-family: "Avenir LT Std";
     font-style: normal;
     font-weight: 800;
@@ -182,7 +182,7 @@
     width: 526px;
     height: 83px;
     left: 11%;
-    top: 58.5%;
+    top: 62%;
   }
 
   .disc-img {
@@ -207,35 +207,36 @@
     position: absolute;
     width: 288px;
     height: 284px;
-    left: 11.25%;
-    top: calc(50vh);
+    left: 10.2%;
+    top: calc(40vh);
     transform: translateY(-50%);
   }
   .faq-img {
     position: absolute;
     width: 480px;
     height: 320px;
-    left: 57.9166%;
-    top: 34.9659%;
+    left: 59.5%;
+    top: 37%;
   }
   .rules-img {
     position: absolute;
     width: 474px;
     height: 261px;
     left: 3.125%;
-    top: 74.21895932%;
+    top: 73%;
   }
 
   .about-text {
     position: absolute;
     width: 45vw;
     height: 114px;
-    left: 50vw;
-    top: 12vw;
+    left: 43vw;
+    top: 17vw;
     font-family: Avenir LT Std;
     font-style: normal;
     font-weight: 350;
     font-size: 18px;
+    text-align: right;
     line-height: 160%;
     /* or 26px */
 
@@ -250,7 +251,7 @@
     width: 463px;
     height: 76px;
     left: 10.416666%;
-    top: 29.8751406%;
+    top: 29.5%;
 
     font-family: Poppins;
     font-style: normal;
@@ -266,8 +267,8 @@
     position: absolute;
     width: 463px;
     height: 76px;
-    left: 56.52777%;
-    top:5vw;
+    left: 58.4%;
+    top:10vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -281,11 +282,11 @@
     color: #ffb800;
   }
   .faq-list {
-    left: 5%;
+    left: 9%;
     top: 37%;
     /* background-color: #ffb800; */
     position: absolute;
-    width: 50%;
+    width: 47%;
   }
 
   .faq-list li {
@@ -295,11 +296,11 @@
 
   .faq-list li b {
     display: block;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
   }
 
-  .rules-list li p {
+  .faq-list li p {
     font-size: 18px;
   }
   .faq-btn {
@@ -307,8 +308,8 @@
     position: absolute;
     width: 182px;
     height: 46px;
-    left: 5%;
-    top: 61%;
+    left: 10%;
+    top: 60%;
     border: none;
     background: #292929;
 
@@ -338,8 +339,8 @@
     position: absolute;
     width: 463px;
     height: 76px;
-    left: 56.52777%;
-    top: 67.25255%;
+    left: 58.7%;
+    top: 65%;
 
     font-family: Poppins;
     font-style: normal;
@@ -354,8 +355,8 @@
   }
   .rules-list {
     position: absolute;
-    left: 45%;
-    top: 74%;
+    left: 46%;
+    top: 72%;
     margin-right: 5%;
   }
   .rules-list li {
@@ -365,7 +366,7 @@
 
   .rules-list li b {
     display: block;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
   }
 
@@ -385,8 +386,8 @@
     position: absolute;
     width: 182px;
     height: 46px;
-    right: 5%;
-    top: 93%;
+    right: 10%;
+    top: 90%;
     border: none;
     background: #292929;
     box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);

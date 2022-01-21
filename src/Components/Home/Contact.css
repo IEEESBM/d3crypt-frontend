@@ -2,7 +2,7 @@
   height: 100vh;
   background-color: #191919;
   position: absolute;
-  top: 410vh;
+  top: 395vh;
   width: 100%;
 }
 .contact-h {
@@ -40,7 +40,7 @@
   width: 60%;
   margin-left: 20%;
   position: absolute;
-  top: 180px;
+  top: 190px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
