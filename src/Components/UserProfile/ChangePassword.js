@@ -42,12 +42,16 @@ function ChangePassword({ person, setPerson, handleChange, editField }) {
           : (
             <>
               <p className="detailstitle">Don't have an IEEE Membership?</p>
+              <a href="https://www.ieee.org">
               <div className="data-and-button">
+               
                 <button type="button" class="modal-click">
                   Click here to get one!
                   <div className="overlay"></div>
                 </button>
+                
               </div>
+              </a>
             </>
           )
       }
