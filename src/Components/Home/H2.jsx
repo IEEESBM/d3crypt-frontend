@@ -71,14 +71,7 @@ export default function H2() {
       <img src={rules} className="rules-img" />
       <div class="rules-head">Rules</div>
       <ul className="rules-list">
-        <li>
-          <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
-          <p>
-            {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore
-          </p>
-        </li>
+     
 
         <li>
           <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
