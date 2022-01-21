@@ -11,6 +11,31 @@ function LeaderBoard() {
   const [first, setFirst] = useState({});
   const [second, setSecond] = useState({});
   const [third, setThird] = useState({});
+
+  useEffect(async () => {
+
+    const jwt = JSON.parse(localStorage.getItem("jwt"));
+    await axios.get("http://localhost:4000/check-verified", {
+      headers: {
+        'x-access-token': jwt
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        if (res.data === 'allow_access') {
+          console.log(res.data);
+        }
+        else {
+          window.location.href = '/';
+        }
+        // props.history.push("/")
+      })
+      .catch((err) => {
+        console.log(err.message);
+        window.location.href = '/';
+      })
+  })
+
   useEffect(() => {
     // console.log("inhere");
     axios.get("http://localhost:4000/leaderboad")

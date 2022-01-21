@@ -32,7 +32,7 @@ function App() {
   const [img3, setImg3] = useState("");
   const [img4, setImg4] = useState("");
   const [dis, setDis] = useState(false);
-  const [ind,setInd] = useState();
+  const [ind, setInd] = useState();
   const [points, setPoints] = useState(0);
   const [score, setScore] = useState(0);
   const [ans, setAns] = useState("");
@@ -42,6 +42,30 @@ function App() {
 
   const [index, setIndex] = useState(1);
   const [userID, setUserID] = useState("");
+
+  useEffect(async () => {
+
+    const jwt = JSON.parse(localStorage.getItem("jwt"));
+    await axios.get("http://localhost:4000/check-verified", {
+      headers: {
+        'x-access-token': jwt
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        if (res.data === 'allow_access') {
+          console.log(res.data);
+        }
+        else {
+          window.location.href = '/';
+        }
+        // props.history.push("/")
+      })
+      .catch((err) => {
+        console.log(err.message);
+        window.location.href = '/';
+      })
+  })
 
   useEffect(() => {
     var token = localStorage.getItem("jwt");
@@ -67,20 +91,20 @@ function App() {
         setImg2(res.data.question.image_2);
         setImg3(res.data.question.image_3);
         setImg4(res.data.question.image_4);
-        document.querySelector('.div1').style.backgroundColor='transparent';
-        document.querySelector('.div2').style.backgroundColor='transparent';
-        document.querySelector('.div3').style.backgroundColor='transparent';
+        document.querySelector('.div1').style.backgroundColor = 'transparent';
+        document.querySelector('.div2').style.backgroundColor = 'transparent';
+        document.querySelector('.div3').style.backgroundColor = 'transparent';
 
-        if(diff===1){
-          document.querySelector('.div1').style.backgroundColor='#ffb800';
+        if (diff === 1) {
+          document.querySelector('.div1').style.backgroundColor = '#ffb800';
           document.querySelector('.difficulty').innerHTML = "Easy";
         }
-        if(diff===2){
-          document.querySelector('.div2').style.backgroundColor='#ffb800';
+        if (diff === 2) {
+          document.querySelector('.div2').style.backgroundColor = '#ffb800';
           document.querySelector('.difficulty').innerHTML = "Medium";
         }
-        if(diff===3){
-          document.querySelector('.div3').style.backgroundColor='#ffb800';
+        if (diff === 3) {
+          document.querySelector('.div3').style.backgroundColor = '#ffb800';
           document.querySelector('.difficulty').innerHTML = "Hard";
         }
       });
@@ -98,12 +122,12 @@ function App() {
         id: userID,
       })
       .then((res) => {
-        document.querySelector('.answer-error').innerHTML='&nbsp;'
+        document.querySelector('.answer-error').innerHTML = '&nbsp;'
         console.log(res.data);
         setDis(false);
-        document.querySelector('.answer').value=''
+        document.querySelector('.answer').value = ''
         if (res.data.isCorrect === true) setIndex(index + 1);
-        if (res.data.isCorrect === false){
+        if (res.data.isCorrect === false) {
           document.querySelector('.answer-error').innerHTML = "Wrong answer";
         }
       })

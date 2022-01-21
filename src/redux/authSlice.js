@@ -1,16 +1,47 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const jwt = JSON.parse(localStorage.getItem("jwt"));
+// var allow = false;
 
-const initialState = jwt?{
+// export const check_verified = async () => {
+//   await axios.get("http://localhost:4000/check-verified", {
+//     headers: {
+//       'x-access-token': jwt
+//     }
+//   })
+//     .then((res) => {
+//       console.log(res);
+//       if (res.data === 'allow_access') {
+//         console.log(res.data);
+//         allow = true;
+//       }
+//       else {
+//         allow = false;
+//       }
+//       // props.history.push("/")
+//     })
+//     .catch((err) => {
+//       console.log(err.message);
+//       allow = false;
+//     })
+// }
+// check_verified();
+
+// console.log(allow);
+
+
+var initialState = jwt ? {
   SignUpErrorMessage: {},
   SignInErrorMessage: {},
   isLoggedIn: true,
-}:{
+} : {
   SignUpErrorMessage: {},
   SignInErrorMessage: {},
   isLoggedIn: false,
 };
+
+
 
 
 export const signUpSlice = createSlice({

@@ -24,45 +24,15 @@ import Competition from "./Components/Competition/Competition";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import axios from "axios";
-import { verified } from "./redux/authSlice";
+import { verified, returnDefault } from "./redux/authSlice";
 import { useDispatch } from "react-redux";
+import { check_verified } from "./redux/authSlice";
+import { useState } from "react";
 
 function App() {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.signUp.isLoggedIn);
   console.log(isLoggedIn);
-  useEffect(() => {
-    var token = localStorage.getItem("jwt");
-    
-    if (token) {
-      var base64Payload = token.split(".")[1];
-      var payload = Buffer.from(base64Payload, "base64");
-      var userID = JSON.parse(payload.toString()).id;
-      console.log(userID);
-      axios
-        .post("http://localhost:4000/get-user", {
-          uid: `${userID}`,
-        })
-        .then(
-          (response) => {
-            if (response.data.isVerified == true) {
-              console.log("dispatch for verified called");
-              dispatch(verified());
-            }
-          },
-          (error) => {
-            console.log(error);
-          }
-        )
-        .catch((error) => {
-          console.log(error);
-        });
-    } else {
-      console.log("User not found");
-    }
-  }, []);
-
-  console.log("check ", isLoggedIn);
 
   return (
     <div className="App">
@@ -77,19 +47,11 @@ function App() {
             <Contact />
           </Route>
           <Route exact path="/user-profile">
-            {isLoggedIn ? (<UserProfile />) : (<Redirect to={"/"} />)}
-            {/* {isLoggedIn ? (<UserProfile />) : (<UserProfile />)} */}
+            <UserProfile />
           </Route>
           <Route exact path="/register">
-            {isLoggedIn ? (
-              <Redirect to={"/"} />
-            ) : (
-              <>
-                <Navbar />
-                {/* <MobileNavbar /> */}
-                <SignUp />
-              </>
-            )}
+            <Navbar />
+            <SignUp />
           </Route>
           <Route exact path="/reset/:id/:token">
             <MobileNavbar />
@@ -102,24 +64,14 @@ function App() {
             <ForgotPassword />
           </Route>
           <Route exact path="/signin">
-            {isLoggedIn ? (
-              <Redirect to={"/"} />
-            ) : (
-              <>
-                <Navbar />
-                <MobileNavbar />
-                <SignIn />
-              </>
-            )}
+            <>
+              <Navbar />
+              <MobileNavbar />
+              <SignIn />
+            </>
           </Route>
           <Route exact path="/leaderboard">
-            {isLoggedIn ? (
-              <>
-                <Leaderboard />
-              </>
-            ) : (
-              <Leaderboard />
-            )}
+            <Leaderboard />
           </Route>
           <Route exact path="/faq">
             <MobileNavbar />
@@ -135,15 +87,7 @@ function App() {
             <Verification />
           </Route>
           <Route exact path="/competition">
-            {isLoggedIn ? (
-              <>
-                {/* <Navbar /> */}
-                {/* <MobileNavbar /> */}
-                <Competition />
-              </>
-            ) : (
-              <Redirect to={"/"} />
-            )}
+            <Competition />
           </Route>
         </Switch>
       </Router>

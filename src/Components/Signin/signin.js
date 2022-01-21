@@ -6,8 +6,36 @@ import { useDispatch } from "react-redux";
 import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { useEffect } from "react";
 
 export default function Signin() {
+
+  useEffect(async () => {
+
+    const jwt = JSON.parse(localStorage.getItem("jwt"));
+    await axios.get("http://localhost:4000/check-verified", {
+      headers: {
+        'x-access-token': jwt
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        if (res.data === 'allow_access') {
+          window.location.href = '/';
+        }
+        else {
+          console.log(res.data);
+        }
+        // props.history.push("/")
+      })
+      .catch((err) => {
+        console.log(err.message);
+        // window.location.href = '/';
+      })
+  })
+
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [dis, setDis] = useState(false);
@@ -31,8 +59,8 @@ export default function Signin() {
           document.querySelector(".emailError2").innerHTML = error.email;
           document.querySelector(".passwordError").innerHTML = "";
           document.querySelector(".passwordError2").innerHTML = "";
-          document.querySelector('.verifyError').innerHTML="";
-          document.querySelector('.verifyError2').innerHTML="";
+          document.querySelector('.verifyError').innerHTML = "";
+          document.querySelector('.verifyError2').innerHTML = "";
 
         }
         if (error.password) {
@@ -41,18 +69,18 @@ export default function Signin() {
           document.querySelector(".emailError2").innerHTML = "";
           document.querySelector(".passwordError").innerHTML = error.password;
           document.querySelector(".passwordError2").innerHTML = error.password;
-          document.querySelector('.verifyError').innerHTML="";
-          document.querySelector('.verifyError2').innerHTML="";
+          document.querySelector('.verifyError').innerHTML = "";
+          document.querySelector('.verifyError2').innerHTML = "";
 
         }
-        if(error.verify){
+        if (error.verify) {
 
           document.querySelector(".emailError").innerHTML = "";
           document.querySelector(".emailError2").innerHTML = "";
           document.querySelector(".passwordError").innerHTML = "";
           document.querySelector(".passwordError2").innerHTML = "";
-          document.querySelector('.verifyError').innerHTML=error.verify;
-          document.querySelector('.verifyError2').innerHTML=error.verify;
+          document.querySelector('.verifyError').innerHTML = error.verify;
+          document.querySelector('.verifyError2').innerHTML = error.verify;
 
         }
       }

@@ -9,9 +9,34 @@ import { useDispatch } from "react-redux";
 import "./signUpErrors.css";
 import { register } from "../../redux/actions/authSignup";
 import { Navbar } from "react-bootstrap";
+import axios from "axios";
 
 function SignUp() {
   const dispatch = useDispatch();
+
+  useEffect(async () => {
+
+    const jwt = JSON.parse(localStorage.getItem("jwt"));
+    await axios.get("http://localhost:4000/check-verified", {
+      headers: {
+        'x-access-token': jwt
+      }
+    })
+      .then((res) => {
+        console.log(res);
+        if (res.data === 'allow_access') {
+          window.location.href = '/';
+        }
+        else {
+          console.log(res.data);
+        }
+        // props.history.push("/")
+      })
+      .catch((err) => {
+        console.log(err.message);
+        // window.location.href = '/';
+      })
+  })
 
   const initialState = {
     username: "",
@@ -34,7 +59,7 @@ function SignUp() {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     dispatch(register(newUser)).then(
-      () => {},
+      () => { },
       (error) => {
         console.log(error);
         document.querySelector(".nameError").innerHTML = "&nbsp;";

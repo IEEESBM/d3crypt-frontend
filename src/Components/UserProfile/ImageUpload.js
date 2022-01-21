@@ -40,6 +40,15 @@ function ImageUpload() {
     const file = imageInput.files[0];
     console.log(file);
 
+    if (!file) {
+      alert("sorry you have not selected an image!");
+      var btn1 = document.querySelector(".modal-click");
+      var btn2 = document.querySelector("#img-submit");
+      btn1.style.visibility = "visible";
+      btn2.style.visibility = "hidden";
+      return;
+    }
+
     var imageInput = new FormData();
     imageInput.append("image", file);
 
