@@ -10,6 +10,7 @@ import "./signUpErrors.css";
 import { register } from "../../redux/actions/authSignup";
 import { Navbar } from "react-bootstrap";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -59,7 +60,9 @@ function SignUp() {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     dispatch(register(newUser)).then(
-      () => { },
+      () => { 
+        window.location.href='/signin'
+      },
       (error) => {
         console.log(error);
         document.querySelector(".nameError").innerHTML = "&nbsp;";
@@ -211,10 +214,10 @@ function SignUp() {
               </div>
               <div className="passwordError error">&nbsp;</div>
             </div>
-            <button className={styles.register} type="submit">
-              Register
-              <div className={styles.overlay}></div>
-            </button>
+              <button className={styles.register} type="submit">
+                Register
+                <div className={styles.overlay}></div>
+              </button>
           </form>
           <p className={styles.link}>
             Already have an account? <a href="/signin">Sign In!</a>
