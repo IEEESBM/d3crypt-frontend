@@ -77,7 +77,7 @@ function UserProfile() {
         email: data.email,
         mobileNo: data.phone,
         college: data.college,
-        password: data.password,
+       
         memNo: data.memNo,
         applicationId: data.ID,
 
