@@ -126,7 +126,13 @@ function App() {
         console.log(res.data);
         setDis(false);
         document.querySelector('.answer').value = ''
-        if (res.data.isCorrect === true) setIndex(index + 1);
+        if (res.data.isCorrect === true){ 
+          setIndex(index + 1)
+          if(ind===14){
+            window.location.href= '/leaderboard'
+          }
+          
+        };
         if (res.data.isCorrect === false) {
           document.querySelector('.answer-error').innerHTML = "Wrong answer";
         }
@@ -169,13 +175,13 @@ function App() {
                         <img src={img1} alt="neural" />
                       </div>
                       <div class="grid-item">
-                        <img src={img1} alt="neural" />
+                        <img src={img2} alt="neural" />
                       </div>
                       <div class="grid-item">
-                        <img src={img1} alt="neural" />
+                        <img src={img3} alt="neural" />
                       </div>
                       <div class="grid-item">
-                        <img src={img1} alt="neural" />
+                        <img src={img4} alt="neural" />
                       </div>
                     </div>
                   </div>
