@@ -193,6 +193,9 @@ p.link > a {
 }
 
 @media screen and (max-width: 576px) {
+  .bg{
+    height: 288vw;
+  }
   .bg .head {
     display: none;
     height: 16.944vw;

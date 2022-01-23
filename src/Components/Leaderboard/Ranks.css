@@ -114,7 +114,7 @@
 
 .leaderboard-container .ranks-name {
     position: absolute;
-    font-size: 1.6vw;
+    font-size: 1.15vw;
     line-height: 3.722vw;
     font-weight: 600;
     border-radius: 1.388vw;
@@ -161,7 +161,7 @@
         line-height: 5vh;
     }
     .leaderboard-container .rank-box1-name {
-        top: 9.416vw;
+        top: 9.8vw;
         width: 15.166vw;
         height: 4.361vw;
     }
@@ -202,7 +202,7 @@
         height: 7.47vw;
     }
     .leaderboard-container .rank-box3-name {
-        top: 6.55vw;
+        top: 6vw;
         width: 15.166vw;
         height: 4.361vw;
     }
@@ -210,7 +210,7 @@
         top: 12.916vw;
     }
     .leaderboard-container .ranks-name {
-        font-size: 2.6vw;
+        font-size: 1.9vw;
         line-height: 4.722vw;
         font-weight: 600;
     }
