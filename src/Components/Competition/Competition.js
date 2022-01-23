@@ -86,7 +86,7 @@ function App() {
         setDiff(res.data.question.difficulty);
         setScore(res.data.user.points);
         setPoints(res.data.question.points);
-        setInd(res.data.user.currentQuestion);
+        setInd(res.data.user.currentQuestion+1);
         setImg1(res.data.question.image_1);
         setImg2(res.data.question.image_2);
         setImg3(res.data.question.image_3);
@@ -128,7 +128,7 @@ function App() {
         document.querySelector('.answer').value = ''
         if (res.data.isCorrect === true){ 
           setIndex(index + 1)
-          if(ind===14){
+          if(ind===15){
             window.location.href= '/leaderboard'
           }
           
