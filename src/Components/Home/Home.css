@@ -79,7 +79,7 @@
   .register-2 {
     position: absolute;
     width: 119px;
-    height: 20px;
+    height: 15px;
     left: 11.25%;
     top: 13px;
     font-family: "Avenir";
@@ -97,9 +97,9 @@
   .register-btn-2 {
     position: absolute;
     width: 148px;
-    height: 46px;
+    height: 40px;
     left: 11%;
-    top: 81%;
+    top: 87%;
     background: #ffb800;
     box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
     border-radius: 50px;
@@ -112,8 +112,8 @@
     background: rgba(0, 0, 0, 0);
     transition: background 0.5s ease;
   }
-  
-  .register-btn-2:hover  .register-btn-2-overlay {
+
+  .register-btn-2:hover .register-btn-2-overlay {
     display: block;
     background: rgba(248, 246, 246, 0.3);
   }
@@ -129,7 +129,6 @@
     color: #ffffff;
     font-weight: 400;
   }
-
 
   .r-container {
     position: absolute;
@@ -230,7 +229,7 @@
     position: absolute;
     width: 45vw;
     height: 114px;
-    left: 43vw;
+    right: 12%;
     top: 17vw;
     font-family: Avenir LT Std;
     font-style: normal;
@@ -267,14 +266,12 @@
     position: absolute;
     width: 463px;
     height: 76px;
-    left: 58.4%;
-    top:10vw;
-
+    right: 12.5%;
+    top: 10vw;
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
     font-size: 64px;
-    line-height: 160%;
     /* or 102px */
 
     text-align: right;
@@ -414,6 +411,16 @@
     color: #ffffff;
   }
 }
+@media only screen and (max-width: 1340px) {
+  .rules-list li b {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .rules-list li p {
+    font-size: 18px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .h-container {
     background-color: #191919;
@@ -519,15 +526,15 @@
     left: 50%;
     transform: translateX(-50%);
   }
- .register-btn-2-overlay {
+  .register-btn-2-overlay {
     border-radius: 2.89vw;
     width: 132px;
     height: 36px;
     background: rgba(0, 0, 0, 0);
     transition: background 0.5s ease;
   }
-  
-  .register-btn-2:hover  .register-btn-2-overlay {
+
+  .register-btn-2:hover .register-btn-2-overlay {
     display: block;
     background: rgba(248, 246, 246, 0.3);
   }

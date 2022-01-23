@@ -77,8 +77,10 @@ function App() {
     }
 
     axios
-      .post("http://localhost:4000/questions", {
-        id: userID,
+      .get("http://localhost:4000/questions", {
+        headers: {
+          "x-access-token": token,
+        },
       })
       .then((res) => {
         console.log(res)
@@ -115,11 +117,12 @@ function App() {
     // setDis(true);
     console.log(userID);
     console.log("submitting");
+    var token = localStorage.getItem("jwt");
 
     axios
       .post("http://localhost:4000/submit", {
         answer: ans,
-        id: userID,
+        token:token
       })
       .then((res) => {
         document.querySelector('.answer-error').innerHTML = '&nbsp;'

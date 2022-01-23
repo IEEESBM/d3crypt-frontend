@@ -30,10 +30,6 @@ import { check_verified } from "./redux/authSlice";
 import { useState } from "react";
 
 function App() {
-  const dispatch = useDispatch();
-  const isLoggedIn = useSelector((state) => state.signUp.isLoggedIn);
-  console.log(isLoggedIn);
-
   return (
     <div className="App">
       <Router>
