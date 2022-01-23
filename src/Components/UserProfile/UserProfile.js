@@ -10,86 +10,59 @@ import ChangePassword from "./ChangePassword";
 import MobileNavbar2 from "../MobileNav2/MobileNav2";
 var data;
 
-var idy = '61d1dae0257b9f167e0aef15';
-const axios = require('axios');
+const axios = require("axios");
 var db;
+var idy;
 function UserProfile() {
-
-
   useEffect(async () => {
     const jwt = JSON.parse(localStorage.getItem("jwt"));
-    await axios.get("http://localhost:4000/check-verified", {
-      headers: {
-        'x-access-token': jwt
-      }
-    })
+    await axios
+      .get("http://localhost:4000/check-verified", {
+        headers: {
+          "x-access-token": jwt,
+        },
+      })
       .then((res) => {
         console.log(res);
-        if (res.data === 'allow_access') {
+        if (res.data === "allow_access") {
           console.log(res.data);
-        }
-        else {
-          window.location.href = '/';
+        } else {
+          window.location.href = "/";
         }
         // props.history.push("/")
       })
       .catch((err) => {
         console.log(err.message);
-        window.location.href = '/';
-      })
-
-
+        window.location.href = "/";
+      });
 
     var token = localStorage.getItem("jwt");
-    if (token) {
-      var base64Payload = token.split(".")[1];
-      var payload = Buffer.from(base64Payload, "base64");
-      var userID = JSON.parse(payload.toString()).id;
-      idy = userID;
-      console.log(userID);
-      axios
-        .post("http://localhost:4000/get-user", {
-          uid: `${userID}`,
-        })
-        .then(
-          (response) => {
-            console.log(response.data);
-            if ((response.data.mem === true) && (response.data.memNo !== null)) {
-              setPerson({ ...person, memNo: response.data.memNo });
-            }
-          },
-          (error) => {
-            console.log(error);
-          }
-        );
-    } else {
-      console.log("User not found");
-    }
 
-    axios.get("http://localhost:4000/users/:idy", { params: { id: idy } }).then(res => {
-      console.log(res.data);
-      db = res.data;
-      data = res.data;
-      document.querySelector(".name").innerHTML = data.username;
-      setPerson({
-        ...person,
-        fullName: data.username,
-        email: data.email,
-        mobileNo: data.phone,
-        college: data.college,
-       
-        memNo: data.memNo,
-        applicationId: data.ID,
+    axios
+      .get("http://localhost:4000/user", {
+        headers: {
+          "x-access-token": token,
+        },
+      })
 
+      .then((res) => {
+        console.log(res.data);
+        db = res.data;
+        data = res.data;
+        idy = res.data.id;
+        document.querySelector(".name").innerHTML = data.username;
+        setPerson({
+          ...person,
+          fullName: data.username,
+          email: data.email,
+          mobileNo: data.phone,
+          college: data.college,
+
+          memNo: data.memNo,
+          applicationId: data.ID,
+        });
       });
-    });
-
-
-
-
-
-
-  }, [])
+  }, []);
 
   const [person, setPerson] = useState({
     fullName: "shreyas shah",
@@ -98,15 +71,12 @@ function UserProfile() {
     college: "mit",
     applicationId: "200905404",
     password: "teammate",
-    memNo: ""
+    memNo: "",
   });
   function submitHandler(e) {
-
-    axios.get("http://localhost:4000/users/u",
-      {
+    axios
+      .get("http://localhost:4000/users/u", {
         params: {
-
-
           id: idy,
           username: person.fullName,
           password: person.password,
@@ -114,16 +84,14 @@ function UserProfile() {
           phone: person.mobileNo,
           ID: person.applicationId,
           memNo: person.memNo,
-        }
-      }).then(res => {
+        },
+      })
+      .then((res) => {
         if (isNaN(person.mobileNo) == true)
-          document.querySelector(".phoneError").innerHTML = "Please enter a valid phone number"
-        else
-          console.log(res.data);
+          document.querySelector(".phoneError").innerHTML =
+            "Please enter a valid phone number";
+        else console.log(res.data);
       });
-
-
-
   }
   function handleChange(e) {
     const name = e.target.name;
@@ -145,11 +113,10 @@ function UserProfile() {
       field.readOnly = true;
       field.classList.toggle("datafocus");
     }
-    if (field.type === 'password') {
-      field.type = 'text';
-    }
-    else {
-      field.type = 'text';
+    if (field.type === "password") {
+      field.type = "text";
+    } else {
+      field.type = "text";
     }
   }
 

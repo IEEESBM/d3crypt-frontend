@@ -9,64 +9,44 @@ import axios from "axios";
 import { verified } from "../../redux/authSlice";
 
 export default function MobileNavbar() {
-  const { isLoggedIn } = useSelector((state) => state.signUp);
+  var token = localStorage.getItem("jwt");
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    // var token = localStorage.getItem("jwt");
-    // // var user = await User.findOne({ _id: userID });
-    // if (token) {
-    //   var base64Payload = token.split(".")[1];
-    //   var payload = Buffer.from(base64Payload, "base64");
-    //   var userID = JSON.parse(payload.toString()).id;
-    //   console.log(userID);
-    //   //user = JSON.parse(user);
-    //   //console.log(user);
-    //   axios
-    //     .post("http://localhost:4000/get-user", {
-    //       uid: `${userID}`,
-    //     })
-    //     .then(
-    //       (response) => {
-    //         console.log(response);
-    //         console.log(response.data.isVerified);
-    //         if (response.data.isVerified == true) {
-    //           console.log("dispatch for verified called");
-    //           dispatch(verified());
-    //         }
-    //       },
-    //       (error) => {
-    //         console.log(error);
-    //       }
-    //     )
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // } else {
-    //   console.log("User not found");
-    // }
-  }, []);
-
   function handleLogout() {
-    localStorage.removeItem("user");
+    console.log("in lgout");
+    localStorage.removeItem("jwt");
     window.location.reload();
   }
   const [visible, setVisible] = useState(false);
-
-  function displayNavbar() {
-    document.querySelector(".slidenavbar").classList.toggle("slide");
-  }
 
   function toggleClass() {
     var div = document.getElementById("nav-icon2");
     div.classList.toggle("open");
     document.querySelector(".slidenavbar").classList.toggle("slide");
   }
+
+  useEffect(async() => {
+    console.log("in mob ue");
+    var token = localStorage.getItem("jwt");
+    if(token){
+
+    
+    await axios
+      .get("http://localhost:4000/user", {
+        headers: {
+          "x-access-token": token,
+        },
+      })
+      .then((res) => {
+        console.log(res);
+      });
+    }
+  });
   return (
     <>
       <nav className="mobilenavbar">
-        {isLoggedIn ? (
+        {token ? (
           <img
             onMouseOver={() => {
               setVisible(true);
@@ -115,7 +95,7 @@ export default function MobileNavbar() {
             Contact
           </a>
         </div>
-        {isLoggedIn ? (
+        {token ? (
           <div className="btn-c">
             <Link to={"/competition"}>
               <button className="reg-button">
@@ -155,7 +135,12 @@ export default function MobileNavbar() {
           <a className="hover-item2" href={"/user-profile"}>
             Profile
           </a>
-          <a className="hover-item2" onClick={handleLogout}>
+          <a
+            className="hover-item2"
+            onClick={() => {
+              handleLogout();
+            }}
+          >
             Logout
           </a>
         </div>
