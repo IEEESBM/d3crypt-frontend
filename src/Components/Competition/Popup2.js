@@ -9,11 +9,13 @@ function Popup2({remove2, userID}) {
   const [hint2, setHint2] = useState('');
 
   useEffect(() =>{
+    const jwt = JSON.parse(localStorage.getItem("jwt"));
+    console.log(jwt);
     console.log(userID)
     axios
-      .put("http://localhost:4000/hint", {
-        id: userID,
-      })
+      .put("http://localhost:4000/hint", {headers: {
+        'x-access-token': jwt
+      }})
       .then((res)=>{
         console.log(res);
         setHint1(res.data.hint1);

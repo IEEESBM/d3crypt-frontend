@@ -67,21 +67,14 @@ function App() {
       })
   })
 
-  useEffect(() => {
-    var token = localStorage.getItem("jwt");
-    if (token) {
-      var base64Payload = token.split(".")[1];
-      var payload = Buffer.from(base64Payload, "base64");
-      setUserID(JSON.parse(payload.toString()).id);
-      console.log(userID);
-    }
+  useEffect(async() => {
+    const jwt = JSON.parse(localStorage.getItem("jwt"));
 
-    axios
-      .get("http://localhost:4000/questions", {
-        headers: {
-          "x-access-token": token,
-        },
-      })
+    await axios.get("http://localhost:4000/questions", {
+      headers: {
+        'x-access-token': jwt
+      }
+    })
       .then((res) => {
         console.log(res)
         setQTitle(res.data.question.title);

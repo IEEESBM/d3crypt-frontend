@@ -36,12 +36,10 @@ function UserProfile() {
         window.location.href = "/";
       });
 
-    var token = localStorage.getItem("jwt");
-
     axios
       .get("http://localhost:4000/user", {
         headers: {
-          "x-access-token": token,
+          "x-access-token": jwt,
         },
       })
 

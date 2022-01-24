@@ -4,15 +4,17 @@ import './popup.css';
 import axios from "axios";
 
 export default function Popup1({remove1, add2, first,userID}) {
+  const jwt = JSON.parse(localStorage.getItem("jwt"));
 
   const [hint1, setHint1] = useState('');
 
   useEffect(() =>{
-    console.log(userID)
+    
+    console.log(jwt)
     axios
-      .put("http://localhost:4000/hint", {
-        id: userID,
-      })
+      .put("http://localhost:4000/hint", {headers: {
+        'x-access-token': jwt
+      }})
       .then((res)=>{
         console.log(res);
         setHint1(res.data.hint1);

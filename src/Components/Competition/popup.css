@@ -115,3 +115,49 @@
   display: block;
   background: rgba(248, 246, 246, 0.3);
 }
+
+@media screen and (max-width: 576px) {
+  .hint-content{
+    width: 50vw;
+    height:50px;
+    top:60%;
+  }
+  .hint-title{
+    height: 8vw;
+  }
+  .hint-title-text{
+    font-size: 2vw;
+  }
+  .hint-close{
+    top:10px;
+  right: 10px;
+  font-size: 10px;
+  }
+  .hint-body-title{
+    font-size: 2vw;
+  }
+  .hint-body-content{
+    font-size: 2vw;
+  line-height: 10px;
+  }
+  .hint-button{
+    width:10.49vw;
+    height:3.125vw;
+    margin-left: 20.5vw;
+    margin-top: 2.8vw;
+    margin-bottom: 5vw;
+    padding-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hint-button-text{
+    padding-top: 1.3vw;
+    padding-left: 2.5vw;
+  }
+  .hint-right-arrow{
+    font-size: 10vw;
+  }
+
+}

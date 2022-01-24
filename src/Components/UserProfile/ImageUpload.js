@@ -59,12 +59,14 @@ function ImageUpload() {
         (response) => {
           const key = response.data;
           const data = {
-            key,
-            id,
+            key
           };
           console.log(data);
+          const jwt = localStorage.getItem("jwt");
           axios
-            .post("http://localhost:4000/user-img", data)
+            .post("http://localhost:4000/user-img", data, {headers: {
+              'x-access-token': jwt
+            }})
             .then((response) => {
               window.location.reload();
             });
@@ -82,17 +84,18 @@ function ImageUpload() {
 
     // var user = await User.findOne({ _id: userID });
     if (token) {
-      var base64Payload = token.split(".")[1];
-      var payload = Buffer.from(base64Payload, "base64");
-      var userID = JSON.parse(payload.toString()).id;
+      // var base64Payload = token.split(".")[1];
+      // var payload = Buffer.from(base64Payload, "base64");
+      // var userID = JSON.parse(payload.toString()).id;
       // console.log(userID);
-      setId(userID);
+      // setId(userID);
       //user = JSON.parse(user);
       //console.log(user);
+      const jwt = localStorage.getItem("jwt");
       await axios
-        .post("http://localhost:4000/get-user", {
-          uid: `${userID}`,
-        })
+        .post("http://localhost:4000/get-user", {headers: {
+          'x-access-token': jwt
+        }})
         .then(
           (response) => {
             console.log(response.data.imgKey);
