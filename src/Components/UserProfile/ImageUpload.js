@@ -62,7 +62,7 @@ function ImageUpload() {
             key
           };
           console.log(data);
-          const jwt = localStorage.getItem("jwt");
+          const jwt = JSON.parse(localStorage.getItem("jwt"));
           axios
             .post("http://localhost:4000/user-img", data, {headers: {
               'x-access-token': jwt
@@ -91,9 +91,9 @@ function ImageUpload() {
       // setId(userID);
       //user = JSON.parse(user);
       //console.log(user);
-      const jwt = localStorage.getItem("jwt");
+      const jwt = JSON.parse(localStorage.getItem("jwt"));
       await axios
-        .post("http://localhost:4000/get-user", {headers: {
+        .post("http://localhost:4000/get-user",{},{headers: {
           'x-access-token': jwt
         }})
         .then(

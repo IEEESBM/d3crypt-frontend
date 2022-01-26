@@ -13,7 +13,7 @@ function Popup2({remove2, userID}) {
     console.log(jwt);
     console.log(userID)
     axios
-      .put("http://localhost:4000/hint", {headers: {
+      .put("http://localhost:4000/hint", {},{headers: {
         'x-access-token': jwt
       }})
       .then((res)=>{

@@ -12,7 +12,7 @@ export default function Popup1({remove1, add2, first,userID}) {
     
     console.log(jwt)
     axios
-      .put("http://localhost:4000/hint", {headers: {
+      .put("http://localhost:4000/hint",{}, {headers: {
         'x-access-token': jwt
       }})
       .then((res)=>{
