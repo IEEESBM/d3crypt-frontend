@@ -50,7 +50,7 @@ function App() {
             <Navbar />
             <SignUp />
           </Route>
-          <Route exact path="/reset/:id/:token">
+          <Route exact path="/reset/:token">
             <MobileNavbar />
             <Navbar />
             <ResetPassword />

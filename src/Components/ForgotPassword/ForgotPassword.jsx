@@ -108,6 +108,7 @@ export default function ForgotPassword() {
               <input
                 type="email"
                 className="fs-5"
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="email"
                 name="email"
                 required
@@ -115,10 +116,27 @@ export default function ForgotPassword() {
               <p className="text-light text-end  m pos1">
                 Please enter registered email id
               </p>
+              <div className="emailError error">
+                {msg !== "" ? (
+                  <div
+                    className={
+                      err ? "failure" : success ? "success" : "no-class"
+                    }
+                  >
+                    {msg}
+                  </div>
+                ) : null}
+              </div>
+
+              <hr></hr>
 
               <button
                 type="submit"
                 class="btn-login col-10 btn-block p-2 m-2 fs-3 text-center m"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSubmit();
+                }}
               >
                 Submit
               </button>
