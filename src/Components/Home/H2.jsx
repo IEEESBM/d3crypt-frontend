@@ -11,53 +11,43 @@ export default function H2() {
       <div class="about-head">About Us</div>
 
       <div class="about-text">
-        Welcome to IEEE’s quiz event blah blah blah Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation
+        D3CRYPT is a yearly web-based cryptic hunt coordinated by IEEE Student
+        Branch Manipal for extending association among the first year students
+        and the senior students, it moreover gives a wellspring of redirection
+        to students of the second year and above. The event enjoys added
+        benefits including cash prizes for the underlying three position
+        holders.
       </div>
 
       <div class="faq-head">FAQs</div>
       <img src={FAQs} className="faq-img" />
       <ul className="faq-list">
         <li>
-          <b>
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod?
-          </b>
+          <b> 1. When is the event conducted?</b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore e u fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui.
+            The event is going to be conducted from 13th-14th February 2022.
           </p>
         </li>
 
         <li>
-          <b>
-            {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod?
-          </b>
+          <b> 2. What is the criteria of participation for the event?</b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore e u fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui.
+            Anybody can participate in the event, participation has no
+            restriction based on the batch you belong to.
           </p>
         </li>
         <li>
           <b>
             {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod?
+            3. Does questions belong to a specific category? Which categories
+            can be found in the event?
           </b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore e u fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui.
+            The event has questions under 5 broad categories, these are: a.
+            Technology b. Music/Pop culture c. Sports d. Life in Manipal e. IEEE
           </p>
         </li>
       </ul>
@@ -71,42 +61,27 @@ export default function H2() {
       <img src={rules} className="rules-img" />
       <div class="rules-head">Rules</div>
       <ul className="rules-list">
-     
-
         <li>
-          <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+          <b> Rule 1 </b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore
+            The event is a 1.5-day event, and you need to finish answering all
+            the questions in the stipulated time.
           </p>
         </li>
 
         <li>
-          <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+          <b> Rule 2</b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore
+            The decision for extension in the duration of the event will be
+            taken by the board.
           </p>
         </li>
 
         <li>
-          <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
-          <p>
-            {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore
-          </p>
-        </li>
-
-        <li>
-          <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
-          <p>
-            {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore
-          </p>
+          <b> Rule 3</b>
+          <p> In case of a dispute, the board will take the final decision.</p>
         </li>
       </ul>
       <a href="/rules">
