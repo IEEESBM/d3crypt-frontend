@@ -1,0 +1,293 @@
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.bg {
+  height: 1335px;
+  background: #191919;
+}
+
+.bg .head {
+  background: #121212;
+  box-shadow: 0px 0.278vw 8.33vw 0.278vw rgba(0, 0, 0, 0.03);
+  height: 4vw;
+}
+
+.bg .hero {
+  box-shadow: 0px 0px 0.902vw rgba(0, 0, 0, 0.55);
+  border-radius: 3.33vw;
+  height: 70vw;
+  width: 72.9vw;
+  margin: auto;
+  margin-top: 9.1111vw;
+  display: flex;
+  row-gap: 0px;
+  position: relative;
+}
+
+.hero .illustration {
+  background: #474747;
+  border-radius: 3.33vw 0px 0px 3.33vw;
+  flex: 44.2vw;
+  /* position: relative; */
+}
+
+.hero .content {
+  border-radius: 0px 3.33vw 3.33vw 0px;
+  background: #292929;
+  flex: 55.7vw;
+}
+
+.illustration .image {
+  /* position: absolute; */
+  width: 34.72vw;
+  height: 34.72vw;
+  /* left: 0;
+  right: 0; */
+  margin: auto;
+  top: 8.75vw;
+  animation: fadeIn 2.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.illustration .logo {
+  margin-left: 4.72vw;
+  margin-top: 2.63vw;
+  height: 2.84vw;
+  width: 11.3vw;
+}
+
+.illustration .description {
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.972vw;
+  line-height: 160%;
+  color: #ffffff;
+  margin-top: 1.32vw;
+  margin-left: 3.88vw;
+  margin-right: 3.19vw;
+}
+
+.container .text {
+  margin-left: 5.76vw;
+  font-family: Avenir LT Std;
+  margin-bottom: 3.05vw;
+}
+
+.container .title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.43vw;
+  line-height: 160%;
+  color: #ffffff;
+  margin-top: 4.38vw;
+  margin-bottom: 3.54vw;
+}
+
+.radio,
+span {
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.805vw;
+  line-height: 160%;
+  color: #8a8e92;
+  width: 30vw;
+}
+span {
+  margin-right: 1.04vw;
+  margin-left: 0.139vw;
+}
+
+.form .label {
+  outline: none;
+  border: none;
+  display: block;
+  background: 0 0;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.805vw;
+  line-height: 160%;
+  color: #8a8e92;
+  width: 30vw;
+}
+
+input::placeholder {
+  text-overflow: ellipsis;
+  opacity: 1;
+}
+
+.container .form {
+  border-bottom: 1px solid #000000;
+  /* margin-bottom: 2.08vw; */
+  width: 30vw;
+  box-shadow: 0 4px 4px -6px rgba(0, 0, 0, 0.25);
+}
+
+.container .register {
+  width: 16.52vw;
+  height: 3.26vw;
+  background: #ffb800;
+  box-shadow: 0px 10px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2.89vw;
+  margin-left: 11.8vw;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.944vw;
+  line-height: 160%;
+  border: 0;
+  color: #000000;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+.overlay {
+  border-radius: 2.89vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.register:hover .overlay{
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+
+
+
+.link {
+  margin-top: 2.36vw;
+  text-align: center;
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.66vw;
+  line-height: 160%;
+  color: #ffffff;
+}
+
+p.link > a {
+  color: #ffb800;
+}
+
+@media screen and (max-width: 576px) {
+  .bg{
+    height: 288vw;
+  }
+  .bg .head {
+    display: none;
+    height: 16.944vw;
+  }
+  .bg .hero {
+    margin-top: 13.6vw;
+    display: block;
+    height: 168vw;
+    border-radius: 13.3vw;
+  }
+  .illustration .logo {
+    display: none;
+    height: 0;
+  }
+  .illustration .description {
+    display: none;
+    height: 0;
+  }
+  .hero .illustration {
+    background: #292929;
+    box-shadow: 0px 0px 3.6vw rgba(0, 0, 0, 0.55);
+    border-radius: 13.3vw 13.3vw 0px 0px;
+    height: 37.2vw;
+    z-index: -1;
+  }
+  .illustration .image {
+    margin: auto;
+    width: 100%;
+  }
+  .hero .content {
+    border-radius: 0px 0px 13.3vw 13.3vw;
+    background: #474747;
+    height: 167vw;
+  }
+  .container .text {
+    margin-left: 0;
+    margin-bottom: 4.16vw;
+  }
+  .container .title {
+    margin-top: 0;
+    font-size: 6.66vw;
+    margin-left: 24vw;
+    padding-top: 4.16vw;
+    margin-bottom: 6.66vw;
+  }
+  .form .label {
+    font-size: 3.89vw;
+    color: #fafafa;
+    width: 58.3vw;
+    font-family: Avenir LT Std;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 160%;
+    margin-bottom: 1vw;
+  }
+  input::placeholder {
+    color: #fafafa;
+    margin-bottom: 2vw;
+  }
+
+  .radioForm {
+    margin-bottom: 0vw;
+    margin-left: 8.89vw;
+  }
+  .radio,
+  span {
+    font-size: 3.89vw;
+    color: #fafafa;
+  }
+  span {
+    margin-right: 3vw;
+    margin-left: 0.5vw;
+  }
+
+  .container .form {
+    width: 55vw;
+    margin-left: 8.89vw;
+    /* margin-bottom: 3.89vw; */
+    box-shadow: 0 4px 4px -6px rgba(0, 0, 0, 0.25);
+  }
+
+  .container .register {
+    width: 30.8vw;
+    height: 6.66vw;
+    font-size: 3.89vw;
+    margin-left: 21vw;
+    margin-top: 3.05vw;
+    margin-bottom: 6.33vw;
+  }
+  .link {
+    font-size: 3.33vw;
+    margin-bottom: 3.33vw;
+  }
+}

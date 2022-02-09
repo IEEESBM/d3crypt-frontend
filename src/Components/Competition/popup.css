@@ -1,0 +1,170 @@
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.hint-content{
+  width: 18.54vw;
+  height: 26.875vw;
+  border-radius: 2.5vw;  
+  box-shadow: 0px 1px 10px rgba(255, 184, 0, 0.15);
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #474747;
+  z-index: 5;
+}
+
+.hint-title{
+  background: #292929;
+  height: 4.722vw;
+  border-radius: 2.5vw 2.5vw 0 0;
+}
+
+.hint-title-text{
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 22px;
+  color: #FFFFFF;
+  padding-top: 1.81vw;
+  text-align: center;
+}
+
+.hint-body{
+  background: #474747;
+  border-radius: 0 0 2.5vw 2.5vw;
+}
+
+.hint-body-title{
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25vw;
+  line-height: 22px;
+  color: #EB8D00;
+  padding-top: 2.78vw;
+  margin-left: 1.32vw;
+}
+
+.hint-body-content{
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 350;
+  font-size: 1.25vw;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-left: 1.32vw;
+  margin-right: 1.04vw;
+  margin-top: 1.25vw;
+}
+
+.hint-button{
+  width:10.49vw;
+  height:3.125vw;
+  background: #FBB800;
+  box-shadow: -2px -2px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 3vw;
+  border: 0;
+  margin-left: 4vw;
+  margin-top: 2.8vw;
+  margin-bottom: 2vw;
+  position: relative;
+}
+
+.hint-button-text{
+ 
+  font-family: Avenir LT Std;
+  font-style: normal;
+  font-weight: 750;
+  font-size: 1.25vw;
+  line-height: 22px;
+  vertical-align: top; 
+  color: black;
+}
+
+.hint-right-arrow{
+  font-size: 1.39vw;
+}
+
+.hint-close{
+  color: #FBB800;
+  position: absolute;
+  top:10px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.hint-button-overlay {
+  border-radius: 2.89vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:10.49vw;
+  height:3.125vw;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.hint-button:hover .hint-button-overlay{
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+
+@media screen and (max-width: 576px) {
+  .hint-content{
+    width: 50vw;
+    height:80px;
+    top:60%;
+    transform: translate(-60%, -50%);
+  }
+  .hint-title{
+    height: 8vw;
+  }
+  .hint-title-text{
+    font-size: 2vw;
+  }
+  .hint-close{
+    top:10px;
+  right: 10px;
+  font-size: 10px;
+  }
+  .hint-body-title{
+    font-size: 2vw;
+    margin-bottom:1.38vw;
+  }
+  .hint-body-content{
+    font-size: 2vw;
+  line-height: 10px;
+  margin-bottom: 0px;
+  margin-top:2vw;
+  /* margin-top: 0.5vw; */
+  }
+
+  .hint-button{
+    width:13vw;
+    height:3.125vw;
+    margin-left: 18vw;
+    bottom: 2vw;
+    /* margin: auto; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+  }
+  .hint-button-text{
+    flex: 50%;
+    padding-left: 2.5vw;
+    margin: 0;
+  }
+  .hint-right-arrow{
+    flex: 50%;
+    /* width: 10px !important; */
+  }
+  
+
+}

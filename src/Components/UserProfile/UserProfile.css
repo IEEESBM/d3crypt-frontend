@@ -1,0 +1,663 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   text-decoration:none!important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+
+#imageInput {
+  display: none;
+}
+.modal-but
+{
+  background-color: #e3a300;
+  font-size: 1.2vw;
+}
+.buttext
+{
+  color: #121212;
+  float:clear;
+  position: relative;
+  width:10vw;
+  display: block;
+  
+  padding: 0em;
+ left:16%;
+  background-color: #e3a300;
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+.modal-click {
+  margin-top: 1.25vw;
+  margin-bottom: 1.25vw;
+  z-index: 500;
+  border: none;
+  padding: 0.5vw;
+  width: 15vw;
+  border-radius: 20px;
+  background-color: #e3a300;
+  font-weight: 600;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2vw;
+
+  position: relative;
+}
+.overlay {
+  border-radius: 2.89vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.modal-click:hover .overlay {
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+
+#img-submit {
+  margin-top: -2.8vw;
+  z-index: 500;
+  border: none;
+  padding: 0.5vw;
+  width: 15vw;
+  border-radius: 20px;
+  background-color: #e3a300;
+  font-weight: 600;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2vw;
+  visibility: hidden;
+
+  position: relative;
+}
+#img-submit:hover .overlay {
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+#userprofile {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  height: 116.5vw;
+}
+
+#userprofile .sidebar {
+  flex: 6.25%;
+  height: 116.5vw;
+  background: #121212;
+  box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#userprofile .homeicon,
+#userprofile .leaderboardicon,
+#userprofile .competitionicon,
+#userprofile .userprofileicon {
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+#userprofile .homeicon:hover,
+#userprofile .leaderboardicon:hover,
+#userprofile .competitionicon:hover,
+#userprofile .userprofileicon:hover {
+  color: #ffb800;
+}
+
+#userprofile .smallicon,
+#userprofile .homeicon,
+#userprofile .leaderboardicon,
+#userprofile .competitionicon,
+#userprofile .userprofileicon {
+  margin-top: 40px;
+  font-size: 3vw;
+}
+
+#userprofile .content {
+  flex: 93.75%;
+  background: #171717;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+}
+
+#userprofile .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+#userprofile .heading-line {
+  flex: 1;
+  padding-left: 2vw;
+}
+
+#userprofile .heading-line hr {
+  width: 100%;
+  border: 0.75px solid #ffffff;
+  opacity: 1;
+}
+
+#userprofile .header .page-heading {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4.44vw;
+  line-height: 160%;
+  color: #ffb800;
+}
+
+#userprofile .row1,
+#userprofile .row2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.77vw;
+}
+
+#userprofile .profilephoto {
+  width: 35vw;
+  height: 39.4vw;
+  background: #292929;
+  border-radius: 15px;
+  border-bottom: #ffb800 solid 11.29px;
+  --angle: 0deg;
+  border-image: linear-gradient(
+      var(--angle),
+      #ffb800,
+      #e8ba45,
+      #e3a300,
+      #b07e00
+    )
+    1;
+  animation: 3s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#userprofile .contact {
+  width: 50vw;
+  height: 39.4vw;
+  background: #292929;
+  border-radius: 15px;
+  border-bottom: #ffb800 solid 11.29px;
+  --angle: 0deg;
+  border-image: linear-gradient(
+      var(--angle),
+      #ffb800,
+      #e8ba45,
+      #e3a300,
+      #b07e00
+    )
+    1;
+  animation: 3s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+#userprofile .details {
+  width: 42.4vw;
+  height: 26vw;
+  background: #292929;
+  border-radius: 15px;
+  border-bottom: #ffb800 solid 11.29px;
+  --angle: 0deg;
+  border-image: linear-gradient(
+      var(--angle),
+      #ffb800,
+      #e8ba45,
+      #e3a300,
+      #b07e00
+    )
+    1;
+  animation: 3s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+#userprofile .profile-image {
+  height: 13.88vw;
+  width: 13.88vw;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  margin-top: 7.36vw;
+}
+
+#userprofile .name {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5vw;
+  line-height: 4vw;
+  text-align: center;
+  color: #ffb800;
+  text-transform: capitalize;
+  margin-top: 4.65vw;
+}
+
+#userprofile .year {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.38vw;
+  line-height: 1.94vw;
+  color: #ffffff;
+  text-align: center;
+}
+
+#userprofile .contactheading {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.5vw;
+  line-height: 1.94vw;
+  color: #ffffff;
+  margin-top: 3.125vw;
+  margin-left: 3.125vw;
+  margin-bottom: 3.4vw;
+}
+
+#userprofile .contacttitle {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.38vw;
+  line-height: 1.94vw;
+  color: #ffffff;
+  margin-left: 4.93vw;
+  margin-bottom: 0;
+}
+
+#userprofile .contactdata {
+  width: 37.83vw;
+  height: 4.3vw;
+  background: #171717;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.38vw;
+  line-height: 4.3vw;
+  color: #ffffff;
+  padding-left: 2.7vw;
+  display: block;
+  border: none;
+  margin-top: 0.41vw;
+  margin-bottom: 1.45vw;
+  outline: none;
+}
+
+#userprofile .detailsheading {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.5vw;
+  line-height: 1.94vw;
+  color: #ffffff;
+  margin-top: 3.125vw;
+  margin-left: 3.125vw;
+  margin-bottom: 1.73vw;
+}
+
+#userprofile .detailstitle {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.38vw;
+  line-height: 1.94vw;
+  color: #ffffff;
+  margin-left: 3.4vw;
+  margin-top: 0.76vw;
+  margin-bottom: 0;
+}
+
+#userprofile .detailsdata {
+  width: 33vw;
+  height: 4.3vw;
+  background: #171717;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.38vw;
+  line-height: 4.4vw;
+  color: #ffffff;
+  padding-left: 2.7vw;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-top: 0.34vw;
+  display: block;
+  border: none;
+  outline: none;
+}
+
+#userprofile .datafocus {
+  outline: auto;
+}
+
+#userprofile .backbutton {
+  background: #2a2d3a;
+  box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+  border-radius: 50px;
+  width: 10.27vw;
+  height: 3.19vw;
+  line-height: 3.19vw;
+  text-align: center;
+  font-family: "Avenir LT Std", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.111vw;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px !important;
+
+  position: relative;
+}
+.backbutton:hover .overlay {
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+
+#userprofile .updatebutton {
+  background: #ffb800;
+  box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+  border-radius: 50px;
+  width: 10.27vw;
+  height: 3.19vw;
+  line-height: 3.19vw;
+  text-align: center;
+  font-family: "Avenir LT Std", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.111vw;
+  letter-spacing: 0.005em;
+  color: #161616;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px !important;
+
+  position: relative;
+}
+.updatebutton:hover .overlay {
+  display: block;
+  background: rgba(248, 246, 246, 0.3);
+}
+
+#userprofile .buttons {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 22.37vw;
+  justify-content: space-between;
+}
+
+#userprofile .contact .data-and-button {
+  display: flex;
+  align-items: center;
+  margin-left: 4.5vw;
+}
+
+#userprofile .details .data-and-button {
+  display: flex;
+  align-items: center;
+  margin-left: 3vw;
+}
+
+#userprofile .editfield {
+  opacity: 0.3;
+  color: #ffffff;
+  font-size: 3vw;
+  transition: 0.2s;
+  margin-left: 1vw;
+  cursor: pointer;
+}
+
+#userprofile .editfieldclicked {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+/******************************************/
+
+@media screen and (max-width: 576px) {
+
+  .modal-click {
+    margin-top: 8vw;
+    z-index: 500;
+    border: none;
+    padding: 1vw;
+    width: 25vw;
+    border-radius: 20px;
+    background-color: #e3a300;
+    font-weight: 600;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vw;
+  }
+  #img-submit {
+    margin-top: -5vw;
+    z-index: 500;
+    border: none;
+    padding: 1vw;
+    width: 25vw;
+    border-radius: 20px;
+    background-color: #e3a300;
+    font-weight: 600;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2vw;
+    visibility: hidden;
+  }
+
+  #userprofile {
+    height: 350vw;
+  }
+
+  #userprofile .sidebar {
+    display: none;
+  }
+
+  #userprofile .header {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  #userprofile .header .page-heading {
+    font-size: 5vw;
+  }
+
+  #userprofile .row1,
+  #userprofile .row2 {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  #userprofile .profilephoto {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 93.05vw;
+    border-bottom: #ffb800 solid 1.86vw;
+    padding-top: 16.66vw;
+  }
+
+  #userprofile .contact {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 68.33vw;
+    margin-top: 4.81vw;
+    margin-bottom: 0;
+    border-bottom: #ffb800 solid 1.86vw;
+  }
+
+  #userprofile .details {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vw;
+    margin-top: 4.81vw;
+  }
+
+  #userprofile .profile-image {
+    width: 32.77vw;
+    height: 32.77vw;
+    margin-top: 0;
+  }
+
+  #userprofile .name {
+    font-size: 5vw;
+    margin-top: 15vw;
+  }
+
+  #userprofile .year {
+    font-size: 2.77vw;
+    margin-top: 9vw;
+  }
+
+  #userprofile .contactheading {
+    font-size: 3.88vw;
+    padding-top: 7vw;
+    padding-left: 7vw;
+    margin: 0;
+    margin-bottom: 5vw;
+  }
+
+  #userprofile .contacttitle {
+    font-size: 3.333vw;
+    margin: 0px;
+    margin-top: 3vw;
+    padding-left: 8vw;
+  }
+
+  #userprofile .contactdata {
+    width: 60.28vw;
+    height: 6.88vw;
+    font-size: 3.33vw;
+    line-height: 6.88vw;
+    margin-top: 2.7vw;
+  }
+
+  #userprofile .details {
+    border-bottom: #ffb800 solid 1.86vw;
+  }
+
+  #userprofile .detailsheading {
+    font-size: 3.88vw;
+    padding-top: 7vw;
+    padding-left: 7vw;
+    margin: 0;
+    margin-bottom: 4.72vw;
+  }
+  
+  #userprofile .detailstitle {
+    font-size: 3.333vw;
+    margin: 0px;
+    margin-top: 4.2vw;
+    padding-left: 8vw;
+  }
+
+  #userprofile .detailsdata {
+    width: 60.28vw;
+    height: 6.88vw;
+    font-size: 3.33vw;
+    line-height: 6.88vw;
+    margin-top: 2.7vw;
+  }
+
+  #userprofile .backbutton {
+    width: 18vw;
+    height: 5.8vw;
+    line-height: 5.8vw;
+    font-size: 3vw;
+  }
+  #userprofile .updatebutton {
+    width: 18vw;
+    height: 5.8vw;
+    line-height: 5.8vw;
+    font-size: 3vw;
+  }
+
+  #userprofile .buttons {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
+    justify-content: space-between;
+  }
+
+  #userprofile .contact .data-and-button {
+    margin-left: 6vw;
+  }
+
+  #userprofile .details .data-and-button {
+    margin-left: 6vw;
+  }
+
+  #userprofile .editfield {
+    font-size: 5vw;
+    margin-left: 1vw;
+  }
+  .buttext
+{
+  color: #121212;
+  float:clear;
+  
+
+width:100%;
+left:7%;
+  display: block;
+  font-size: 2.0vw;
+  font-weight: 900px;
+  padding: 0em;
+ text-align: center;
+  background-color: #e3a300;
+  
+ 
+}
+.modal-click {
+  margin-top: 3.25vw;
+  margin-bottom: 3.25vw;
+  
+}
+}
