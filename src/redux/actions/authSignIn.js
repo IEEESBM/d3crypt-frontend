@@ -1,5 +1,7 @@
 import axios from "axios";
 import { signIn, showErrorMessagesSignIn } from "../authSlice";
+import ConsoleHelper from "../../Components/consolelogger";
+
 
 export const signInUser = function (user) {
   return function (dispatch) {
@@ -10,7 +12,7 @@ export const signInUser = function (user) {
       })
       .then(
         (response) => {
-          console.log(response);
+          ConsoleHelper(response);
           localStorage.setItem("jwt", JSON.stringify(response.data));
           document.querySelector(".emailError").innerHTML = "";
 

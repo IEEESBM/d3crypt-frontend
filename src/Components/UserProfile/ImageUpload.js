@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import FormData from "form-data";
+import ConsoleHelper from "../consolelogger";
 
 
 
@@ -17,8 +18,8 @@ function ImageUpload() {
     var btn1 = document.querySelector(".modal-click");
   
     var btn2 = document.querySelector("#img-submit");
-    console.log(btn1);
-    console.log(btn2);
+    ConsoleHelper(btn1);
+    ConsoleHelper(btn2);
   
     btn1.style.visibility = "hidden";
     btn2.style.visibility = "visible";
@@ -27,21 +28,21 @@ function ImageUpload() {
   const handleUpload = async (e) => {
     e.preventDefault();
     setVisible(false)
-    console.log(key);
+    ConsoleHelper(key);
     if (img !== defaultImg) {
       await axios
         .post("https://d3crypt-backend.herokuapp.com/delete-image/" + key)
         .then((res) => {
-          console.log(res);
+          ConsoleHelper(res);
         })
         .catch((error) => {
-          console.log(error);
+          ConsoleHelper(error);
         });
     }
 
     var imageInput = document.getElementById("imageInput");
     const file = imageInput.files[0];
-    console.log(file);
+    ConsoleHelper(file);
 
     if (!file) {
       alert("Sorry you have not selected an image!");
@@ -63,7 +64,7 @@ function ImageUpload() {
           const data = {
             key,
           };
-          console.log(data);
+          ConsoleHelper(data);
           const jwt = JSON.parse(localStorage.getItem("jwt"));
           axios
             .post("https://d3crypt-backend.herokuapp.com/user-img", data, {
@@ -76,11 +77,11 @@ function ImageUpload() {
             });
         },
         (error) => {
-          console.log(error);
+          ConsoleHelper(error);
         }
       )
       .catch((error) => {
-        console.log(error);
+        ConsoleHelper(error);
       });
   };
   useEffect(async () => {
@@ -100,7 +101,7 @@ function ImageUpload() {
         )
         .then(
           (response) => {
-            console.log(response.data.imgKey);
+            ConsoleHelper(response.data.imgKey);
             if (response.data.imgKey) {
               setKey(response.data.imgKey);
               setImg(
@@ -110,16 +111,16 @@ function ImageUpload() {
             }
           },
           (error) => {
-            console.log(error);
+            ConsoleHelper(error);
           }
         )
         .catch((error) => {
-          console.log(error);
+          ConsoleHelper(error);
         });
     }
   }, []);
 
-  console.log(img);
+  ConsoleHelper(img);
 
   useEffect(() => {
     var image = document.querySelector(".profile-image");

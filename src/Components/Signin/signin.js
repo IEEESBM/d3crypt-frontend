@@ -8,6 +8,8 @@ import NavBar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect } from "react";
+import ConsoleHelper from "../consolelogger";
+
 
 export default function Signin() {
 
@@ -20,17 +22,17 @@ export default function Signin() {
       }
     })
       .then((res) => {
-        console.log(res);
+        ConsoleHelper(res);
         if (res.data === 'allow_access') {
           window.location.href = '/';
         }
         else {
-          console.log(res.data);
+          ConsoleHelper(res.data);
         }
         // props.history.push("/")
       })
       .catch((err) => {
-        console.log(err.message);
+        ConsoleHelper(err.message);
         // window.location.href = '/';
       })
   })
@@ -46,15 +48,15 @@ export default function Signin() {
     e.preventDefault();
     setDis(true);
     const data = { email, password };
-    console.log(data);
+    ConsoleHelper(data);
     dispatch(signInUser(data)).then(
       () => {
         setDis(false);
       },
       (error) => {
-        console.log(error);
+        ConsoleHelper(error);
         if (error.email) {
-          console.log(error.email);
+          ConsoleHelper(error.email);
           document.querySelector(".emailError").innerHTML = error.email;
           document.querySelector(".emailError2").innerHTML = error.email;
           document.querySelector(".passwordError").innerHTML = "";
@@ -64,7 +66,7 @@ export default function Signin() {
 
         }
         if (error.password) {
-          console.log(error.password);
+          ConsoleHelper(error.password);
           document.querySelector(".emailError").innerHTML = "";
           document.querySelector(".emailError2").innerHTML = "";
           document.querySelector(".passwordError").innerHTML = error.password;

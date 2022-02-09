@@ -7,6 +7,7 @@ import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import ConsoleHelper from "../consolelogger";
 
 export default function ResetPassword() {
   const current_url = window.location.href;
@@ -46,9 +47,9 @@ export default function ResetPassword() {
               setMsg("Password Updated Successfully"))
             : null)
       )
-      .catch((err) => console.log(err.message));
+      .catch((err) => ConsoleHelper(err.message));
 
-    console.log(data);
+    ConsoleHelper(data);
   }
   return (
     <>

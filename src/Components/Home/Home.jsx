@@ -5,6 +5,8 @@ import disc from "../../assets/disc.svg";
 import logo from "../../assets/logo.svg";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import ConsoleHelper from "../consolelogger";
+
 
 import "./Home.css";
 export default function Home() {
@@ -19,7 +21,7 @@ export default function Home() {
         },
       })
       .then((res) => {
-        console.log(res);
+        ConsoleHelper(res);
         if (res.data === "allow_access") {
           setLoggedin(true);
         } else {
@@ -28,7 +30,7 @@ export default function Home() {
         // props.history.push("/")
       })
       .catch((err) => {
-        console.log(err.message);
+        ConsoleHelper(err.message);
         setLoggedin(false);
       });
   }, []);

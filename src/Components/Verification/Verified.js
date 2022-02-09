@@ -2,6 +2,9 @@ import axios from "axios";
 import "./Verified.css";
 import React, { useEffect,useState } from "react";
 import {Redirect,useParams} from "react-router-dom";
+import ConsoleHelper from "../consolelogger";
+
+
 const style1 = {
     padding: '36px 24px 0', 
     fontFamily: 'Source Sans Pro, Helvetica, Arial, sans-serif',
@@ -53,7 +56,7 @@ function countdown(ctr) {
               }
         })
         .then(()=>{
-            console.log('Done')
+            ConsoleHelper('Done')
         })
         .catch((err)=>{
 

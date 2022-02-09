@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./MobileNav.css";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
+import ConsoleHelper from "../consolelogger";
 
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -14,7 +15,7 @@ export default function MobileNavbar() {
   const dispatch = useDispatch();
 
   function handleLogout() {
-    console.log("in lgout");
+    ConsoleHelper("in lgout");
     localStorage.removeItem("jwt");
     window.location.reload();
   }
@@ -39,7 +40,7 @@ export default function MobileNavbar() {
 
 
   useEffect(async() => {
-    console.log("in mob ue");
+    ConsoleHelper("in mob ue");
     var token = localStorage.getItem("jwt");
     if(token){
 
@@ -51,7 +52,7 @@ export default function MobileNavbar() {
         },
       })
       .then((res) => {
-        console.log(res);
+        ConsoleHelper(res);
       });
     }
   });

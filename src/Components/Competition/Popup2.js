@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react'
 import { AiOutlineArrowRight } from "react-icons/ai";
 import './popup.css';
 import axios from "axios"
+import ConsoleHelper from "../consolelogger";
 
 function Popup2({remove2, userID}) {
 
@@ -10,14 +11,14 @@ function Popup2({remove2, userID}) {
 
   useEffect(() =>{
     const jwt = JSON.parse(localStorage.getItem("jwt"));
-    console.log(jwt);
-    console.log(userID)
+    ConsoleHelper(jwt);
+    ConsoleHelper(userID)
     axios
       .put("https://d3crypt-backend.herokuapp.com/hint", {},{headers: {
         'x-access-token': jwt
       }})
       .then((res)=>{
-        console.log(res);
+        ConsoleHelper(res);
         setHint1(res.data.hint1);
         setHint2(res.data.hint2);
       })

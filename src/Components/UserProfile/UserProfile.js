@@ -8,6 +8,8 @@ import College from "./College";
 import ImageUpload from "./ImageUpload";
 import ChangePassword from "./ChangePassword";
 import MobileNavbar2 from "../MobileNav2/MobileNav2";
+import ConsoleHelper from "../consolelogger";
+
 var data;
 
 const axios = require("axios");
@@ -24,16 +26,16 @@ function UserProfile() {
        },
      })
      .then((res) => {
-       console.log(res);
+       ConsoleHelper(res);
        if (res.data === "allow_access") {
-         console.log(res.data);
+         ConsoleHelper(res.data);
        } else {
          window.location.href = "/";
        }
        // props.history.push("/")
      })
      .catch((err) => {
-       console.log(err.message);
+       ConsoleHelper(err.message);
        window.location.href = "/";
      });
     
@@ -42,7 +44,7 @@ function UserProfile() {
     axios.get("https://d3crypt-backend.herokuapp.com/users/:idy", { params: { id: jwt } })
 
       .then((res) => {
-        console.log(res.data);
+        ConsoleHelper(res.data);
         db = res.data;
         data = res.data;
         
@@ -70,7 +72,7 @@ function UserProfile() {
     memNo: " ",
   });
   function submitHandler(e) {
-    console.log(jwt);
+    ConsoleHelper(jwt);
     axios
       .get("https://d3crypt-backend.herokuapp.com/users/u", {
         params: {
@@ -87,7 +89,7 @@ function UserProfile() {
         if (isNaN(person.mobileNo) == true)
           document.querySelector(".phoneError").innerHTML =
             "Please enter a valid phone number";
-        else console.log(res.data);
+        else ConsoleHelper(res.data);
       });
   }
   function handleChange(e) {

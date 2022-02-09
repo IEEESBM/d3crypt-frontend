@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import ConsoleHelper from "../Components/consolelogger";
+
 
 const jwt = JSON.parse(localStorage.getItem("jwt"));
 // var allow = false;
@@ -11,9 +13,9 @@ const jwt = JSON.parse(localStorage.getItem("jwt"));
 //     }
 //   })
 //     .then((res) => {
-//       console.log(res);
+//       ConsoleHelper(res);
 //       if (res.data === 'allow_access') {
-//         console.log(res.data);
+//         ConsoleHelper(res.data);
 //         allow = true;
 //       }
 //       else {
@@ -22,13 +24,13 @@ const jwt = JSON.parse(localStorage.getItem("jwt"));
 //       // props.history.push("/")
 //     })
 //     .catch((err) => {
-//       console.log(err.message);
+//       ConsoleHelper(err.message);
 //       allow = false;
 //     })
 // }
 // check_verified();
 
-// console.log(allow);
+// ConsoleHelper(allow);
 
 
 var initialState = jwt ? {
@@ -49,7 +51,7 @@ export const signUpSlice = createSlice({
   initialState,
   reducers: {
     signUp: (state, action) => {
-      console.log(action.payload);
+      ConsoleHelper(action.payload);
       return {
         ...state,
         SignUpErrorMessage: {},
@@ -74,7 +76,7 @@ export const signUpSlice = createSlice({
       };
     },
     signIn: (state, action) => {
-      console.log(action.payload);
+      ConsoleHelper(action.payload);
       return {
         ...state,
         SignUpErrorMessage: {},
