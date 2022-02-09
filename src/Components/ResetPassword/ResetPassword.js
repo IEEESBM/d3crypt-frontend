@@ -141,6 +141,19 @@ export default function ResetPassword() {
                 name="psw"
                 required
               />
+              <div className="emailError error">
+                {msg !== "" ? (
+                  <div
+                    className={
+                      err ? "failure" : success ? "success" : "no-class"
+                    }
+                  >
+                    {msg}
+                  </div>
+                ) : null}
+              </div>
+
+              <hr></hr>
               {/* <Link to={"/signin"}> */}
                 <button
                   type="submit"
