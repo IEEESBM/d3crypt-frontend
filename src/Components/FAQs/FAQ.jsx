@@ -26,7 +26,7 @@ export default function FAQs() {
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              The event is going to be conducted from 12th-13th February 2022.
+            D3CRYPT is an online guessing game made to test your analytical aptitude. The event will be live from 13th-14th February 2022.
             </div>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function FAQs() {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              2) Who can participate in the event?
+              2) What is the criteria for participation in the event?
             </button>
           </h2>
           <div
@@ -52,8 +52,7 @@ export default function FAQs() {
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              Anybody can participate in the event, participation has no
-              restriction based on the batch you belong to.
+            The event is open to all Undergraduate branches and colleges 
             </div>
           </div>
         </div>
@@ -69,7 +68,7 @@ export default function FAQs() {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              3) Which category questions can be found in the event?
+              3) What are the questions based on? 
             </button>
           </div>
           <div
@@ -79,9 +78,15 @@ export default function FAQs() {
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              The event has questions under 5 broad categories, these are: a.
-              Technology b. Music/Pop culture c. Sports d. Life in Manipal e.
-              IEEE
+              <p>The event has questions under 5 broad categories : 
+              <ul>
+                <li> Technology </li>
+               <li> Music/Pop culture </li>
+                <li> Sports </li>
+                <li> Life in Manipal </li> 
+                <li> IEEE </li>
+              </ul>
+              </p>
             </div>
           </div>
         </div>
@@ -131,19 +136,17 @@ export default function FAQs() {
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
-              The points awarded per question differ according to the difficulty
-              level of the question. The original points for Easy, Medium, and
-              Hard is 100, 200, and 300. Now take the marks awarded for one
-              question as p. So, the scoring system is like this.: Successful in
-              the first attempt= p. Successful in the 2nd= 0.9*p. Successful in
-              the third= 0.8*p. For all other successful attempts= 0.5*p. Also
-              if it's 3rd consecutive successful attempt, then a bonus of 20
-              points is given. If you are stuck on a question and cannot figure
-              out the answer using the clues given, you can opt for hints. In
-              total, you will be allowed to look at 2 hints for a question.
-              However, using hints deduct points from your total score. Opting
-              to look at the first hint deducts 30 points and opting to look for
-              the second hint deducts 50 more points.
+            <p>
+            The points awarded per question differ according to the difficulty level of the question. The original points for Easy, Medium, and Hard are 100, 200, and 300. 
+            <br /><br />
+            Fancy a mathematical equation? We do too. Assume the marks awarded for one question as P. The scoring system assesses your answer and then goes on to follow the below mentioned logic :
+            Successful in the first attempt = p. <br />
+            Successful in the 2nd= 0.9*p. <br />
+            Successful in the third= 0.8*p. <br />
+            For all other successful attempts= 0.5*p. <br />
+            Got 3 consecutive answers right? Score a 20 point bonus. <br />
+            If you are stuck on a question and cannot figure out the answer using the clues given, you can also opt for hints. In total, you will be allowed to sneak a peek at 2 hints for a question. However, beware! Using hints deducts points from your total score. Opting for hints will cost you 30 points and 50 points on each consecutive hint. 
+            </p>
             </div>
           </div>
         </div>
