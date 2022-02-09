@@ -61,13 +61,13 @@ function UserProfile() {
   }, []);
 
   const [person, setPerson] = useState({
-    fullName: "shreyas shah",
-    email: "shreyaslshah@gmail.com",
-    mobileNo: "9136698199",
-    college: "mit",
-    applicationId: "200905404",
-    password: "teammate",
-    memNo: "",
+    fullName: " ",
+    email: " ",
+    mobileNo: " ",
+    college: " ",
+    applicationId: " ",
+    password: " ",
+    memNo: " ",
   });
   function submitHandler(e) {
     console.log(jwt);

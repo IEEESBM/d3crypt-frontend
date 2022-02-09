@@ -130,7 +130,7 @@
 }
 
 .grid-item {
-  background-color: #72777b;
+  background-color: rgb(41, 41, 41);
   display: flex;
   justify-content: center;
   align-items: center;

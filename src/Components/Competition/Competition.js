@@ -174,23 +174,23 @@ function App() {
                   <div className="boxes-outer">
                     <div className="boxes">
                       <div class="grid-item">
-                        <img src={img1} alt="neural" />
+                        <img src={img1} alt=" " />
                       </div>
                       <div class="grid-item">
-                        <img src={img2} alt="neural" />
+                        <img src={img2} alt=" " />
                       </div>
                       <div class="grid-item">
-                        <img src={img3} alt="neural" />
+                        <img src={img3} alt=" " />
                       </div>
                       <div class="grid-item">
-                        <img src={img4} alt="neural" />
+                        <img src={img4} alt=" " />
                       </div>
                     </div>
                   </div>
                   <div className="submit-outer">
                     <textarea
                       className="answer"
-                      placeholder="Enter you answer here"
+                      placeholder="Give us your best guess"
                       name="ans"
                       onChange={handleAnsChange}
                     ></textarea>
