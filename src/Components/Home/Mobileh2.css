@@ -20,7 +20,7 @@
     width: 60vw;
     height: 60vw;
     margin-left: 20vw;
-    top: 60vw;
+    top: 75vw;
   }
   .faq-img {
     position: absolute;
@@ -41,7 +41,7 @@
     position: absolute;
     width: 90vw;
     height: 114px;
-    top: 20vw;
+    top: 30vw;
 
     font-family: "Avenir LT Std";
     font-style: normal;
@@ -92,7 +92,7 @@
     width: 80vw;
     height: 104px;
     left: 10%;
-    top: 160vw;
+    top: 170vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -111,7 +111,7 @@
     width: 80vw;
     height: 104px;
     left: 10%;
-    top: 200vw;
+    top: 205vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -131,7 +131,7 @@
     width: 80vw;
     height: 104px;
     left: 10%;
-    top: 240vw;
+    top: 225vw;
     align-items: center;
     font-family: Poppins;
     font-style: normal;
@@ -152,10 +152,10 @@
   .faq-btn {
     box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
     position: absolute;
-    width: 200px;
+    width: 250px;
     height: 46px;
     left: 27%;
-    top: 275vw;
+    top: 255vw;
     border: none;
     background: #292929;
     left: 50%;
@@ -190,7 +190,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 355vw;
+    top: 345vw;
     font-family: Poppins;
     font-style: normal;
     font-weight: bold;
@@ -202,7 +202,7 @@
   .rules-list1 {
     position: absolute;
     left: 10%;
-    top: 375vw;
+    top: 370vw;
     width: 80vw;
     font-family: Poppins;
     font-style: normal;
@@ -217,7 +217,7 @@
   .rules-list2 {
     position: absolute;
     left: 10%;
-    top: 400vw;
+    top: 390vw;
     width: 80vw;
     font-family: Poppins;
     font-style: normal;
@@ -235,7 +235,7 @@
 
     height: 51px;
     left: 10%;
-    top: 425vw;
+    top: 420vw;
 
     font-family: Poppins;
     font-style: normal;
@@ -254,7 +254,7 @@
     position: absolute;
 
     left: 10%;
-    top: 450vw;
+    top: 445vw;
     width: 80vw;
 
     font-family: Poppins;
@@ -294,10 +294,10 @@
   .rules-btn {
     box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
     position: absolute;
-    width: 200px;
+    width: 250px;
     height: 46px;
     left: 27%;
-    top: 500vw;
+    top: 480vw;
     border: none;
     background: #292929;
     left: 50%;

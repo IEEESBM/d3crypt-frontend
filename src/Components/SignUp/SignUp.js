@@ -111,8 +111,7 @@ function SignUp() {
           <Logo className={styles.logo} />
           <Illustration className={styles.image} />
           <p className={styles.description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          D3CRYPT, IEEESBM’s annual cryptic hunt is here. Begin the quest today!
           </p>
         </div>
         <div className={styles.content}>

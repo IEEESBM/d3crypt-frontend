@@ -9,12 +9,13 @@ export default function H2() {
     <div class="hcontainer2" id="about">
       <img src={ieee} className="ieee-img" />
       <div class="about-head">About Us</div>
-
+<br /><br />
       <div class="about-text">
-        Welcome to IEEE’s quiz event blah blah blah Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation
+        Welcome to D3CRYPT. An annual online cryptic hunt conducted by IEEE Student
+        Branch Manipal for increasing interaction among the first-year
+        students and the senior students, D3CRYPT also provides a platform for students 
+        of the second year and above to test their prowess as the next Sherlock Holmes. The event has
+        added perks, including cash prizes for the first three position holders.
       </div>
 
       <div class="faq-head">FAQs</div>
@@ -23,41 +24,32 @@ export default function H2() {
         <li>
           <b>
             {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod?
+            What is the D3CRYPT? When is it conducted?
           </b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore e u fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui.
+            D3CRYPT is an online guessing game made to test your analytical aptitude. The event will be live from 13th-14th February 2022.
           </p>
         </li>
 
         <li>
           <b>
             {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod?
+            Who can participate?
           </b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore e u fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui.
+            The event is open to all Undergraduate branches and colleges 
           </p>
         </li>
         <li>
           <b>
             {" "}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod?
+            Wondering about the prizes? 
           </b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore e u fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui.
+            The top three position holders will score cash awards
           </p>
         </li>
       </ul>
@@ -74,40 +66,35 @@ export default function H2() {
      
 
         <li>
-          <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+           <b style= {{fontSize: "1.35em"}}> {" "} The contest tests your resolution to hunt down clues and ascertain the best solution. Channel your inner Sherlock Holmes and place your best guess by connecting the dots between the visual aids provided. </b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore
           </p>
         </li>
 
         <li>
-          <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+          <b style= {{fontSize: "1.35em"}}> Starting on 13th February, 12pm, your quest ends in 36 hours. You need to finish answering all the questions within the allotted time. </b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore
           </p>
         </li>
 
         <li>
-          <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
+          <b style= {{fontSize: "1.35em"}}> In case of a scoring dispute, the admin’s decision is final and absolute.</b>
           <p>
             {" "}
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore
+
           </p>
         </li>
 
-        <li>
+        {/* <li>
           <b> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b>
           <p>
             {" "}
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore
           </p>
-        </li>
+        </li> */}
       </ul>
       <a href="/rules">
         <button class="rules-btn">

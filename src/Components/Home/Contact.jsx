@@ -62,8 +62,7 @@ export default function Contact() {
       <div className="footer-c">
         <img src={logo} className="logo-img" />
         <div className="footer-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        D3CRYPT, IEEESBM’s annual cryptic hunt is here! 
         </div>
         <div>
           <SiFacebook className="footer-icon" />

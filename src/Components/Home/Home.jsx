@@ -51,11 +51,8 @@ export default function Home() {
         </div>
 
         <div className="head_text">
-          D3CRYPT is an annual online cryptic hunt conducted by IEEE Student
-          Branch Manipal for increasing interaction among the first-year
-          students and the senior students, it also provides a source of
-          entertainment for students of the second year and above. The event has
-          added perks such as cash prizes for the first three position holders.
+          D3CRYPT, IEEESBM’s annual cryptic hunt is here! 
+          It’s time to put that creative mind of yours at work and race against your competitors. Fuel your imagination to beat the clock before time runs out, break all the records and claim victory to get bragging rights over your peers.
         </div>
         <div className="coming_soon">Coming Soon!</div>
         <div className="flipdown-container">
