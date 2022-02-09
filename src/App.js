@@ -20,6 +20,7 @@ import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import FAQs from "./Components/FAQs/FAQ";
 import Rules from "./Components/Rules/Rules";
 import Verification from "./Components/Verification/Verification";
+import Verified from "./Components/Verification/Verified";
 import Competition from "./Components/Competition/Competition";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -84,6 +85,9 @@ function App() {
           </Route>
           <Route exact path="/competition">
             <Competition />
+          </Route>
+          <Route exact path="/verification/:token">
+          <Verified/>
           </Route>
         </Switch>
       </Router>

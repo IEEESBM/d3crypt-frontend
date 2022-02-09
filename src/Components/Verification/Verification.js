@@ -3,7 +3,7 @@ import React from "react";
 function Verification() {
   return (
     <>
-      <div>we have sent you a verification mail</div>
+      <div>We have sent you a verification mail</div>
     </>
   );
 }
