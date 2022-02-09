@@ -86,23 +86,23 @@ export default function FAQs() {
           </div>
         </div>
         <div class="accordion-item" id="accordion-item">
-          <div class="accordion-header" id="headingOne">
+          <div class="accordion-header" id="headingFour">
             <button
               class="accordion-button"
               type="button"
               data-bs-toggle="collapse"
               id="acc"
-              data-bs-target="#collapseOne"
+              data-bs-target="#collapseFour"
               aria-expanded="true"
-              aria-controls="collapseOne"
+              aria-controls="collapseFour"
             >
               4) Is there any prize money rewarded for the event?
             </button>
           </div>
           <div
-            id="collapseOne"
+            id="collapseFour"
             class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
+            aria-labelledby="headingFour"
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
@@ -111,23 +111,23 @@ export default function FAQs() {
           </div>
         </div>
         <div class="accordion-item" id="accordion-item">
-          <div class="accordion-header" id="headingOne">
+          <div class="accordion-header" id="headingFive">
             <button
               class="accordion-button"
               type="button"
               data-bs-toggle="collapse"
               id="acc"
-              data-bs-target="#collapseOne"
+              data-bs-target="#collapseFive"
               aria-expanded="true"
-              aria-controls="collapseOne"
+              aria-controls="collapseFive"
             >
               5) How does the marking scheme for the event work?
             </button>
           </div>
           <div
-            id="collapseOne"
+            id="collapseFive"
             class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
+            aria-labelledby="headingFive"
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
@@ -148,23 +148,23 @@ export default function FAQs() {
           </div>
         </div>
         <div class="accordion-item" id="accordion-item">
-          <div class="accordion-header" id="headingOne">
+          <div class="accordion-header" id="headingSix">
             <button
               class="accordion-button"
               type="button"
               data-bs-toggle="collapse"
               id="acc"
-              data-bs-target="#collapseOne"
+              data-bs-target="#collapseSix"
               aria-expanded="true"
-              aria-controls="collapseOne"
+              aria-controls="collapseSix"
             >
               6) Do I have to finish attempting all the questions together?
             </button>
           </div>
           <div
-            id="collapseOne"
+            id="collapseSix"
             class="accordion-collapse collapse show"
-            aria-labelledby="headingOne"
+            aria-labelledby="headingSix"
             data-bs-parent="#accordionExample"
           >
             <div class="accordion-body">
