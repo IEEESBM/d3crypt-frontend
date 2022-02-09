@@ -11,10 +11,12 @@ import axios from "axios";
 export default function ResetPassword() {
   const current_url = window.location.href;
   const param_array = current_url.split("/");
-  const id = param_array[4];
-  const token = param_array[5];
+  // const id = param_array[4];
+  const token = param_array[4];
 
   const url = "https://d3crypt-backend.herokuapp.com";
+
+
 
   const [newPass, setNewPass] = useState("");
   const [confirmNewPass, setConfirmNewPass] = useState("");
@@ -23,11 +25,13 @@ export default function ResetPassword() {
   const [msg, setMsg] = useState("");
 
   function handleSubmit() {
+    console.log('submit')
     const data = {
-      id,
+      // id,
       token,
       newPass,
     };
+    console.log(data);
 
     if(newPass!=confirmNewPass) {
 
@@ -39,13 +43,14 @@ export default function ResetPassword() {
     axios
       .patch(url + "/reset", data)
       .then(
-        (res) =>
+        (res) =>{
+          console.log(res);
           (res.data.status = "success"
             ? (setError(false),
               setSuccess(true),
               setMsg("Password Updated Successfully"))
             : null)
-      )
+        })
       .catch((err) => console.log(err.message));
 
     console.log(data);
@@ -123,6 +128,7 @@ export default function ResetPassword() {
               <input
                 type="password"
                 className="fs-5 m"
+                onChange={(e) => setNewPass(e.target.value)}
                 placeholder="New Password"
                 name="email"
                 required
@@ -130,18 +136,23 @@ export default function ResetPassword() {
               <input
                 type="password"
                 className="fs-5 m"
+                onChange={(e) => setConfirmNewPass(e.target.value)}
                 placeholder="Re-enter new Password"
                 name="psw"
                 required
               />
-              <Link to={"/signin"}>
+              {/* <Link to={"/signin"}> */}
                 <button
                   type="submit"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSubmit();
+                  }}
                   class="btn-login col-10 btn-block p-2 m-2 fs-4 text-center m"
                 >
                   Reset Password
                 </button>
-              </Link>
+              {/* </Link> */}
             </div>
           </form>
         </div>

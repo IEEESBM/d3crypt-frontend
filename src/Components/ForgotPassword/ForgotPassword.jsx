@@ -117,6 +117,10 @@ export default function ForgotPassword() {
               <button
                 type="submit"
                 class="btn-login col-10 btn-block p-2 m-2 fs-3 text-center m"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSubmit();
+                }}
               >
                 Submit
               </button>
