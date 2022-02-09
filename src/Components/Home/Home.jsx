@@ -52,7 +52,7 @@ export default function Home() {
 
         <div className="head_text">
           D3CRYPT, IEEESBM’s annual cryptic hunt is here! 
-          It’s time to put that creative mind of yours at work and race against your competitors. Fuel your imagination to beat the clock before time runs out, break all the records and claim victory to get bragging rights over your peers.
+          It’s time to put that creative mind of yours to work and race against your competitors. Fuel your imagination to beat the clock before time runs out, break all the records and claim victory to get bragging rights over your peers.
         </div>
         <div className="coming_soon">Coming Soon!</div>
         <div className="flipdown-container">

@@ -104,8 +104,8 @@ export default function ResetPassword() {
         <div className="col-lg-5 col-md-4 img-fluid my-auto p-3 col-12">
           <Ques className="col-10 my-3 mx-5" />
           <p className="text-light text-center">
-            Small info tidbit about D3Crypt. dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation.
+          You're almost there. Begin your quest today!
+
           </p>
         </div>
       </div>
