@@ -20,11 +20,23 @@ export default function MobileNavbar() {
   }
   const [visible, setVisible] = useState(false);
 
+
   function toggleClass() {
+   
     var div = document.getElementById("nav-icon2");
     div.classList.toggle("open");
+    if(!div.classList.contains('open')){
+     div.style.position='absolute' 
+    }
     document.querySelector(".slidenavbar").classList.toggle("slide");
+
+    // div.id.toggle("fixed");
+    if(div.classList.contains('open')){
+      div.style.position='fixed'
+    }
+
   }
+
 
   useEffect(async() => {
     console.log("in mob ue");
