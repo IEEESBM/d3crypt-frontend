@@ -164,11 +164,11 @@ function App() {
             </div>
 
             <div className="competition-content-outer">
-            {/* <h5 style={{ textAlign: "center", color: "white"}}> Set the date and hoist your flag. Your quest begins on 13th February, 12 PM </h5> */}
+            <h5 style={{ textAlign: "center", color: "white"}}> Set the date and hoist your flag. Your quest begins on 13th February, 12 PM </h5>
 
             {/* UNCOMMENT when the contest starts */}
 
-              <div className="competition-question-outer">
+              {/* <div className="competition-question-outer">
                 <div className="competition-question-content">
                   <div className="question-counter">
                     Question <span>{ind}</span> of 15
@@ -240,7 +240,7 @@ function App() {
                     <div className='first-overlay'></div>
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div> 
         </div>
         </div>
