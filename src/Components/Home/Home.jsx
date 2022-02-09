@@ -51,10 +51,11 @@ export default function Home() {
         </div>
 
         <div className="head_text">
-          Welcome to IEEE's quiz event blah blah blah Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation
+          D3CRYPT is an annual online cryptic hunt conducted by IEEE Student
+          Branch Manipal for increasing interaction among the first-year
+          students and the senior students, it also provides a source of
+          entertainment for students of the second year and above. The event has
+          added perks such as cash prizes for the first three position holders.
         </div>
         <div className="coming_soon">Coming Soon!</div>
         <div className="flipdown-container">
