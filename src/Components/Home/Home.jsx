@@ -64,7 +64,7 @@ export default function Home() {
         {!loggedin && (
           <a href="/register">
             <button className="register-btn-2">
-              <span className="register-2">Register Now!</span>
+              <span className="register-2">Begin your Quest!</span>
               <div className="register-btn-2-overlay"></div>
             </button>
           </a>

@@ -78,7 +78,7 @@
 
   .register-2 {
     position: absolute;
-    width: 119px;
+    width: 259px;
     height: 15px;
     left: 11.25%;
     top: 13px;
@@ -96,10 +96,10 @@
 
   .register-btn-2 {
     position: absolute;
-    width: 148px;
+    width: 185px;
     height: 40px;
     left: 11%;
-    top: 87%;
+    top: 68%;
     background: #ffb800;
     box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
     border-radius: 50px;
