@@ -6,6 +6,8 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { verified } from "../../redux/authSlice";
 import Sidebar from "../UserProfile/Sidebar";
+import ConsoleHelper from "../consolelogger";
+
 
 export default function MobileNavbar2() {
   const { isLoggedIn } = useSelector((state) => state.signUp);
@@ -14,7 +16,7 @@ export default function MobileNavbar2() {
 
   useEffect(() => {
     let windowHeight = document.documentElement.scrollHeight-61;
-    console.log(windowHeight);
+    ConsoleHelper(windowHeight);
     document.querySelector('.sidebar2 .sidebar').style.height = `${windowHeight}px`;
 
     // var token = localStorage.getItem("jwt");
@@ -22,29 +24,29 @@ export default function MobileNavbar2() {
     //   var base64Payload = token.split(".")[1];
     //   var payload = Buffer.from(base64Payload, "base64");
     //   var userID = JSON.parse(payload.toString()).id;
-    //   console.log(userID);
+    //   ConsoleHelper(userID);
     //   axios
     //     .post("https://d3crypt-backend.herokuapp.com/get-user", {
     //       uid: `${userID}`,
     //     })
     //     .then(
     //       (response) => {
-    //         console.log(response);
-    //         console.log(response.data.isVerified);
+    //         ConsoleHelper(response);
+    //         ConsoleHelper(response.data.isVerified);
     //         if (response.data.isVerified == true) {
-    //           console.log("dispatch for verified called");
+    //           ConsoleHelper("dispatch for verified called");
     //           dispatch(verified());
     //         }
     //       },
     //       (error) => {
-    //         console.log(error);
+    //         ConsoleHelper(error);
     //       }
     //     )
     //     .catch((error) => {
-    //       console.log(error);
+    //       ConsoleHelper(error);
     //     });
     // } else {
-    //   console.log("User not found");
+    //   ConsoleHelper("User not found");
     // }
   }, []);
 

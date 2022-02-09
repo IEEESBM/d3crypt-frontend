@@ -5,6 +5,8 @@ import PositionTable from "./PositionTable";
 import "./LeaderBoard.css";
 import axios from "axios";
 import MobileNavbar2 from "../MobileNav2/MobileNav2";
+import ConsoleHelper from "../consolelogger";
+
 
 function LeaderBoard() {
   const [remainingList, setRemainingList] = useState([]);
@@ -21,9 +23,9 @@ function LeaderBoard() {
       }
     })
       .then((res) => {
-        console.log(res);
+        ConsoleHelper(res);
         if (res.data === 'allow_access') {
-          console.log(res.data);
+          ConsoleHelper(res.data);
         }
         else {
           window.location.href = '/';
@@ -31,13 +33,13 @@ function LeaderBoard() {
         // props.history.push("/")
       })
       .catch((err) => {
-        console.log(err.message);
+        ConsoleHelper(err.message);
         window.location.href = '/';
       })
   })
 
   useEffect(() => {
-    // console.log("inhere");
+    // ConsoleHelper("inhere");
     axios.get("https://d3crypt-backend.herokuapp.com/leaderboad")
       .then(async (res) => {
         await setRemainingList(res.data.slice(3));
@@ -46,7 +48,7 @@ function LeaderBoard() {
         setThird(res.data[2]);
       })
       .catch((error) => {
-        console.log(error);
+        ConsoleHelper(error);
       });
   }, []);
 

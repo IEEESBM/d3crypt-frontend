@@ -5,6 +5,8 @@ import disc from "../../assets/disc.svg";
 import logo from "../../assets/logo.svg";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import ConsoleHelper from "../consolelogger";
+
 
 import "./Home.css";
 export default function Home() {
@@ -19,7 +21,7 @@ export default function Home() {
         },
       })
       .then((res) => {
-        console.log(res);
+        ConsoleHelper(res);
         if (res.data === "allow_access") {
           setLoggedin(true);
         } else {
@@ -28,7 +30,7 @@ export default function Home() {
         // props.history.push("/")
       })
       .catch((err) => {
-        console.log(err.message);
+        ConsoleHelper(err.message);
         setLoggedin(false);
       });
   }, []);
@@ -52,7 +54,7 @@ export default function Home() {
 
         <div className="head_text">
           D3CRYPT, IEEESBM’s annual cryptic hunt is here! 
-          It’s time to put that creative mind of yours at work and race against your competitors. Fuel your imagination to beat the clock before time runs out, break all the records and claim victory to get bragging rights over your peers.
+          It’s time to put that creative mind of yours to work and race against your competitors. Fuel your imagination to beat the clock before time runs out, break all the records and claim victory to get bragging rights over your peers.
         </div>
         <div className="coming_soon">Coming Soon!</div>
         <div className="flipdown-container">

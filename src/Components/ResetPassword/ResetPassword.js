@@ -7,6 +7,7 @@ import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import ConsoleHelper from "../consolelogger";
 
 export default function ResetPassword() {
   const current_url = window.location.href;
@@ -43,17 +44,16 @@ export default function ResetPassword() {
     axios
       .patch(url + "/reset", data)
       .then(
-        (res) =>{
-          console.log(res);
+        (res) =>
           (res.data.status = "success"
             ? (setError(false),
               setSuccess(true),
               setMsg("Password Updated Successfully"))
             : null)
-        })
-      .catch((err) => console.log(err.message));
+      )
+      .catch((err) => ConsoleHelper(err.message));
 
-    console.log(data);
+    ConsoleHelper(data);
   }
   return (
     <>
@@ -109,8 +109,8 @@ export default function ResetPassword() {
         <div className="col-lg-5 col-md-4 img-fluid my-auto p-3 col-12">
           <Ques className="col-10 my-3 mx-5" />
           <p className="text-light text-center">
-            Small info tidbit about D3Crypt. dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation.
+          You're almost there. Begin your quest today!
+
           </p>
         </div>
       </div>

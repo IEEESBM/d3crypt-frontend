@@ -6,6 +6,8 @@ import { useDispatch } from "react-redux";
 import { signInUser } from "../../redux/actions/authSignIn";
 import NavBar from "../Navbar/Navbar";
 import axios from "axios";
+import ConsoleHelper from "../consolelogger";
+
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -19,7 +21,7 @@ export default function ForgotPassword() {
     const data = {
       email,
     };
-    console.log(data);
+    ConsoleHelper(data);
 
     axios
       .post(url + "/forgot", data)
@@ -32,9 +34,9 @@ export default function ForgotPassword() {
             setMsg("Mail with password reset link has been sent."))
           : null
       )
-      .catch((err) => console.log(err.message));
+      .catch((err) => ConsoleHelper(err.message));
 
-    console.log(data);
+    ConsoleHelper(data);
   }
 
   return (
@@ -87,8 +89,8 @@ export default function ForgotPassword() {
         <div className="col-lg-5 col-md-4 img-fluid my-auto p-3 col-12">
           <Ques className="col-10 my-3 mx-5" />
           <p className="text-light text-center">
-            Small info tidbit about D3Crypt. dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation.
+          You're almost there. Begin your quest today!
+
           </p>
         </div>
       </div>

@@ -8,6 +8,7 @@ import { RiLightbulbFlashLine } from "react-icons/ri";
 import Popup0 from "./Popup0";
 import Popup1 from "./Popup1";
 import Popup2 from "./Popup2";
+import ConsoleHelper from "../consolelogger";
 
 function App() {
   const [popup0, setPopup0] = useState(false);
@@ -52,9 +53,9 @@ function App() {
       }
     })
       .then((res) => {
-        console.log(res);
+        ConsoleHelper(res);
         if (res.data === 'allow_access') {
-          console.log(res.data);
+          ConsoleHelper(res.data);
         }
         else {
           window.location.href = '/';
@@ -62,7 +63,7 @@ function App() {
         // props.history.push("/")
       })
       .catch((err) => {
-        console.log(err.message);
+        ConsoleHelper(err.message);
         window.location.href = '/';
       })
   })
@@ -76,7 +77,7 @@ function App() {
       }
     })
       .then((res) => {
-        console.log(res)
+        ConsoleHelper(res)
         setQTitle(res.data.question.title);
         setDiff(res.data.question.difficulty);
         setScore(res.data.user.points);
@@ -108,8 +109,8 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // setDis(true);
-    console.log(userID);
-    console.log("submitting");
+    ConsoleHelper(userID);
+    ConsoleHelper("submitting");
     var token = localStorage.getItem("jwt");
 
     axios
@@ -119,7 +120,7 @@ function App() {
       })
       .then((res) => {
         document.querySelector('.answer-error').innerHTML = '&nbsp;'
-        console.log(res.data);
+        ConsoleHelper(res.data);
         setDis(false);
         setFirst(0);
 
@@ -140,7 +141,7 @@ function App() {
         }
       })
       .catch((error) => {
-        console.log(error);
+        ConsoleHelper(error);
       });
   };
   return (
@@ -163,11 +164,11 @@ function App() {
             </div>
 
             <div className="competition-content-outer">
-            <h5 style={{ textAlign: "center", color: "white"}}> Set the date and hoist your flag. Your quest begins on 13th February, 12 PM </h5>
+            {/* <h5 style={{ textAlign: "center", color: "white"}}> Set the date and hoist your flag. Your quest begins on 13th February, 12 PM </h5> */}
 
             {/* UNCOMMENT when the contest starts */}
 
-              {/* <div className="competition-question-outer">
+              <div className="competition-question-outer">
                 <div className="competition-question-content">
                   <div className="question-counter">
                     Question <span>{ind}</span> of 15
@@ -239,7 +240,7 @@ function App() {
                     <div className='first-overlay'></div>
                   </button>
                 </div>
-              </div> */}
+              </div>
             </div> 
         </div>
         </div>

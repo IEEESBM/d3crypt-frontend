@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { verified } from "../../redux/authSlice";
+import ConsoleHelper from "../consolelogger";
 
 export default function NavBar() {
   const { isLoggedIn } = useSelector((state) => state.signUp);
@@ -21,33 +22,33 @@ export default function NavBar() {
   //     var base64Payload = token.split(".")[1];
   //     var payload = Buffer.from(base64Payload, "base64");
   //     var userID = JSON.parse(payload.toString()).id;
-  //     console.log(userID);
+  //     ConsoleHelper(userID);
   //     //user = JSON.parse(user);
-  //     //console.log(user);
+  //     //ConsoleHelper(user);
   //     axios
   //       .post("https://d3crypt-backend.herokuapp.com/get-user", {
   //         uid: `${userID}`,
   //       })
   //       .then(
   //         (response) => {
-  //           console.log(response);
-  //           console.log(response.data.isVerified);
+  //           ConsoleHelper(response);
+  //           ConsoleHelper(response.data.isVerified);
   //           if (response.data.isVerified == true) {
-  //             console.log("dispatch for verified called");
+  //             ConsoleHelper("dispatch for verified called");
   //             dispatch(verified());
 
 
   //           }
   //         },
   //         (error) => {
-  //           console.log(error);
+  //           ConsoleHelper(error);
   //         }
   //       )
   //       .catch((error) => {
-  //         console.log(error);
+  //         ConsoleHelper(error);
   //       });
   //   } else {
-  //     console.log("User not found");
+  //     ConsoleHelper("User not found");
   //   }
   // }, []);
 

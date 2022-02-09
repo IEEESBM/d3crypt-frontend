@@ -12,6 +12,8 @@ import { Navbar } from "react-bootstrap";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import SignUpPopup from "./SignUpPopup";
+import ConsoleHelper from "../consolelogger";
+
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -26,16 +28,16 @@ function SignUp() {
       }
     })
       .then((res) => {
-        console.log(res);
+        ConsoleHelper(res);
         if (res.data === 'allow_access') {
           window.location.href = '/';
         }
         else {
-          console.log(res.data);
+          ConsoleHelper(res.data);
         }
       })
       .catch((err) => {
-        console.log(err.message);
+        ConsoleHelper(err.message);
       })
   })
 
@@ -65,7 +67,7 @@ function SignUp() {
         setPopup(true);
       },
       (error) => {
-        console.log(error);
+        ConsoleHelper(error);
         document.querySelector(".nameError").innerHTML = "&nbsp;";
         document.querySelector(".emailError").innerHTML = "&nbsp;";
         document.querySelector(".passwordError").innerHTML = "&nbsp;";
@@ -73,27 +75,27 @@ function SignUp() {
         document.querySelector(".collegeError").innerHTML = "&nbsp;";
         document.querySelector(".memError").innerHTML = "&nbsp;";
         if (error.username) {
-          console.log(error.username);
+          ConsoleHelper(error.username);
           document.querySelector(".nameError").innerHTML = error.username;
         }
         if (error.email) {
-          console.log(error.email);
+          ConsoleHelper(error.email);
           document.querySelector(".emailError").innerHTML = error.email;
         }
         if (error.password) {
-          console.log(error.password);
+          ConsoleHelper(error.password);
           document.querySelector(".passwordError").innerHTML = error.password;
         }
         if (error.phone) {
-          console.log(error.phone);
+          ConsoleHelper(error.phone);
           document.querySelector(".phoneError").innerHTML = error.phone;
         }
         if (error.college) {
-          console.log(error.college);
+          ConsoleHelper(error.college);
           document.querySelector(".collegeError").innerHTML = error.college;
         }
         if (error.mem) {
-          console.log(error.mem);
+          ConsoleHelper(error.mem);
           document.querySelector(".memError").innerHTML = error.mem;
         }
       }

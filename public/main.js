@@ -1,3 +1,5 @@
+import ConsoleHelper from "../src/Components/consolelogger";
+
 document.addEventListener("DOMContentLoaded", () => {
   // Unix timestamp (in seconds) to count down to
   // var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 2) + 1;
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Do something when the countdown ends
     .ifEnded(() => {
-      console.log("The countdown has ended!");
+      ConsoleHelper("The countdown has ended!");
     });
 
   // Toggle theme
