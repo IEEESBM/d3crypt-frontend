@@ -7,6 +7,9 @@ import { store } from "./redux/Store";
 import { Provider } from "react-redux";
 import Competition from "./Components/Competition/Competition";
 
+if (process.env.NODE_ENV !== "development")
+    console.log = () => {};
+    
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
