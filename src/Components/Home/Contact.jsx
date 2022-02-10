@@ -29,7 +29,7 @@ export default function Contact() {
             target={"_blank"}
           >
             <img src={net} className="contact-img" />
-            <div className="c-box-text">www.ieeesbm.com</div>
+            <div className="c-box-text">ieeemanipal.com</div>
           </a>
         </div>
 {/* 
