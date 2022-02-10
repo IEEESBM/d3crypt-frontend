@@ -68,7 +68,7 @@ function LeaderBoard() {
             </p>
           </h1>
           <div className="leaderboard-content">
-            <h5 style={{ textAlign: "center", color: "white"}}> Set the date and hoist your flag. Your quest begins on 13th February, 12 PM </h5>
+            <h5 style={{ textAlign: "center", color: "white", left : '50%'}}> Set the date and hoist your flag.<br /> Your quest begins on 13th February, 12 PM </h5>
             {/* UNCOMMENT when the contest starts */}
             {/* <Ranks remainingList={remainingList} first={first} second={second} third={third}></Ranks>
             <PositionTable remainingList={remainingList} first={first} second={second} third={third}></PositionTable> */}

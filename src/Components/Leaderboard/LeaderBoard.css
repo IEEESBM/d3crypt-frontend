@@ -137,6 +137,7 @@ body {
     }
     .leaderboard-container .heading {
         top: 91px;
+        left: 70px;
     }
     .leaderboard-container .heading-line {
         top: 110px;
@@ -145,7 +146,10 @@ body {
         flex: 1;
     }
     .leaderboard-container .leaderboard-content {
-        flex: 8;
+        flex: 7;
+        width: 100vw;
+        text-align: center;
+        margin: 10px;
     }
 }
 

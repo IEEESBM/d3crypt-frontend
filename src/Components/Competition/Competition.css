@@ -468,7 +468,12 @@ button:focus {
 
 @media screen and (max-width: 576px) {
   .competition-main-outer {
-    margin-left: 0;
+    text-align: center;
+    padding-right: 20%;
+  }
+
+  .competition-content-outer {
+    width: 20rem;
   }
   .competitions-container .sidebar {
     display: none;
