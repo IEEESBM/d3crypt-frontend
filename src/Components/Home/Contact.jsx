@@ -73,7 +73,7 @@ export default function Contact() {
             target={"_blank"}
           >
             <IconContext.Provider
-              value={{ color: '#ffb800', size: '80px'}}
+              value={{ color: '#ffb800'}}
             >
             <SiLinkedin className="footer-icon" /> 
             </IconContext.Provider>
@@ -89,7 +89,7 @@ export default function Contact() {
             target={"_blank"}
           >
              <IconContext.Provider
-              value={{ color: '#ffb800', size: '80px'}}
+              value={{ color: '#ffb800'}}
             >
             <SiMinutemailer className="footer-icon" />
             </IconContext.Provider>

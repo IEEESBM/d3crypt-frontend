@@ -89,16 +89,16 @@
 .footer-icon {
   margin: 0px 15px;
   margin-top: 200px;
-  width: 24px;
-  height: 24px;
-  /* background-color: #ffb800; */
+  width: 32px;
+  height: 32px;
+  background-color: white;
   border-radius: 50%;
   border: none;
 
 }
 
 .footer-icon:hover{
-  background-color: white;
+  background-color: gray;
 }
 
 @media only screen and (max-width: 600px) {
@@ -173,7 +173,7 @@
     margin-top: 180px;
     width: 24px;
     height: 24px;
-    background-color: #ffb800;
+    background-color: white;
     border-radius: 50%;
     border: none;
   }
