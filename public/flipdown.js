@@ -1,5 +1,3 @@
-import ConsoleHelper from "../src/Components/consolelogger";
-
 function _typeof(obj) {
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
     _typeof = function _typeof(obj) {
@@ -87,7 +85,7 @@ var FlipDown = (function () {
 
     this._setOptions();
 
-    ConsoleHelper(
+    console.log(
       "FlipDown ".concat(this.version, " (Theme: ").concat(this.opts.theme, ")")
     );
   }

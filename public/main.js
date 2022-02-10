@@ -1,9 +1,7 @@
-import ConsoleHelper from "../src/Components/consolelogger";
-
 document.addEventListener("DOMContentLoaded", () => {
   // Unix timestamp (in seconds) to count down to
   // var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 2) + 1;
-  var twoDaysFromNow = new Date("2022-01-25T12:00:00Z").getTime() / 1000 + 1;
+  var twoDaysFromNow = new Date("2022-02-13T06:30:00Z").getTime() / 1000 + 1;
 
   // Set up FlipDown
   var flipdown = new FlipDown(twoDaysFromNow)
@@ -13,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Do something when the countdown ends
     .ifEnded(() => {
-      ConsoleHelper("The countdown has ended!");
+      console.log("The countdown has ended!");
     });
 
   // Toggle theme

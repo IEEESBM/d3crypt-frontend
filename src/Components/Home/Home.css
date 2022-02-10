@@ -99,7 +99,7 @@
     width: 185px;
     height: 40px;
     left: 11%;
-    top: 68%;
+    top: 85%;
     background: #ffb800;
     box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
     border-radius: 50px;
@@ -508,10 +508,11 @@
   }
   .flipdown-container {
     position: absolute;
-    width: 320px;
+    width: auto;
     height: 81px;
     transform: translateX(-50%);
     left: 50%;
+    overflow-x: hidden;
     top: 69%;
   }
 
