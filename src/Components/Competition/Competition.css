@@ -130,7 +130,7 @@
 }
 
 .grid-item {
-  background-color: rgb(41, 41, 41);
+  background-color: #72777b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,6 +326,14 @@ button:focus {
   background: rgba(248, 246, 246, 0.3);
 }
 
+.final{
+  position: absolute;
+  top: 10px;
+  left:0px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 @media only screen and (max-width: 1100px) {
   .competition-content-outer {
     display: flex;
@@ -468,12 +476,7 @@ button:focus {
 
 @media screen and (max-width: 576px) {
   .competition-main-outer {
-    text-align: center;
-    padding-right: 20%;
-  }
-
-  .competition-content-outer {
-    width: 20rem;
+    margin-left: 0;
   }
   .competitions-container .sidebar {
     display: none;
@@ -485,6 +488,9 @@ button:focus {
   .sidebar2 .userprofileicon {
     margin-top: 40px;
     font-size: 8vw;
+  }
+  .final{
+    top:100px;
   }
 }
 
