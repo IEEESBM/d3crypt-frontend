@@ -49,7 +49,7 @@ export default function Popup1({ remove1, add2, first, userID }) {
           <p className="hint-body-title">Want another hint?</p>
           <p className="hint-body-content">
             The help you seek will cost you precious points.
-            <br /> -50 for your seoncd hint.{" "}
+            <br /> -50 for your second hint.{" "}
           </p>
           <button className="hint-button" onClick={handleClick}>
             <span className="hint-button-text">Proceed</span>

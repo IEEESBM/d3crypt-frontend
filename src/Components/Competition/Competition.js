@@ -8,12 +8,14 @@ import { RiLightbulbFlashLine } from "react-icons/ri";
 import Popup0 from "./Popup0";
 import Popup1 from "./Popup1";
 import Popup2 from "./Popup2";
+import FinalPopup from "./FinalPopup";
 import ConsoleHelper from "../consolelogger";
 
 function App() {
   const [popup0, setPopup0] = useState(false);
   const [popup1, setPopup1] = useState(false);
   const [popup2, setPopup2] = useState(false);
+  const [finalPop,setFinalPop] = useState(false);
   const [first, setFirst] = useState(0);
 
   const onClick = () => {
@@ -78,6 +80,12 @@ function App() {
     })
       .then((res) => {
         ConsoleHelper(res)
+
+        if(res.data==="Congratulations!, you're done with all the questions"){
+          setFinalPop(true);
+        }
+        else{
+          if(res.data.question){
         setQTitle(res.data.question.title);
         setDiff(res.data.question.difficulty);
         setScore(res.data.user.points);
@@ -103,7 +111,7 @@ function App() {
           document.querySelector('.div3').style.backgroundColor = '#ffb800';
           document.querySelector('.difficulty').innerHTML = "Hard";
         }
-      });
+      }}});
   });
 
   const handleSubmit = (e) => {
@@ -131,8 +139,8 @@ function App() {
           // setPopup0(false);
           // setPopup1(false);
           // setPopup2(false);
-          if (ind === 15) {
-            window.location.href = '/leaderboard'
+          if (ind === 30) {
+            setFinalPop(true);
           }
 
         };
@@ -156,14 +164,15 @@ function App() {
           <Popup1 remove1={setPopup1} add2={setPopup2} first={setFirst} userID={userID} />
         ) : null}
         {popup2 ? <Popup2 remove2={setPopup2} userID={userID} /> : null}
+        {finalPop ? <FinalPopup/> : null}
         <div className="competition-main-outer">
           <div className="temp">
-            <div className="competition-title">
+            <div className={finalPop?"competition-title final":"competition-title"}>
               Competition
               <div className="competition-line"></div>
             </div>
 
-            <div className="competition-content-outer">
+            {finalPop?null:<div className="competition-content-outer">
             {/* <h5 style={{ textAlign: "center", color: "white"}}> Set the date and hoist your flag. <br /> Your quest begins on 13th February, 12 PM </h5> */}
 
             {/* UNCOMMENT when the contest starts */}
@@ -171,7 +180,7 @@ function App() {
               <div className="competition-question-outer">
                 <div className="competition-question-content">
                   <div className="question-counter">
-                    Question <span>{ind}</span> of 15
+                    Question <span>{ind}</span> of 30
                   </div>
 
                   <div className="question-title">{qtitle}</div>
@@ -241,7 +250,8 @@ function App() {
                   </button>
                 </div>
               </div>
-            </div> 
+            </div>
+} 
         </div>
         </div>
       </div> 

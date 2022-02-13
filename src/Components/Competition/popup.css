@@ -119,7 +119,7 @@
 @media screen and (max-width: 576px) {
   .hint-content{
     width: 50vw;
-    height:80px;
+    height:120px;
     top:60%;
     transform: translate(-60%, -50%);
   }
@@ -127,7 +127,7 @@
     height: 8vw;
   }
   .hint-title-text{
-    font-size: 2vw;
+    font-size: 4vw;
   }
   .hint-close{
     top:10px;
@@ -135,22 +135,22 @@
   font-size: 10px;
   }
   .hint-body-title{
-    font-size: 2vw;
+    font-size: 4vw;
     margin-bottom:1.38vw;
   }
   .hint-body-content{
-    font-size: 2vw;
-  line-height: 10px;
+    font-size: 4vw;
+  line-height: 20px;
   margin-bottom: 0px;
   margin-top:2vw;
   /* margin-top: 0.5vw; */
   }
 
   .hint-button{
-    width:13vw;
-    height:3.125vw;
+    width:17vw;
+    height:5vw;
     margin-left: 18vw;
-    bottom: 2vw;
+    bottom: 1.5vw;
     /* margin: auto; */
     display: flex;
     align-items: center;
@@ -160,6 +160,7 @@
     flex: 50%;
     padding-left: 2.5vw;
     margin: 0;
+    font-size: 3vw;
   }
   .hint-right-arrow{
     flex: 50%;
