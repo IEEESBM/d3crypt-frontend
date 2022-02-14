@@ -70,49 +70,49 @@ function App() {
       })
   })
 
-  useEffect(async () => {
-    const jwt = JSON.parse(localStorage.getItem("jwt"));
+  // useEffect(async () => {
+  //   const jwt = JSON.parse(localStorage.getItem("jwt"));
 
-    await axios.get("https://d3crypt-backend.herokuapp.com/questions", {
-      headers: {
-        'x-access-token': jwt
-      }
-    })
-      .then((res) => {
-        ConsoleHelper(res)
+  //   await axios.get("https://d3crypt-backend.herokuapp.com/questions", {
+  //     headers: {
+  //       'x-access-token': jwt
+  //     }
+  //   })
+  //     .then((res) => {
+  //       ConsoleHelper(res)
 
-        if(res.data==="Congratulations!, you're done with all the questions"){
-          setFinalPop(true);
-        }
-        else{
-          if(res.data.question){
-        setQTitle(res.data.question.title);
-        setDiff(res.data.question.difficulty);
-        setScore(res.data.user.points);
-        setPoints(res.data.question.points);
-        setInd(res.data.user.currentQuestion + 1);
-        setImg1(res.data.question.image_1);
-        setImg2(res.data.question.image_2);
-        setImg3(res.data.question.image_3);
-        setImg4(res.data.question.image_4);
-        document.querySelector('.div1').style.backgroundColor = 'transparent';
-        document.querySelector('.div2').style.backgroundColor = 'transparent';
-        document.querySelector('.div3').style.backgroundColor = 'transparent';
+  //       if(res.data==="Congratulations!, you're done with all the questions"){
+  //         setFinalPop(true);
+  //       }
+  //       else{
+  //         if(res.data.question){
+  //       setQTitle(res.data.question.title);
+  //       setDiff(res.data.question.difficulty);
+  //       setScore(res.data.user.points);
+  //       setPoints(res.data.question.points);
+  //       setInd(res.data.user.currentQuestion + 1);
+  //       setImg1(res.data.question.image_1);
+  //       setImg2(res.data.question.image_2);
+  //       setImg3(res.data.question.image_3);
+  //       setImg4(res.data.question.image_4);
+  //       document.querySelector('.div1').style.backgroundColor = 'transparent';
+  //       document.querySelector('.div2').style.backgroundColor = 'transparent';
+  //       document.querySelector('.div3').style.backgroundColor = 'transparent';
 
-        if (diff === 1) {
-          document.querySelector('.div1').style.backgroundColor = '#ffb800';
-          document.querySelector('.difficulty').innerHTML = "Easy";
-        }
-        if (diff === 2) {
-          document.querySelector('.div2').style.backgroundColor = '#ffb800';
-          document.querySelector('.difficulty').innerHTML = "Medium";
-        }
-        if (diff === 3) {
-          document.querySelector('.div3').style.backgroundColor = '#ffb800';
-          document.querySelector('.difficulty').innerHTML = "Hard";
-        }
-      }}});
-  });
+  //       if (diff === 1) {
+  //         document.querySelector('.div1').style.backgroundColor = '#ffb800';
+  //         document.querySelector('.difficulty').innerHTML = "Easy";
+  //       }
+  //       if (diff === 2) {
+  //         document.querySelector('.div2').style.backgroundColor = '#ffb800';
+  //         document.querySelector('.difficulty').innerHTML = "Medium";
+  //       }
+  //       if (diff === 3) {
+  //         document.querySelector('.div3').style.backgroundColor = '#ffb800';
+  //         document.querySelector('.difficulty').innerHTML = "Hard";
+  //       }
+  //     }}});
+  // });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -157,28 +157,28 @@ function App() {
       <MobileNavbar2></MobileNavbar2>
       <div className="App competitions-container">
         <Sidebar></Sidebar>
-        {popup0 ? (
+        {/* {popup0 ? (
           <Popup0 remove0={setPopup0} add1={setPopup1} first={setFirst} />
         ) : null}
         {popup1 ? (
           <Popup1 remove1={setPopup1} add2={setPopup2} first={setFirst} userID={userID} />
         ) : null}
         {popup2 ? <Popup2 remove2={setPopup2} userID={userID} /> : null}
-        {finalPop ? <FinalPopup/> : null}
+        {finalPop ? <FinalPopup/> : null} */}
         <div className="competition-main-outer">
           <div className="temp">
-            <div className={finalPop?"competition-title final":"competition-title"}>
+            <div className="competition-title">
               Competition
               <div className="competition-line"></div>
             </div>
 
-            {finalPop?null:<div className="competition-content-outer">
-            {/* <h5 style={{ textAlign: "center", color: "white"}}> Set the date and hoist your flag. <br /> Your quest begins on 13th February, 12 PM </h5> */}
+            <div className="competition-content-outer">
+             <h5 style={{ textAlign: "center", color: "white"}}> The competition is now closed </h5>
 
             {/* UNCOMMENT when the contest starts */}
 
-              <div className="competition-question-outer">
-                <div className="competition-question-content">
+               {/* <div className="competition-question-outer">
+               <div className="competition-question-content">
                   <div className="question-counter">
                     Question <span>{ind}</span> of 30
                   </div>
@@ -217,9 +217,9 @@ function App() {
                     </button>
                   </div>
                   <div className="answer-error">&nbsp;</div>
-                </div>
-              </div>
-              <div className="competition-score">
+                </div> 
+              </div>*/}
+              {/* <div className="competition-score">
                 <div className="score-upper">
                   <div className="timer1">{points}</div>
                 </div>
@@ -249,9 +249,9 @@ function App() {
                     <div className='first-overlay'></div>
                   </button>
                 </div>
-              </div>
-            </div>
-} 
+              </div> */}
+            </div> 
+            
         </div>
         </div>
       </div> 

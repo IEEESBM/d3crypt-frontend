@@ -16,8 +16,26 @@ import ConsoleHelper from "../consolelogger";
 
 
 function SignUp() {
+  // constructor(props){
+  //   super(props);
+  //   this.handleSHow = this.handleShow.bind(this);
+  //   this.state = {
+  //     modalState : false
+  //   }
+  // }
+  
+  // componentDidMount(){
+  //   this.setState({
+  //     modalState : true
+  //   }) 
+  // }
+ 
   const dispatch = useDispatch();
   const [popup,setPopup] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setPopup(true), 1000);
+}, []);
 
   useEffect(async () => {
 
@@ -58,52 +76,53 @@ function SignUp() {
     const { name, value } = e.target;
     setNewUser({ ...newUser, [name]: value });
   };
-
+  
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    dispatch(register(newUser)).then(
-      () => {
-        // window.location.href = '/signin'
-        setPopup(true);
-      },
-      (error) => {
-        ConsoleHelper(error);
-        document.querySelector(".nameError").innerHTML = "&nbsp;";
-        document.querySelector(".emailError").innerHTML = "&nbsp;";
-        document.querySelector(".passwordError").innerHTML = "&nbsp;";
-        document.querySelector(".phoneError").innerHTML = "&nbsp;";
-        document.querySelector(".collegeError").innerHTML = "&nbsp;";
-        document.querySelector(".memError").innerHTML = "&nbsp;";
-        if (error.username) {
-          ConsoleHelper(error.username);
-          document.querySelector(".nameError").innerHTML = error.username;
-        }
-        if (error.email) {
-          ConsoleHelper(error.email);
-          document.querySelector(".emailError").innerHTML = error.email;
-        }
-        if (error.password) {
-          ConsoleHelper(error.password);
-          document.querySelector(".passwordError").innerHTML = error.password;
-        }
-        if (error.phone) {
-          ConsoleHelper(error.phone);
-          document.querySelector(".phoneError").innerHTML = error.phone;
-        }
-        if (error.college) {
-          ConsoleHelper(error.college);
-          document.querySelector(".collegeError").innerHTML = error.college;
-        }
-        if (error.mem) {
-          ConsoleHelper(error.mem);
-          document.querySelector(".memError").innerHTML = error.mem;
-        }
-      }
-    );
+    // dispatch(register(newUser)).then(
+    //   () => {
+    //     // window.location.href = '/signin'
+    //     setPopup(true);
+    //   },
+    //   (error) => {
+    //     ConsoleHelper(error);
+    //     document.querySelector(".nameError").innerHTML = "&nbsp;";
+    //     document.querySelector(".emailError").innerHTML = "&nbsp;";
+    //     document.querySelector(".passwordError").innerHTML = "&nbsp;";
+    //     document.querySelector(".phoneError").innerHTML = "&nbsp;";
+    //     document.querySelector(".collegeError").innerHTML = "&nbsp;";
+    //     document.querySelector(".memError").innerHTML = "&nbsp;";
+    //     if (error.username) {
+    //       ConsoleHelper(error.username);
+    //       document.querySelector(".nameError").innerHTML = error.username;
+    //     }
+    //     if (error.email) {
+    //       ConsoleHelper(error.email);
+    //       document.querySelector(".emailError").innerHTML = error.email;
+    //     }
+    //     if (error.password) {
+    //       ConsoleHelper(error.password);
+    //       document.querySelector(".passwordError").innerHTML = error.password;
+    //     }
+    //     if (error.phone) {
+    //       ConsoleHelper(error.phone);
+    //       document.querySelector(".phoneError").innerHTML = error.phone;
+    //     }
+    //     if (error.college) {
+    //       ConsoleHelper(error.college);
+    //       document.querySelector(".collegeError").innerHTML = error.college;
+    //     }
+    //     if (error.mem) {
+    //       ConsoleHelper(error.mem);
+    //       document.querySelector(".memError").innerHTML = error.mem;
+    //     }
+    //   }
+    // );
   };
 
   return (
     <div className={styles.bg}>
+    { popup ? <SignUpPopup /> : null }
       <MobileNav />
       <div className={styles.head}>
         <NavBar />
@@ -216,13 +235,13 @@ function SignUp() {
               </div>
               <div className="passwordError error">&nbsp;</div>
             </div>
-            <button className={styles.register} type="submit">
+            <button className={styles.register}>
               Register
               <div className={styles.overlay}></div>
             </button>
-            {popup ? (
-              <SignUpPopup remove={setPopup} />
-            ) : null}
+            {/* {popup ? (
+              <SignUpPopup set={setPopup} />
+            ) : null} */}
           </form>
           <p className={styles.link}>
             Already have an account? <a href="/signin">Sign In!</a>
