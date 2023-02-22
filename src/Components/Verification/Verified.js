@@ -49,7 +49,7 @@ function countdown(ctr) {
     }
 }
     useEffect(()=>{
-        axios.get("https://d3crypt-backend.herokuapp.com/verify-email",{
+        axios.get("https://d3crypt-backend.onrender.com/verify-email",{
             // axios.get("http://localhost:4000/verify-email",{
         headers: {
                 'x-access-token': token
