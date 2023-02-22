@@ -33,9 +33,9 @@ function SignUp() {
   const dispatch = useDispatch();
   const [popup,setPopup] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => setPopup(true), 1000);
-}, []);
+//   useEffect(() => {
+//     setTimeout(() => setPopup(true), 1000);
+// }, []);
 
   useEffect(async () => {
 
