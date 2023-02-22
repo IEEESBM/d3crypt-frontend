@@ -15,7 +15,7 @@ export default function ResetPassword() {
   // const id = param_array[4];
   const token = param_array[4];
 
-  const url = "https://d3crypt-backend.herokuapp.com";
+  const url = "https://d3crypt-backend.onrender.com";
 
 
 
