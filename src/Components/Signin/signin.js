@@ -16,7 +16,7 @@ export default function Signin() {
   useEffect(async () => {
 
     const jwt = JSON.parse(localStorage.getItem("jwt"));
-    await axios.get("https://d3crypt-backend.herokuapp.com/check-verified", {
+    await axios.get("https://d3crypt-backend.onrender.com/check-verified", {
       headers: {
         'x-access-token': jwt
       }
